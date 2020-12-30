@@ -10,7 +10,7 @@
   <!-- CSS Styling: -->
   <link rel="stylesheet" href="styles/style.css" type="text/css">
   <!-- Favicon: -->
-  <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/-1.headerSectionAssets/logoGifos.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -18,10 +18,10 @@
   <!-- HEADER -->
   <header class='flexContainer'>
     <!-- LOGO -->
-    <a href="#">
+    <a id="anchorHome" href="index.html">
       <img 
-        class=""
-        src="assets/-1.headerSectionAssets/logo-desktop.svg" 
+        id="logoHeader"
+        src="assets/-1.headerSectionAssets/logoGifos.svg" 
         alt="Gifos' Logo"
         title="Gifos' Logo"
       />
@@ -29,12 +29,18 @@
     <!-- LOGO ends -->
 
     <!-- NAVIGTAION MENU -->
-    <nav class='flexContainer'>
-      <ul>
+    <nav>
+      <ul class='flexContainer'>
         <li><a class="nav-anchor" href="#">MODO NOCTURNO</a></li>
-        <li><a class="nav-anchor" href="#">FAVORITOS</a></li>
-        <li><a class="nav-anchor" href="#">MIS GIFOS</a></li>
-        <li><a class="nav-anchor createGifButton-anchor" href="#"></a></li>
+        <li><a class="nav-anchor" href="favorites.html">FAVORITOS</a></li>
+        <li><a class="nav-anchor" href="myGifos.html">MIS GIFOS</a></li>
+        <li><a  class="nav-anchor" href="createGifos.html">
+          <img
+            id="createGifButton-img"
+            src="assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_normal.svg" 
+            alt="Crea tus Gifos"
+          />
+        </a></li>
       </ul>
     </nav>
     <!-- NAVIGTAION MENU ends -->

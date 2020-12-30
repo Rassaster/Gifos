@@ -1,26 +1,43 @@
 // Main styles document. Only for imports.
 
 // 1-base
-@import '1-base/reset';
-@import '1-base/global';
-@import '1-base/variables';
-@import '1-base/mixins';
-@import '1-base/functions';
+@import '1-base/1-reset';
+// 0-fonts
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('/styles/0-fonts/Montserrat/Montserrat-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('/styles/0-fonts/Montserrat/Montserrat-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/styles/0-fonts/Roboto/Roboto-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/styles/0-fonts/Roboto/Roboto-Regular.ttf');
+  font-weight: 400;
+}
+// 1-base
+@import '1-base/2-variables';
+@import '1-base/3-global';
+@import '1-base/4-mixinsVariables';
+
 
 // 2-layout
-// @import '2-layout/header';
-// @import '2-layout/main';
-// @import '2-layout/footer';
+@import '2-layout/1-header';
+@import '2-layout/2-main';
+@import '2-layout/3-footer';
 
 // 3-sections
-// @import '3-sections/nav';
-// @import '3-sections/presentacion';
-// @import '3-sections/episodios';
-// @import '3-sections/offFlow-image';
-// @import '3-sections/nosotros';
-// @import '3-sections/entrevistas';
-// @import '3-sections/topicos';
-// @import '3-sections/novedades';
+@import '3-sections/1-logo';
+@import '3-sections/2-nav'
+
 
 // 4-darkMode
 // @import '4-darkMode';

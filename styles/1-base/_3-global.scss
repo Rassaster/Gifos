@@ -1,0 +1,13 @@
+// This Partial defines global initial values for some HTML elements.
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+  scroll-behavior: smooth; 
+}
+a {
+  text-decoration: none;
+}
+
+.flexContainer {
+  display: flex;
+}
