@@ -37,25 +37,25 @@ table {
 
 @font-face {
   font-family: 'Montserrat-Bold';
-  src: url("/styles/0-fonts/Montserrat/Montserrat-Bold.ttf");
+  src: url("../styles/0-fonts/Montserrat/Montserrat-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Montserrat-Medium';
-  src: url("/styles/0-fonts/Montserrat/Montserrat-Medium.ttf");
+  src: url("../styles/0-fonts/Montserrat/Montserrat-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url("/styles/0-fonts/Roboto/Roboto-Bold.ttf");
+  src: url("../styles/0-fonts/Roboto/Roboto-Bold.ttf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url("/styles/0-fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../styles/0-fonts/Roboto/Roboto-Regular.ttf");
   font-weight: 400;
 }
 
@@ -298,7 +298,7 @@ nav ul {
 
 .trendingSuggestions-wrapper p {
   margin-top: 7px;
-  font-size: calc(16) vw;
+  font-size: 1.1111111vw;
   font-family: "Montserrat-Medium", sans-serif;
   color: #572EE5;
 }
