@@ -10,7 +10,7 @@ nav ul {
   @include flexContainerConfig(row, nowrap, space-between, center)
 }
 .nav-anchor {
-  font-size: 0.8125rem; // =13px/16px
+  font-size: calc(11px + 0.13888889vw); // =11px + (2px/1440px)
   font-family: $strongTitles-font;
   color: $mainLM-color;
 }

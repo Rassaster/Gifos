@@ -1,0 +1,53 @@
+.searchBar-container {
+  width: 100vw;
+  @include flexContainerConfig(row, nowrap, center, center)
+}
+.searchBar-wrapper {
+  min-width: 500px;
+  width: 38.263889vw; // =551px/1440px
+  max-width: 820px;
+  min-height: 50px;
+  height: 3.4722222vw; // 50px/1440px
+  max-height: 60px;
+  border: 1px solid $mainLM-color;
+  border-radius: 27px;
+  @include flexContainerConfig(row, nowrap, space-around, center)
+}
+#searchBar {
+  border: none;
+  width: 85.480944%; // =(551px-80px)/1440px
+  &:focus{
+    outline: none;
+  }
+}
+.searchBar-wrapper img {
+  &:nth-child(1) {
+    margin-left: 20px;
+  }
+  &:nth-child(3) {
+    margin-right: 20px;
+    
+  }
+  &:nth-child(4) {
+    margin-right: 20px;
+  }
+}
+.trendingSuggestions-wrapper {
+  width: 100vw;
+  margin-top: 73px;
+  margin-bottom: 95px;
+  @include flexContainerConfig(column, nowrap, center, center);
+}
+.trendingSuggestions-wrapper h4 {
+  font-size: 1.25vw; // =18px/1440px
+  font-family: $strongTitles-font;
+  color: $mainLM-color;
+}
+
+.trendingSuggestions-wrapper p {
+  margin-top: 7px;
+  // font-size: 1.1111111vw; // =16px/1440px
+  font-size: calc(16)vw; // =16px/1440px
+  font-family: $mediumTitles-font;
+  color: $mainLM-color;
+}

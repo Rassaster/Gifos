@@ -1,0 +1,10 @@
+.topSection-container {
+  position: relative;
+  top: 90px;
+  width: 100vw;
+  height: auto;
+}
+.welcomeSearch-wrapper {
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, center, center)
+}

@@ -7,7 +7,24 @@
 a {
   text-decoration: none;
 }
-
 .flexContainer {
   display: flex;
+}
+// ********************************
+// ************CLASSES*************
+// ********************************
+.visibility-hidden{
+  visibility: hidden;
+}
+.visibility-visible {
+  visibility: visible;
+}
+.display-none{
+  display: none;
+}
+.display-block{
+  display: block;
+}
+.display-inline{
+  display: inline;
 }

@@ -34,7 +34,7 @@
         <li><a class="nav-anchor" href="#">MODO NOCTURNO</a></li>
         <li><a class="nav-anchor" href="favorites.html">FAVORITOS</a></li>
         <li><a class="nav-anchor" href="myGifos.html">MIS GIFOS</a></li>
-        <li><a  class="nav-anchor" href="createGifos.html">
+        <li><a class="nav-anchor" href="createGifos.html">
           <img
             id="createGifButton-img"
             src="assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_normal.svg" 
@@ -54,21 +54,22 @@
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container welcomeSearch-wrapper">
       <div class="welcomeMessage-wrapper">
-        <h1>Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+        <h1>Inspírate, busca, guarda, y crea<br>los mejores <span>GIFOS</span></h1>
       </div>
       <div class="welcomeIlustration-wrapper">
         <img
-          class="welcomeIlustration-img"
+          id="welcomeIlustration-img"
           src="assets/-2.mainSectionAssets/ilustration-home.svg"
           alt="Personas saludando."
         />
       </div>
-      <div class="searchBar-container">
-        <div class="searchBar-wrapper">
-                    <!--Check which fit best. if type="search" or "text"-->
-          <input id="" class="" type="search" name="searchGifs" placeholder="Busca GIFOS y más...">
+      <div class="flexContainer searchBar-container">
+        <div class="flexContainer searchBar-wrapper">
+          <img id="searchButton-searchBar" class="visibility-hidden"src="assets/-2.mainSectionAssets/0.searchAssets/button-search.svg" alt="Enter search">
+          <input id="searchBar" type="text" name="searchGifs" placeholder="Busca GIFOS y más...">
+          <img id="searchIcon-searchBar" class="display-block" src="assets/-2.mainSectionAssets/0.searchAssets/icon-search.svg" alt="Search">
+          <img id="closeButton-searchBar" class="display-none" src="assets/icon-close.svg" alt="Close search">
         </div>
-          <!-- <img class="" src="assets/-2.mainSectionAssets/0.searchAssets/icon-search.svg" alt=""> or SVG? -->
         </div>
       </div>
       <div class="flexContainer trendingSuggestions-wrapper">
@@ -79,7 +80,7 @@
     <!-- TOP SECTION ends -->
 
     <!-- TRENDING SECTIONS -->
-    <section class="flexContainer trendingSection-container trending-wrapper">
+    <!-- <section class="flexContainer trendingSection-container trending-wrapper">
       <div class="trendingTitle-wrapper">
         <h2>Trending GIFOS</h2>
         <p>Mira los últimos GIFO de nuestra comunidad.</p>
@@ -89,33 +90,30 @@
         <div class="flexContainer trendingGifosSlider-wrapper"></div>
         <div class="trendingRightButtonSlider"></div>
       </div>
-    </section>
+    </section> -->
     <!-- TRENDING SECTION ends -->
 
   </main>
   <!-- MAIN ends -->
 
   <!-- FOOTER -->
-  <footer class='flexContainer'>
+  <!-- <footer class='flexContainer'>
     <div class="flexContainer socialMedia-wrapper">
       <p>Compartir en: </p>
       <a href="http://instagram.com" target="blank">
         <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_normal.svg" alt="">
-        <!-- <i class="fab fa-instagram"></i> -->
       </a>
       <a href="https://twitter.com" target="blank">
         <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_normal.svg" alt="">
-        <!-- <i class="fab fa-twitter"></i> -->
       </a>
       <a href="https://www.facebook.com" target="blank">
         <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_normal.svg" alt="">
-        <!-- <i class="fab fa-facebook-f"></i> -->
       </a>
     </div>
     <div class="flexContainer allRights-wrapper">
       <p>© GIFOS 2020 All Rights Reserved.</p>
     </div>
-  </footer>
+  </footer> -->
   <!-- FOOTER ends -->
   
   <!-- Scripts Section -->

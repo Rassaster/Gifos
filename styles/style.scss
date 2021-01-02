@@ -26,7 +26,7 @@
 // 1-base
 @import '1-base/2-variables';
 @import '1-base/3-global';
-@import '1-base/4-mixinsVariables';
+@import '1-base/4-mixins';
 
 
 // 2-layout
@@ -36,8 +36,9 @@
 
 // 3-sections
 @import '3-sections/1-logo';
-@import '3-sections/2-nav'
-
+@import '3-sections/2-nav';
+@import '3-sections/3-welcome';
+@import '3-sections/4-search';
 
 // 4-darkMode
 // @import '4-darkMode';

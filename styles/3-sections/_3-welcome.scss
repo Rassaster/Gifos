@@ -1,0 +1,24 @@
+.welcomeMessage-wrapper {
+  margin-top: 76px;
+  min-width: 600px;
+  width: 64.861111vw; // =934px/1440px
+}
+.welcomeMessage-wrapper h1 {
+  text-align: center;
+  font-size: 2.4305556vw; // =35px/1440px
+  font-family: $strongTitles-font;
+  color: $mainLM-color; 
+}
+.welcomeMessage-wrapper h1 span {
+  color: $tertiaryLM-color;
+}
+.welcomeIlustration-wrapper {
+  margin-top: 24px;
+  margin-bottom: -3px;
+  min-width: 399px;
+  width: 27.708333vw; // =399px/1440px
+}
+.welcomeIlustration-wrapper img {
+  width: 100%;
+  height: 100%;
+}
