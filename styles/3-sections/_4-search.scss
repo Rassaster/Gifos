@@ -35,7 +35,6 @@
 .trendingSuggestions-wrapper {
   width: 100vw;
   margin-top: 73px;
-  margin-bottom: 95px;
   @include flexContainerConfig(column, nowrap, center, center);
 }
 .trendingSuggestions-wrapper h4 {
