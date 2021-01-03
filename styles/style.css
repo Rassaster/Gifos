@@ -70,6 +70,8 @@ table {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
 }
 
 *::-webkit-scrollbar {
@@ -136,9 +138,8 @@ main {
 .topSection-container {
   height: auto;
   margin-bottom: 95px;
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
   scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .welcomeSearch-wrapper {
@@ -157,9 +158,8 @@ main {
 .trendingSection-container {
   height: auto;
   background-color: #F3F5F8;
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
   scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 #anchorHome {
