@@ -1,0 +1,23 @@
+.socialMedia-wrapper {
+  min-width: 200px;
+  width: 13.888889vw; // =200px/1440px
+  margin-left: 10.833333vw; // =156px/1440px
+  @include flexContainerConfig(row, nowrap, space-between, center);
+  p {
+    @include footerText;
+  }
+  a {
+    width: 18px;
+    height: 18px;
+    img {
+      width: 100%; // of parent
+      height: 100%; // of parent
+    }
+  }
+}
+.allRights-wrapper {
+  margin-right: 10.833333vw; // =156px/1440px
+  p {
+    @include footerText;
+  }
+}

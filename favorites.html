@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gifos - Gifos Favoritos</title>
-
   <!-- FONTAWSOME: -->
   <script src="https://kit.fontawesome.com/168b45207e.js" crossorigin="anonymous"></script>
   <!-- CSS Styling: -->
@@ -12,9 +11,7 @@
   <!-- Favicon: -->
   <link rel="shortcut icon" href="assets/-1.headerSectionAssets/logoGifos.svg" type="image/svg+xml">
 </head>
-
 <body>
-
   <!-- HEADER -->
   <header class='flexContainer'>
     <!-- LOGO -->
@@ -27,7 +24,6 @@
       />
     </a>
     <!-- LOGO ends -->
-
     <!-- NAVIGTAION MENU -->
     <nav>
       <ul class='flexContainer'>
@@ -44,54 +40,111 @@
       </ul>
     </nav>
     <!-- NAVIGTAION MENU ends -->
-
   </header>
   <!-- HEADER ends -->
-
   <!-- MAIN -->
   <main>
-
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container">
     </section>
     <!-- TOP SECTION ends -->
 
-    <!-- TRENDING SECTIONS -->
-    <section class="flexContainer trendingSection-container trending-wrapper">
-      <div class="trendingTitle-wrapper">
-        <h2>Trending GIFOS</h2>
-        <p>Mira los últimos GIFO de nuestra comunidad.</p>
-      </div>
-      <div class="flexContainer trendingSlider-container">
-        <div class="trendingLeftButtonSlider"></div>
-        <div class="flexContainer trendingGifosSlider-wrapper"></div>
-        <div class="trendingRightButtonSlider"></div>
-      </div>
-    </section>
-    <!-- TRENDING SECTION ends -->
 
-  </main>
-  <!-- MAIN ends -->
-
-  <!-- FOOTER -->
-  <footer class='flexContainer'>
-    <div class="flexContainer socialMedia-wrapper">
-      <p>Compartir en: </p>
-      <a href="http://instagram.com" target="blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://twitter.com" target="blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.facebook.com" target="blank">
-        <i class="fab fa-instagram"></i>
-      </a>
+<!-- TRENDING SECTION -->
+<section class="flexContainer trendingSection-container">
+  <div class="trendingTitle-wrapper">
+    <h2>Trending GIFOS</h2>
+    <p>Mira los últimos GIFO de nuestra comunidad.</p>
+  </div>
+  <!-- Trending Slider starts -->
+  <div class="flexContainer trendingSlider-container">
+    <!-- Slider Left Button starts -->
+    <div id="trendingLefttButtonSlider" class="trendingSliderButton">
+      <!-- Left Button Normal -->
+      <img class="visibility-visible" src="assets/-0.generalButtons/button-sliderLeft_normal.svg" alt="Trending left slider">
+      <!-- Left Button Hover -->
+      <img class="visibility-hidden" src="assets/-0.generalButtons/button-sliderLeft_hover.svg" alt="Trending left slider">
     </div>
-    <div class="flexContainer allRights-wrapper">
-      <p>© GIFOS 2020 All Rights Reserved.</p>
+    <!-- Slider Left Button ends -->
+    <!-- Slider x3 Cards starts -->
+    <div class="flexContainer trendingGifosSlider-wrapper">
+      <div class="trendingGifoCard">
+        <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+          <div class="flexContainer socialTrendingCards-wrapper">
+            <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+          </div>
+          <div class="flexContainer userTitleTrengingCards-wrapper">
+            <h4 id="userTrendingCard">User</h4>
+            <h4 id="titleTrendingCard">Título GIFO</h4>
+          </div>
+        </div>
+      </div>
+      <div class="trendingGifoCard">
+        <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+          <div class="flexContainer socialTrendingCards-wrapper">
+            <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+          </div>
+          <div class="flexContainer userTitleTrengingCards-wrapper">
+            <h4 id="userTrendingCard">User</h4>
+            <h4 id="titleTrendingCard">Título GIFO</h4>
+          </div>
+        </div>
+      </div>
+      <div class="trendingGifoCard">
+        <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+          <div class="flexContainer socialTrendingCards-wrapper">
+            <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+            <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+          </div>
+          <div class="flexContainer userTitleTrengingCards-wrapper">
+            <h4 id="userTrendingCard">User</h4>
+            <h4 id="titleTrendingCard">Título GIFO</h4>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-  <!-- FOOTER ends -->
+    <!-- Slider x3 Cards ends -->
+    <!-- Slider Right Button starts -->
+    <div id="trendingRightButtonSlider" class="trendingSliderButton">
+      <!-- Right Button Normal -->
+      <img class="visibility-visible" src="assets/-0.generalButtons/button-sliderRight_normal.svg" alt="Trending right slider">
+      <!-- Right Button Hover -->
+      <img class="visibility-hidden" src="assets/-0.generalButtons/button-sliderRight_hover.svg" alt="Trending right slider">
+    </div>
+    <!-- Slider Right Button ends -->
+  </div>
+  <!-- Trending Slider ends -->
+</section>
+<!-- TRENDING SECTION ends -->
+</main>
+<!-- MAIN ends -->
+<!-- FOOTER -->
+<footer class='flexContainer'>
+<div class="flexContainer socialMedia-wrapper">
+  <p>Compartir en: </p>
+  <a href="https://www.facebook.com" target="blank">
+    <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_normal.svg" alt="Facebook link">
+    <img class="display-none" src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_hover.svg" alt="Facebook link">
+  </a>
+  <a href="https://twitter.com" target="blank">
+    <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_normal.svg" alt="Twitter Link">
+    <img class="display-none" src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_hover.svg" alt="Twitter Link">
+  </a>
+  <a href="http://instagram.com" target="blank">
+    <img src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_normal.svg" alt="Instagram Link">
+    <img class="display-none" src="assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_hover.svg" alt="Instagram Link">
+  </a>
+</div>
+<div class="flexContainer allRights-wrapper">
+  <p>© GIFOS 2020 All Rights Reserved.</p>
+</div>
+</footer>
+<!-- FOOTER ends -->
   
   <!-- Scripts Section -->
   <!-- Pending: link with .js -->
