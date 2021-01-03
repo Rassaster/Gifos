@@ -1,0 +1,84 @@
+.trendingSection-container {
+  @include flexContainerConfig(column, nowrap, center, center);
+}
+.trendingTitle-wrapper {
+  margin-top: 67px;
+  text-align: center;
+}
+.trendingTitle-wrapper h2 {
+  @include trendingSubtitle;
+  font-size: calc(24px + 0.069444444vw); // =24px+(1px/1440px)
+  line-height: 30px;
+}
+.trendingTitle-wrapper p {
+  margin-top: 12px;
+  font-size: calc(16px + 0.13888889vw); // =14px+(2px/1440px)
+  font-family: $regularContent-font;
+  color: $quinaryLM-color;
+}
+.trendingSlider-container {
+  width: 100vw;
+  margin-top: 54px;
+  margin-bottom: 182px;
+  @include flexContainerConfig(row, nowrap, space-between, center);
+}
+.trendingGifosSlider-wrapper {
+  @include flexContainerConfig(row, nowrap, center, center);
+}
+.trendingGifoCard {
+  width: 24.791667vw; // =357px/1440px
+  height: 19.097222vw; // =275px/1440px
+  margin-right: 0.83333333vw; // =12px/1440px
+  margin-left: 0.83333333vw; // =12px/1440px
+  border: 1px solid violet;
+}
+.trendingGifoCard-overlay {
+  width: 100%;
+  height: 100%;
+  @include trendingCardssOverlay;
+  @include flexContainerConfig(column, nowrap, space-between, flex-start);
+}
+.socialTrendingCards-wrapper {
+  width: 100%; // of parent
+  height: auto;
+  @include flexContainerConfig(row, nowrap, flex-end, center);
+}
+.socialTrendingCards-wrapper img{
+  margin-top: 2.8011204%; // =10px/357px (of parent)
+  margin-right: 2.8011204%; // =10px/357px (of parent)
+  width: 8.9635854%; // =32px/357px (of parent)
+}
+.userTitleTrengingCards-wrapper {
+  width: 100%;
+  margin-left: 16px;
+  margin-bottom: 50px;
+  color: $secondaryLM-color;
+  @include flexContainerConfig(column, nowrap, center, flex-start);
+}
+#userTrendingCard{
+  margin-bottom: 5px;
+  font-family: $regularContent-font;
+  font-size: 1.0416667vw; // =15px/1440px
+}
+#titleTrendingCard{
+  font-family: $strongContent-font;
+  font-size: 1.1111111vw; // =16px/1440px
+}
+  .trendingSliderButton {
+  min-width: 38px;
+  width: 2.7777778vw; // =40px/1440
+  min-height: 38px;
+  height: 2.7777778vw; // =40px/1440
+}
+.trendingSliderButton img {
+  width: 100%; // of parent
+  height: 100%; // of parent
+}
+#trendingLefttButtonSlider {
+  margin-left: 6.5277778vw; // =94px/1440px
+  margin-right: 0.83333333vw; // =12px/1440px
+}
+#trendingRightButtonSlider {
+  margin-left: 0.83333333vw; // =12px/1440px
+  margin-right: 6.5277778vw; // =94px/1440px
+}

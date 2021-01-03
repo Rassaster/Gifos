@@ -65,29 +65,75 @@
       </div>
       <div class="flexContainer searchBar-container">
         <div class="flexContainer searchBar-wrapper">
-          <img id="searchButton-searchBar" class="visibility-hidden" src="assets/-2.mainSectionAssets/0.searchAssets/button-search.svg" alt="Enter search">
+          <img id="searchButton-searchBar" class="visibility-visible" src="assets/-2.mainSectionAssets/0.searchAssets/button-search.svg" alt="Enter search">
           <input id="searchBar" type="text" name="searchGifs" placeholder="Busca GIFOS y más...">
           <img id="searchIcon-searchBar" class="display-block" src="assets/-2.mainSectionAssets/0.searchAssets/icon-search.svg" alt="Search">
           <img id="closeButton-searchBar" class="display-none" src="assets/icon-close.svg" alt="Close search">
         </div>
       </div>
       <div class="flexContainer trendingSuggestions-wrapper">
-        <h4>Trending:</h4>
+        <h3>Trending:</h3>
         <p>Reactions, Enterntainment, Sports, Stickers, Artists</p>
       </div>
     </section>
     <!-- TOP SECTION ends -->
 
     <!-- TRENDING SECTIONS -->
-    <section class="flexContainer trendingSection-container trending-wrapper">
+    <section class="flexContainer trendingSection-container">
       <div class="trendingTitle-wrapper">
         <h2>Trending GIFOS</h2>
         <p>Mira los últimos GIFO de nuestra comunidad.</p>
       </div>
       <div class="flexContainer trendingSlider-container">
-        <div class="trendingLeftButtonSlider"></div>
-        <div class="flexContainer trendingGifosSlider-wrapper"></div>
-        <div class="trendingRightButtonSlider"></div>
+        <div id="trendingLefttButtonSlider" class="trendingSliderButton">
+          <img class="visibility-visible" src="assets/-0.generalButtons/button-sliderLeft_normal.svg" alt="Trending left slider">
+          <img class="visibility-hidden" src="assets/-0.generalButtons/button-sliderLeft_hover.svg" alt="Trending left slider">
+        </div>
+        <div class="flexContainer trendingGifosSlider-wrapper">
+          <div class="trendingGifoCard">
+            <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+              <div class="flexContainer socialTrendingCards-wrapper">
+                <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+              </div>
+              <div class="flexContainer userTitleTrengingCards-wrapper">
+                <h4 id="userTrendingCard">User</h4>
+                <h4 id="titleTrendingCard">Título GIFO</h4>
+              </div>
+            </div>
+          </div>
+          <div class="trendingGifoCard">
+            <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+              <div class="flexContainer socialTrendingCards-wrapper">
+                <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+              </div>
+              <div class="flexContainer userTitleTrengingCards-wrapper">
+                <h4 id="userTrendingCard">User</h4>
+                <h4 id="titleTrendingCard">Título GIFO</h4>
+              </div>
+            </div>
+          </div>
+          <div class="trendingGifoCard">
+            <div class="visibility-hidden flexContainer trendingGifoCard-overlay">
+              <div class="flexContainer socialTrendingCards-wrapper">
+                <img src="assets/-0.generalCardAssets/icon-fav_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-trash_normal.svg" alt="">
+                <img src="assets/-0.generalCardAssets/icon-max_normal.svg" alt="">
+              </div>
+              <div class="flexContainer userTitleTrengingCards-wrapper">
+                <h4 id="userTrendingCard">User</h4>
+                <h4 id="titleTrendingCard">Título GIFO</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="trendingRightButtonSlider" class="trendingSliderButton">
+          <img class="visibility-visible" src="assets/-0.generalButtons/button-sliderRight_normal.svg" alt="Trending right slider">
+          <img class="visibility-hidden" src="assets/-0.generalButtons/button-sliderRight_hover.svg" alt="Trending right slider">
+        </div>
       </div>
     </section>
     <!-- TRENDING SECTION ends -->

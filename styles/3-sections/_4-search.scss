@@ -16,6 +16,9 @@
 #searchBar {
   border: none;
   width: 85.480944%; // =(551px-80px)/1440px
+  margin-left: 5px;
+  font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)
+  font-family: $regularContent-font;
   &:focus{
     outline: none;
   }
@@ -34,18 +37,16 @@
 }
 .trendingSuggestions-wrapper {
   width: 100vw;
+  height: auto;
   margin-top: 73px;
   @include flexContainerConfig(column, nowrap, center, center);
 }
-.trendingSuggestions-wrapper h4 {
-  font-size: 1.25vw; // =18px/1440px
-  font-family: $strongTitles-font;
-  color: $mainLM-color;
+.trendingSuggestions-wrapper h3 {
+  @include trendingSubtitle;
 }
-
 .trendingSuggestions-wrapper p {
   margin-top: 7px;
-  font-size: 1.1111111vw; // =16px/1440px
+  font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)
   font-family: $mediumTitles-font;
   color: $mainLM-color;
 }
