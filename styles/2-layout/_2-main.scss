@@ -6,8 +6,6 @@ main {
 .topSection-container {
   height: auto;
   margin-bottom: 95px;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
 .welcomeSearch-wrapper {
   @include flexContainerConfig(column, nowrap, center, center)
@@ -15,6 +13,4 @@ main {
 .trendingSection-container {
   height: auto;
   background-color: $trending-bg-color;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
 }
