@@ -10,9 +10,18 @@
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  background-position: center;
+  background-size: cover;
+  background-color: unset;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
+
 }
 .flexContainer {
   display: flex;
@@ -34,4 +43,7 @@ a {
 }
 .display-inline{
   display: inline;
+}
+.active-page {
+  color: $quaternaryLM-color;
 }

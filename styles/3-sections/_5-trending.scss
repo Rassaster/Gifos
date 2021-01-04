@@ -43,10 +43,31 @@
   height: auto;
   @include flexContainerConfig(row, nowrap, flex-end, center);
 }
-.socialTrendingCards-wrapper img{
+.trendingCardsButton {
   margin-top: 2.8011204%; // =10px/357px (of parent)
   margin-right: 2.8011204%; // =10px/357px (of parent)
-  width: 8.9635854%; // =32px/357px (of parent)
+  width: 2.2222222vw; // =32px/1440px 
+  height: 2.2222222vw; // =32px/1440px 
+  background-size: 2.2222222vw 2.2222222vw;
+  background-size: cover;
+}
+.trendingCardsFavButton {
+  background-image: url(../assets/-0.generalCardAssets/icon-fav_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalCardAssets/icon-fav_hover.svg);
+  }
+}
+.trendingCardsDownloadButton {
+  background-image: url(../assets/-0.generalCardAssets/icon-download_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalCardAssets/icon-download_hover.svg);
+  }
+}
+.trendingCardsMaxButton {
+  background-image: url(../assets/-0.generalCardAssets/icon-max_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalCardAssets/icon-max_hover.svg);
+  }
 }
 .userTitleTrengingCards-wrapper {
   width: 100%;
@@ -55,30 +76,34 @@
   color: $secondaryLM-color;
   @include flexContainerConfig(column, nowrap, center, flex-start);
 }
-#userTrendingCard{
+.userTrendingCard{
   margin-bottom: 5px;
   font-family: $regularContent-font;
   font-size: 1.0416667vw; // =15px/1440px
 }
-#titleTrendingCard{
+.titleTrendingCard{
   font-family: $strongContent-font;
   font-size: 1.1111111vw; // =16px/1440px
 }
-  .trendingSliderButton {
+.trendingSliderButton {
   min-width: 38px;
   width: 2.7777778vw; // =40px/1440
   min-height: 38px;
   height: 2.7777778vw; // =40px/1440
 }
-.trendingSliderButton img {
-  width: 100%; // of parent
-  height: 100%; // of parent
-}
 #trendingLefttButtonSlider {
   margin-left: 6.5277778vw; // =94px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
+  background-image: url(../assets/-0.generalButtons/button-sliderLeft_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalButtons/button-sliderLeft_hover.svg);
+  }
 }
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw; // =12px/1440px
   margin-right: 6.5277778vw; // =94px/1440px
+  background-image: url(../assets/-0.generalButtons/button-sliderRight_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalButtons/button-sliderRight_hover.svg);
+  }
 }

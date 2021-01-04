@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gifos - Crea tus Gifos</title>
-
+  <title>Gifos - Home Page</title>
   <!-- FONTAWSOME: -->
   <script src="https://kit.fontawesome.com/168b45207e.js" crossorigin="anonymous"></script>
   <!-- CSS Styling: -->
@@ -12,9 +11,7 @@
   <!-- Favicon: -->
   <link rel="shortcut icon" href="assets/-1.headerSectionAssets/logoGifos.svg" type="image/svg+xml">
 </head>
-
 <body>
-
   <!-- HEADER -->
   <header class='flexContainer'>
     <!-- LOGO -->
@@ -22,70 +19,39 @@
       <img 
         id="logoHeader"
         src="assets/-1.headerSectionAssets/logoGifos.svg" 
-        alt="Gifos' Logo"
-        title="Gifos' Logo"
+        alt="Logo de Gifos"
+        title="Logo de Gifos"
       />
     </a>
     <!-- LOGO ends -->
-
     <!-- NAVIGTAION MENU -->
     <nav>
       <ul class='flexContainer'>
         <li><a class="nav-anchor" href="#">MODO NOCTURNO</a></li>
         <li><a class="nav-anchor" href="favorites.html">FAVORITOS</a></li>
         <li><a class="nav-anchor" href="myGifos.html">MIS GIFOS</a></li>
-        <li><a  class="nav-anchor" href="createGifos.html">
-          <img
-            id="createGifButton-img"
-            src="assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_normal.svg" 
-            alt="Crea tus Gifos"
-          />
-        </a></li>
+        <li><a id="createGifoLink" class="nav-anchor" href="createGifos.html" title="Crea tus Gifos"></a></li>
       </ul>
     </nav>
     <!-- NAVIGTAION MENU ends -->
-
   </header>
   <!-- HEADER ends -->
 
   <!-- MAIN -->
   <main>
-
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container">
     </section>
     <!-- TOP SECTION ends -->
-
-    <!-- TRENDING SECTIONS -->
-    <section class="flexContainer trendingSection-container trending-wrapper">
-      <div class="trendingTitle-wrapper">
-        <h2>Trending GIFOS</h2>
-        <p>Mira los últimos GIFO de nuestra comunidad.</p>
-      </div>
-      <div class="flexContainer trendingSlider-container">
-        <div class="trendingLeftButtonSlider"></div>
-        <div class="flexContainer trendingGifosSlider-wrapper"></div>
-        <div class="trendingRightButtonSlider"></div>
-      </div>
-    </section>
-    <!-- TRENDING SECTION ends -->
-
   </main>
   <!-- MAIN ends -->
-
   <!-- FOOTER -->
   <footer class='flexContainer'>
     <div class="flexContainer socialMedia-wrapper">
       <p>Compartir en: </p>
-      <a href="http://instagram.com" target="blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://twitter.com" target="blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://www.facebook.com" target="blank">
-        <i class="fab fa-instagram"></i>
-      </a>
+      <a id="facebookLink" href="https://www.facebook.com" target="blank"></a>
+      <a id="twitterLink" href="https://twitter.com" target="blank"></a>
+      <a id="instagramLink" href="http://instagram.com" target="blank"></a>
     </div>
     <div class="flexContainer allRights-wrapper">
       <p>© GIFOS 2020 All Rights Reserved.</p>

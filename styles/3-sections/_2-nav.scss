@@ -13,12 +13,27 @@ nav ul {
   font-size: calc(11px + 0.13888889vw); // =11px + (2px/1440px)
   font-family: $strongTitles-font;
   color: $mainLM-color;
+  &:hover {
+    text-decoration: underline $tertiaryLM-color 2px;
+  }
+  &:active {
+    color: $quaternaryLM-color;
+  }
 }
-#createGifButton-img {
+#createGifoLink {
+  display: block;
   min-width: 50px;
   width: 3.75vw; // =54px/1440px
   max-width: 60px;
   min-height: 50px;
   height: 3.75vw; // =54px/1440px
   max-height: 60px;
+  background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_normal.svg);
+  &:hover{
+    background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_hover.svg);
+  }
+  &:active {
+    background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_active.svg);
+  }
 }
+
