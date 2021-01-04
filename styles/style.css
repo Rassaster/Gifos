@@ -95,6 +95,16 @@ a {
   display: flex;
 }
 
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.active-page {
+  color: #9cafc3;
+}
+
 .visibility-hidden {
   visibility: hidden;
 }
@@ -113,10 +123,6 @@ a {
 
 .display-inline {
   display: inline;
-}
-
-.active-page {
-  color: #9cafc3;
 }
 
 header {
