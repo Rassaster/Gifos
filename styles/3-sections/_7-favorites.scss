@@ -1,0 +1,40 @@
+// ***************************************************************************************
+// ******************MY FAVORITES SECTION GLOBALS*****************************************
+// ***************************************************************************************
+.myFav-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 12px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+}
+// ***************************************************************************************
+// ******************MY FAVORITES TITLE***************************************************
+// ***************************************************************************************
+.myFavTitle-wrapper {
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+  img {
+    min-width: 30px;
+    width: 2.0833333vw; // =30px/1440px
+    min-height: 22px;
+    height: 1.5277778vw; // =22px/1440px
+  }
+  h2 {
+    margin-top: 8px;
+    @include sectionsSusbtitle;
+  }
+}
+// ***************************************************************************************
+// ******************MY FAVORITES GRID****************************************************
+// ***************************************************************************************
+.myFavGrid-wrapper{
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, flex-start, center);
+}
+.myFavGrid {
+  @include gifsGridContainer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -827,4 +827,77 @@ nav ul {
   font-family: "Roboto-Regular", sans-serif;
   color: #000000;
 }
+
+.myFav-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myFavTitle-wrapper {
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myFavTitle-wrapper img {
+  min-width: 30px;
+  width: 2.0833333vw;
+  min-height: 22px;
+  height: 1.5277778vw;
+}
+
+.myFavTitle-wrapper h2 {
+  margin-top: 8px;
+  font-size: calc(20px + 0.69444444vw);
+  line-height: 30px;
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #572EE5;
+}
+
+.myFavGrid-wrapper {
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myFavGrid {
+  margin-top: 50px;
+  -ms-grid-columns: (18.05556vw)[4];
+      grid-template-columns: repeat(4, 18.05556vw);
+  -ms-grid-rows: (13.88889vw)[1];
+      grid-template-rows: repeat(1, 13.88889vw);
+  gap: 2.0833333vw 2.0833333vw;
+}
+
+.myFavGrid img {
+  width: 100%;
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */
