@@ -41,22 +41,24 @@
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container welcomeSearch-wrapper">
       <!-- Welcome starts -->
-      <div class="welcomeMessage-wrapper">
-        <h1>Inspírate, busca, guarda, y crea<br>los mejores <span>GIFOS</span></h1>
-      </div>
-      <div class="welcomeIlustration-wrapper">
-        <img
-          id="welcomeIlustration-img"
-          src="assets/-2.mainSectionAssets/ilustration-home.svg"
-          alt="Personas saludando."
-        />
+      <div class="flexContainer welcome-container">
+        <div class="welcomeMessage-wrapper">
+          <h1>Inspírate, busca, guarda, y crea<br>los mejores <span>GIFOS</span></h1>
+        </div>
+        <div class="welcomeIlustration-wrapper">
+          <img
+            id="welcomeIlustration-img"
+            src="assets/-2.mainSectionAssets/ilustration-home.svg"
+            alt="Personas saludando."
+          />
+        </div>
       </div>
       <!-- Welcome ends -->
       <!-- Search starts -->
       <div class="flexContainer searchBar-container">
           <!-- Search Bar starts -->
         <div class="flexContainer searchBar-wrapper">
-          <button id="searchButton-searchBar" class="visibility-visible" title="Buscar"></button> 
+          <button id="searchButton-searchBar" class="visibility-hidden" title="Buscar"></button> 
           <input id="searchBar" type="text" name="searchGifs" placeholder="Busca GIFOS y más...">
           <button id="searchIcon-searchBar" title="Buscar"></button>
           <button id="closeButton-searchBar" class="display-none" title="Cerrar búsqueda"></button>
@@ -83,10 +85,36 @@
         <!-- Search Suggestions ends -->
       </div>
       <!-- Search ends -->
+      <!-- Trending Suggestions starts -->
       <div class="flexContainer trendingSuggestions-wrapper">
         <h3>Trending:</h3>
         <p>Reactions, Enterntainment, Sports, Stickers, Artists</p>
       </div>
+      <!-- Trending Suggestions ends -->
+      <!-- Results Section starts -->
+      <div class="flexContainer results-container">
+        <div class="flexContainer resultItem-wrapper">
+          <p id="resultItem">Lorem Ipsum</p>
+        </div>
+        <!-- Grid Results starts -->
+        <div class="flexContainer searchResultsGrid-wrapper">
+          <div class="gridContainer resultsGrid">
+            <img src="https://source.unsplash.com/random" alt="sad">
+            <img src="https://source.unsplash.com/random" alt="">
+            <img src="https://source.unsplash.com/random" alt="">
+            <img src="https://source.unsplash.com/random" alt="">
+          </div>
+          <button id="searchVerMasButton" class="buttonVerMas" title="Ver más gifos"></button>
+        </div>
+        <!-- Grid Results ends -->
+        <!-- No Results starts -->
+        <div class="flexContainer noResults-wrapper display-none">
+          <img src="assets/-2.mainSectionAssets/0.searchAssets/icon-search-noResults.svg" alt="Búsqueda sin resultados." title="Búsqueda sin resultados.">
+          <p>Intenta con otra búsqueda.</p>
+        </div>
+        <!-- No Results ends -->
+      </div>
+      <!-- Results Secttion ends -->
     </section>
     <!-- TOP SECTION ends -->
     <!-- TRENDING SECTION -->

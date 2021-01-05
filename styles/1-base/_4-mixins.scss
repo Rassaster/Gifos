@@ -10,6 +10,12 @@
   font-family: $strongTitles-font;
   color: $mainLM-color;
 }
+@mixin sectionsSusbtitle {
+font-size: calc(20px + 0.69444444vw); // =20px + (10px/1440px);
+line-height: 30px;
+font-family: $strongTitles-font;
+color: $mainLM-color;
+}
 @mixin trendingCardssOverlay {
   width: 100%;
   height: 100%;
@@ -19,4 +25,20 @@
   font-size: calc(11px + 0.13888889vw); // =11px + (2px/1440px)
   font-family: $regularContent-font;
   color: $quinaryLM-color;
+}
+@mixin gifsGridContainer {
+  margin-top: 50px;
+  grid-template-columns: repeat(4, 18.055556vw) ; // =260px/1440px
+  grid-template-rows: repeat(1, 13.888889vw); // =200px/1440px
+  gap: 2.0833333vw 2.0833333vw ; // =30px/1440px
+}
+@mixin verMasButton {
+  width: 8.8194444vw; // =127px/1440px
+  height: 3.4722222vw; // =50px/1440px
+  margin-top: 80px;
+  background-size: 8.8194444vw 3.4722222vw;
+  background-image: url(../assets/-0.generalButtons/button-verMas_normal.svg);
+  &:hover{
+    background-image: url(../assets/-0.generalButtons/button-verMas_hover.svg);
+  }
 }

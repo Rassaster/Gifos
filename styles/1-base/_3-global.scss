@@ -15,6 +15,7 @@
   background-position: center;
   background-size: cover;
   background-color: unset;
+  background-repeat: no-repeat;
 }
 button {
   border: none;
@@ -32,6 +33,9 @@ a {
 // ********************************
 .flexContainer {
   display: flex;
+}
+.gridContainer {
+  display: grid;
 }
 .active-page {
   color: $quaternaryLM-color;
