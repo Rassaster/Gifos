@@ -141,18 +141,5 @@
 .noResults-wrapper {
   margin-bottom: 55px;
   @include flexContainerConfig(column, nowrap, space-between, center);
-  img {
-    min-width: 140px;
-    width: 10.416667vw; // =150px/1440px
-    min-height: 140px;
-    height: 10.416667vw; // =150px/1440px
-    margin-top: 110px;
-  }
-  p {
-    margin-top: 29px;
-    font-size: calc(20px + 0.13888889vw); // =10px+(2px/1440px)
-    line-height: 25px;
-    font-family: $strongTitles-font;
-    color: $tertiaryLM-color;
-  }
+  @include noSearchNoFavNoGifos;
 }

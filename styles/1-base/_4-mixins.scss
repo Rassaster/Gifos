@@ -4,6 +4,9 @@
   justify-content: $justify;
   align-items: $aligni;
 }
+@mixin activeAnchor {
+  color: $quaternaryLM-color;
+}
 @mixin trendingSubtitle {
   font-size: calc(17px + 0.069444444vw); // =17px+(1px/1440px)
   line-height: 25px;
@@ -42,6 +45,31 @@ color: $mainLM-color;
     background-image: url(../assets/-0.generalButtons/button-verMas_hover.svg);
   }
 }
-@mixin activeAnchor {
-  color: $quaternaryLM-color;
+@mixin myFavMyGifosHead {
+  img {
+    min-width: 40px;
+    width: 2.7777778vw; // =40px/1440px
+    min-height: 32px;
+    height: 2.2222222vw; // =32px/1440px
+  }
+  h2 {
+    margin-top: 16px;
+    @include sectionsSusbtitle;
+  }
+}
+@mixin noSearchNoFavNoGifos {
+  img {
+    min-width: 140px;
+    width: 10.416667vw; // =150px/1440px
+    min-height: 140px;
+    height: 10.416667vw; // =150px/1440px
+    margin-top: 110px;
+  }
+  p {
+    margin-top: 29px;
+    font-size: calc(20px + 0.13888889vw); // =10px+(2px/1440px)
+    line-height: 25px;
+    font-family: $strongTitles-font;
+    color: $tertiaryLM-color;
+  }
 }

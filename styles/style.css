@@ -859,14 +859,14 @@ nav ul {
 }
 
 .myFavTitle-wrapper img {
-  min-width: 30px;
-  width: 2.0833333vw;
-  min-height: 22px;
-  height: 1.5277778vw;
+  min-width: 40px;
+  width: 2.7777778vw;
+  min-height: 32px;
+  height: 2.2222222vw;
 }
 
 .myFavTitle-wrapper h2 {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: calc(20px + 0.69444444vw);
   line-height: 30px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -901,6 +901,36 @@ nav ul {
   height: 100%;
 }
 
+.noMyFav-wrapper {
+  margin-bottom: 45px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noMyFav-wrapper img {
+  min-width: 140px;
+  width: 10.416667vw;
+  min-height: 140px;
+  height: 10.416667vw;
+  margin-top: 110px;
+}
+
+.noMyFav-wrapper p {
+  margin-top: 29px;
+  font-size: calc(20px + 0.13888889vw);
+  line-height: 25px;
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #5ED7C6;
+}
+
 .myGifos-container {
   width: 100vw;
   height: auto;
@@ -932,14 +962,14 @@ nav ul {
 }
 
 .myGifosTitle-wrapper img {
-  min-width: 30px;
-  width: 2.0833333vw;
-  min-height: 22px;
-  height: 1.5277778vw;
+  min-width: 40px;
+  width: 2.7777778vw;
+  min-height: 32px;
+  height: 2.2222222vw;
 }
 
 .myGifosTitle-wrapper h2 {
-  margin-top: 8px;
+  margin-top: 16px;
   font-size: calc(20px + 0.69444444vw);
   line-height: 30px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -972,5 +1002,35 @@ nav ul {
 .myGifosGrid img {
   width: 100%;
   height: 100%;
+}
+
+.noMyGifos-wrapper {
+  margin-bottom: 45px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noMyGifos-wrapper img {
+  min-width: 140px;
+  width: 10.416667vw;
+  min-height: 140px;
+  height: 10.416667vw;
+  margin-top: 110px;
+}
+
+.noMyGifos-wrapper p {
+  margin-top: 29px;
+  font-size: calc(20px + 0.13888889vw);
+  line-height: 25px;
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #5ED7C6;
 }
 /*# sourceMappingURL=style.css.map */
