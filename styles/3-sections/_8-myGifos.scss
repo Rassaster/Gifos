@@ -1,16 +1,16 @@
 // ***************************************************************************************
-// ******************MY FAVORITES SECTION GLOBALS*****************************************
+// ******************MY GIFOS SECTION GLOBALS*****************************************
 // ***************************************************************************************
-.myFav-container {
+.myGifos-container {
   width: 100vw;
   height: auto;
   margin-top: 12px;
   @include flexContainerConfig(column, nowrap, space-between, center);
 }
 // ***************************************************************************************
-// ******************MY FAVORITES TITLE***************************************************
+// ******************MY GIFOS TITLE***************************************************
 // ***************************************************************************************
-.myFavTitle-wrapper {
+.myGifosTitle-wrapper {
   width: 100vw;
   @include flexContainerConfig(column, nowrap, space-between, center);
   img {
@@ -25,13 +25,13 @@
   }
 }
 // ***************************************************************************************
-// ******************MY FAVORITES GRID****************************************************
+// ******************MY GIFOS GRID****************************************************
 // ***************************************************************************************
-.myFavGrid-wrapper{
+.myGifosGrid-wrapper{
   width: 100vw;
   @include flexContainerConfig(column, nowrap, flex-start, center);
 }
-.myFavGrid {
+.myGifosGrid {
   @include gifsGridContainer;
   img {
     width: 100%;
