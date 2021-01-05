@@ -107,10 +107,6 @@ a {
   display: grid;
 }
 
-.active-page {
-  color: #9cafc3;
-}
-
 .visibility-hidden {
   visibility: hidden;
 }
@@ -247,6 +243,10 @@ nav ul {
 }
 
 .nav-anchor:active {
+  color: #9cafc3;
+}
+
+.active-page {
   color: #9cafc3;
 }
 

@@ -42,3 +42,6 @@ color: $mainLM-color;
     background-image: url(../assets/-0.generalButtons/button-verMas_hover.svg);
   }
 }
+@mixin activeAnchor {
+  color: $quaternaryLM-color;
+}
