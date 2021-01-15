@@ -40,12 +40,40 @@ nav ul {
   min-height: 50px;
   height: 3.75vw; // =54px/1440px
   max-height: 60px;
-  background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_normal.svg);
-  &:hover{
-    background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_hover.svg);
+  .oval-createGifosBtn {
+    stroke: $mainLM-color;
+    fill: $secondaryLM-color;
   }
-  &:active {
-    background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-createGifs_active.svg);
+  .cross-createGifosBtn {
+    fill: $mainLM-color;
+  }
+  &:hover .oval-createGifosBtn {
+    stroke: $secondaryLM-color;
+    fill: $mainLM-color;
+  }
+  &:active .oval-createGifosBtn {
+    stroke: $secondaryLM-color;
+    fill: $quaternaryLM-color;
+  }
+  &:hover .cross-createGifosBtn{
+    fill: $secondaryLM-color;
+  }
+  &:active .cross-createGifosBtn{
+    fill: $secondaryLM-color;
+  }
+  #oval-createGifosBtnActive {
+    stroke: $quaternaryLM-color;
+    fill: $quaternaryLM-color;
+  }
+  #cross-createGifosBtnActive{
+    fill: $secondaryLM-color;
+  }
+  &:hover #oval-createGifosBtnActive {
+    stroke: $secondaryLM-color;
+    fill: $mainLM-color;
+  }
+  &:hover #cross-createGifosBtnActive{
+    fill: $secondaryLM-color;
   }
 }
 
