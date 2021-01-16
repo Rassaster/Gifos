@@ -565,19 +565,25 @@ nav ul {
   height: 3.4722222vw;
   margin-top: 80px;
   background-size: 8.8194444vw 3.4722222vw;
-  background-image: url(../assets/-0.generalButtons/button-verMas_normal.svg);
 }
 
-.buttonVerMas:hover {
-  background-image: url(../assets/-0.generalButtons/button-verMas_hover.svg);
+.buttonVerMas .rectangle-verMasBtn {
+  stroke: #572EE5;
+  fill: #FFFFFF;
 }
 
-.trendingCardsDownloadButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_normal.svg);
+.buttonVerMas .text-verMasBtn {
+  fill: #572EE5;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: calc(11px + 0.13888889vw);
 }
 
-.trendingCardsDownloadButton:hover {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_hover.svg);
+.buttonVerMas:hover .rectangle-verMasBtn {
+  fill: #572EE5;
+}
+
+.buttonVerMas:hover .text-verMasBtn {
+  fill: #FFFFFF;
 }
 
 .noResults-wrapper {

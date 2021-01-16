@@ -129,12 +129,6 @@
 .buttonVerMas {
   @include verMasButton;
 }
-.trendingCardsDownloadButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_normal.svg);
-  &:hover{
-    background-image: url(../assets/-0.generalCardAssets/icon-download_hover.svg);
-  }
-}
 // ***************************************************************************************
 // ******************NO RESULTS***********************************************************
 // ***************************************************************************************
