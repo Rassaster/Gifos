@@ -14,10 +14,8 @@
       color: $mainLM-color;
       font-size: 1.3888889vw; //=20px/1440px
     }
-    #instagramLink{
-      i {
+    .fa-instagram{
         font-size: 1.5277778vw; //=22px/1440px
-      }
     }
     &:hover i {
       color: $quaternaryLM-color;
