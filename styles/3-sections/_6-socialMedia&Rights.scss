@@ -7,27 +7,21 @@
     @include footerText;
   }
   a {
-    background-size: 18px 18px;
-    width: 18px;
-    height: 18px;
-  }
-}
-#facebookLink {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_normal.svg);
-  &:hover{
-    background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_hover.svg);
-  }
-}
-#twitterLink{
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_normal.svg);
-  &:hover{
-    background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_hover.svg);
-  }
-}
-#instagramLink{
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_normal.svg);
-  &:hover{
-    background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_hover.svg);
+    width: 1.3888889vw; //=20px/1440px
+    height: 1.3888889vw; //=20px/1440px
+    @include flexContainerConfig(row, nowrap, center, center);
+    i {
+      color: $mainLM-color;
+      font-size: 1.3888889vw; //=20px/1440px
+    }
+    #instagramLink{
+      i {
+        font-size: 1.5277778vw; //=22px/1440px
+      }
+    }
+    &:hover i {
+      color: $quaternaryLM-color;
+    }
   }
 }
 .allRights-wrapper {

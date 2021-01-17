@@ -835,33 +835,31 @@ nav ul {
 }
 
 .socialMedia-wrapper a {
-  background-size: 18px 18px;
-  width: 18px;
-  height: 18px;
+  width: 1.3888889vw;
+  height: 1.3888889vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#facebookLink {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_normal.svg);
+.socialMedia-wrapper a i {
+  color: #572EE5;
+  font-size: 1.3888889vw;
 }
 
-#facebookLink:hover {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-facebook_hover.svg);
+.socialMedia-wrapper a #instagramLink i {
+  font-size: 1.5277778vw;
 }
 
-#twitterLink {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_normal.svg);
-}
-
-#twitterLink:hover {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-twitter_hover.svg);
-}
-
-#instagramLink {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_normal.svg);
-}
-
-#instagramLink:hover {
-  background-image: url(../assets/-3.footerSectionAssets/0.socialMediaAssets/icon-instagram_hover.svg);
+.socialMedia-wrapper a:hover i {
+  color: #9cafc3;
 }
 
 .allRights-wrapper {
