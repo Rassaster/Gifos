@@ -38,16 +38,23 @@
 // ******************TRENDING CARD********************************************************
 // ***************************************************************************************
 .trendingGifoCard {
+  position: relative;
   width: 24.791667vw; // =357px/1440px
   height: 19.097222vw; // =275px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
   margin-left: 0.83333333vw; // =12px/1440px
   border: 1px solid violet;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 // ***************************************************************************************
 // ******************TRENDING CARD OVERLAY************************************************
 // ***************************************************************************************
 .trendingGifoCard-overlay {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   @include trendingCardssOverlay;
@@ -66,23 +73,8 @@
   background-size: 2.2222222vw 2.2222222vw;
   background-size: cover;
 }
-.trendingCardsFavButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-fav_normal.svg);
-  &:hover{
-    background-image: url(../assets/-0.generalCardAssets/icon-fav_hover.svg);
-  }
-}
-.trendingCardsDownloadButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_normal.svg);
-  &:hover{
-    background-image: url(../assets/-0.generalCardAssets/icon-download_hover.svg);
-  }
-}
-.trendingCardsMaxButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-max_normal.svg);
-  &:hover{
-    background-image: url(../assets/-0.generalCardAssets/icon-max_hover.svg);
-  }
+.trendingCardsFavButton, .trendingCardsDownloadButton, .trendingCardsMaxButton  {
+  @include cardButton;
 }
 .userTitleTrengingCards-wrapper {
   width: 100%;
@@ -120,14 +112,10 @@
     color: $secondaryLM-color;
   }
 }
-
 #trendingLefttButtonSlider {
   margin-left: 6.5277778vw; // =94px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
 }
-
-
-
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw; // =12px/1440px
   margin-right: 6.5277778vw; // =94px/1440px

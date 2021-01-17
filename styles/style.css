@@ -680,6 +680,7 @@ nav ul {
 }
 
 .trendingGifoCard {
+  position: relative;
   width: 24.791667vw;
   height: 19.097222vw;
   margin-right: 0.83333333vw;
@@ -687,7 +688,14 @@ nav ul {
   border: 1px solid violet;
 }
 
+.trendingGifoCard img {
+  width: 100%;
+  height: 100%;
+}
+
 .trendingGifoCard-overlay {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   width: 100%;
@@ -729,28 +737,23 @@ nav ul {
   background-size: cover;
 }
 
-.trendingCardsFavButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-fav_normal.svg);
+.trendingCardsFavButton svg, .trendingCardsDownloadButton svg, .trendingCardsMaxButton svg {
+  width: 100%;
+  height: 100%;
 }
 
-.trendingCardsFavButton:hover {
-  background-image: url(../assets/-0.generalCardAssets/icon-fav_hover.svg);
+.trendingCardsFavButton svg .rectangle-cardIconBtn, .trendingCardsDownloadButton svg .rectangle-cardIconBtn, .trendingCardsMaxButton svg .rectangle-cardIconBtn {
+  fill: #FFFFFF;
+  opacity: 0.7;
 }
 
-.trendingCardsDownloadButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_normal.svg);
+.trendingCardsFavButton svg .icon-cardIconBtn, .trendingCardsDownloadButton svg .icon-cardIconBtn, .trendingCardsMaxButton svg .icon-cardIconBtn {
+  opacity: 0.7;
+  fill: #572EE5;
 }
 
-.trendingCardsDownloadButton:hover {
-  background-image: url(../assets/-0.generalCardAssets/icon-download_hover.svg);
-}
-
-.trendingCardsMaxButton {
-  background-image: url(../assets/-0.generalCardAssets/icon-max_normal.svg);
-}
-
-.trendingCardsMaxButton:hover {
-  background-image: url(../assets/-0.generalCardAssets/icon-max_hover.svg);
+.trendingCardsFavButton svg:hover .rectangle-cardIconBtn, .trendingCardsFavButton svg:hover .icon-cardIconBtn, .trendingCardsDownloadButton svg:hover .rectangle-cardIconBtn, .trendingCardsDownloadButton svg:hover .icon-cardIconBtn, .trendingCardsMaxButton svg:hover .rectangle-cardIconBtn, .trendingCardsMaxButton svg:hover .icon-cardIconBtn {
+  opacity: 1;
 }
 
 .userTitleTrengingCards-wrapper {
