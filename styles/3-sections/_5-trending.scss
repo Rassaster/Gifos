@@ -108,15 +108,26 @@
   width: 2.7777778vw; // =40px/1440
   min-height: 38px;
   height: 2.7777778vw; // =40px/1440
+  border: 1px solid red;
 }
+
 #trendingLefttButtonSlider {
   margin-left: 6.5277778vw; // =94px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
-  background-image: url(../assets/-0.generalButtons/button-sliderLeft_normal.svg);
-  &:hover{
+  &:hover {
     background-image: url(../assets/-0.generalButtons/button-sliderLeft_hover.svg);
   }
+  &:hover img {
+    visibility: hidden;
+  }
+    img {
+    width: 100%;
+    height: 100%;
+  }
 }
+
+
+
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw; // =12px/1440px
   margin-right: 6.5277778vw; // =94px/1440px
