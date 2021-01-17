@@ -786,7 +786,20 @@ nav ul {
   width: 2.7777778vw;
   min-height: 38px;
   height: 2.7777778vw;
-  border: 1px solid red;
+  border: 1px solid #572EE5;
+}
+
+.trendingSliderButton i {
+  color: #572EE5;
+  font-size: 1.1111111vw;
+}
+
+.trendingSliderButton:hover {
+  background-color: #572EE5;
+}
+
+.trendingSliderButton:hover i {
+  color: #FFFFFF;
 }
 
 #trendingLefttButtonSlider {
@@ -794,27 +807,9 @@ nav ul {
   margin-right: 0.83333333vw;
 }
 
-#trendingLefttButtonSlider:hover {
-  background-image: url(../assets/-0.generalButtons/button-sliderLeft_hover.svg);
-}
-
-#trendingLefttButtonSlider:hover img {
-  visibility: hidden;
-}
-
-#trendingLefttButtonSlider img {
-  width: 100%;
-  height: 100%;
-}
-
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw;
   margin-right: 6.5277778vw;
-  background-image: url(../assets/-0.generalButtons/button-sliderRight_normal.svg);
-}
-
-#trendingRightButtonSlider:hover {
-  background-image: url(../assets/-0.generalButtons/button-sliderRight_hover.svg);
 }
 
 .socialMedia-wrapper {

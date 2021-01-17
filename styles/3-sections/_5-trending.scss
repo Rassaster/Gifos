@@ -108,22 +108,22 @@
   width: 2.7777778vw; // =40px/1440
   min-height: 38px;
   height: 2.7777778vw; // =40px/1440
-  border: 1px solid red;
+  border: 1px solid $mainLM-color;
+  i {
+    color: $mainLM-color;
+    font-size: 1.1111111vw;
+  }
+  &:hover {
+    background-color: $mainLM-color;
+  }
+  &:hover i {
+    color: $secondaryLM-color;
+  }
 }
 
 #trendingLefttButtonSlider {
   margin-left: 6.5277778vw; // =94px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
-  &:hover {
-    background-image: url(../assets/-0.generalButtons/button-sliderLeft_hover.svg);
-  }
-  &:hover img {
-    visibility: hidden;
-  }
-    img {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 
@@ -131,8 +131,4 @@
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw; // =12px/1440px
   margin-right: 6.5277778vw; // =94px/1440px
-  background-image: url(../assets/-0.generalButtons/button-sliderRight_normal.svg);
-  &:hover{
-    background-image: url(../assets/-0.generalButtons/button-sliderRight_hover.svg);
-  }
 }
