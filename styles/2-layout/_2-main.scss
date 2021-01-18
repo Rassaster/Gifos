@@ -7,10 +7,3 @@ main {
   height: auto;
   margin-bottom: 95px;
 }
-.welcomeSearch-wrapper {
-  @include flexContainerConfig(column, nowrap, center, center)
-}
-.trendingSection-container {
-  height: auto;
-  background-color: $trending-bg-color;
-}

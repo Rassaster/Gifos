@@ -54,6 +54,12 @@ table {
 }
 
 @font-face {
+  font-family: 'Roboto-Medium';
+  src: url("../styles/0-fonts/Roboto/Roboto-Medium.ttf");
+  font-weight: 400;
+}
+
+@font-face {
   font-family: 'Roboto-Regular';
   src: url("../styles/0-fonts/Roboto/Roboto-Regular.ttf");
   font-weight: 400;
@@ -157,24 +163,6 @@ main {
 .topSection-container {
   height: auto;
   margin-bottom: 95px;
-}
-
-.welcomeSearch-wrapper {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.trendingSection-container {
-  height: auto;
-  background-color: #F3F5F8;
 }
 
 footer {
@@ -314,6 +302,19 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcomeSearch-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -627,6 +628,8 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: auto;
+  background-color: #F3F5F8;
 }
 
 .trendingTitle-wrapper {
@@ -1079,5 +1082,167 @@ nav ul {
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #5ED7C6;
+}
+
+.createGifos-container {
+  position: relative;
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.createGifosCapture-wrapper {
+  position: relative;
+  width: 47.777778vw;
+  height: 27.083333vw;
+  border: 1px solid #572EE5;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cornersCreateGifos {
+  position: absolute;
+  width: 1.875vw;
+  height: 1.7361111vw;
+  border: 1px solid #5ED7C6;
+}
+
+.topCornersCreateGifos {
+  top: 1.3888889vw;
+  border-bottom: none;
+}
+
+.rightCornersCreateGifos {
+  right: 1.3888889vw;
+  border-left: none;
+}
+
+.bottomCornersCreateGifos {
+  bottom: 1.3888889vw;
+  border-top: none;
+}
+
+.leftCornersCreateGifos {
+  left: 1.3888889vw;
+  border-right: none;
+}
+
+#headingInstructionsContentGifosCapture {
+  text-align: center;
+  font-size: calc(25px + 0.34722222vw);
+  line-height: calc(35px + 0.69444444vw);
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #572EE5;
+}
+
+#headingInstructionsContentGifosCapture span {
+  color: #5ED7C6;
+}
+
+#paragraphInstructionsContentGifosCapture {
+  text-align: center;
+  font-size: calc(16px + 0.34722222vw);
+  line-height: calc(29px + 0.69444444vw);
+  font-family: "Roboto-Regular", sans-serif;
+  color: #000000;
+}
+
+.createSteps-wrapper {
+  width: 47.777778vw;
+  height: 5.2083333vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.step-wrapper {
+  width: 2.2222222vw;
+  height: 2.2222222vw;
+  border: 1px solid #572EE5;
+  border-radius: 50%;
+  font-size: 1.25vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #572EE5;
+  font-family: "Roboto-Medium", sans-serif;
+}
+
+.currentStep-wrapper {
+  color: #FFFFFF;
+  background-color: #572EE5;
+}
+
+#step2 {
+  margin-left: 1.7361111vw;
+  margin-right: 1.7361111vw;
+}
+
+.commandButtonCreateGifos-wrapper {
+  width: 55.277778vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.borderTopCommandButton {
+  width: 55.277778vw;
+  height: 0.41666667vw;
+  border: 1px solid #572EE5;
+  border-radius: 1.7361111vw;
+  background-color: #572EE5;
+}
+
+#commandButtonCreateGifos {
+  margin-top: 20px;
+  width: 8.8194444vw;
+  height: 3.4722222vw;
+  border: 1px solid #572EE5;
+  border-radius: 1.7361111vw;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-size: 0.90277778vw;
+  color: #572EE5;
+}
+
+#commandButtonCreateGifos:hover {
+  color: #FFFFFF;
+  background-color: #572EE5;
 }
 /*# sourceMappingURL=style.css.map */

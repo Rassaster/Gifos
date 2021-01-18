@@ -18,6 +18,11 @@
   font-weight: 700;
 }
 @font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../styles/0-fonts/Roboto/Roboto-Medium.ttf');
+  font-weight: 400;
+}
+@font-face {
   font-family: 'Roboto-Regular';
   src: url('../styles/0-fonts/Roboto/Roboto-Regular.ttf');
   font-weight: 400;
@@ -39,5 +44,6 @@
 @import '3-sections/6-socialMedia&Rights';
 @import '3-sections/7-favorites';
 @import '3-sections/8-myGifos';
+@import '3-sections/9-createGifos';
 // 4-darkMode
 // @import '4-darkMode';

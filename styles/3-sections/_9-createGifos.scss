@@ -1,0 +1,114 @@
+// ***************************************************************************************
+// ******************CREATE GIFOS SECTION GLOBALS*****************************************
+// ***************************************************************************************
+.createGifos-container {
+  position: relative;
+  margin-top: 40px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+}
+// ***************************************************************************************
+// ******************CREATE GIFOS CAPTURE*************************************************
+// ***************************************************************************************
+.createGifosCapture-wrapper {
+  position: relative;
+  width: 47.777778vw; //=688px/1440px
+  height: 27.083333vw; //=390px/1440px
+  border: 1px solid $mainLM-color;
+  @include flexContainerConfig(column, nowrap, center, center);
+}
+.cornersCreateGifos {
+  position: absolute;
+  width: 1.875vw; //=27px/1440px
+  height: 1.7361111vw; //=25px/1440px
+  border: 1px solid $tertiaryLM-color;
+}
+.topCornersCreateGifos {
+  top: 1.3888889vw; //=20px/1440px
+  border-bottom: none;
+}
+.rightCornersCreateGifos {
+  right: 1.3888889vw; //=20px/1440px
+  border-left: none;
+}
+.bottomCornersCreateGifos {
+  bottom: 1.3888889vw; //=20px/1440px
+  border-top: none;
+}
+.leftCornersCreateGifos {
+  left: 1.3888889vw; //=20px/1440px
+  border-right: none;
+}
+#headingInstructionsContentGifosCapture {
+  text-align: center;
+  font-size: calc(25px + 0.34722222vw); // =30px+(5px/1440px)
+  line-height: calc(35px + 0.69444444vw); // =40px+(10px/1440px)
+  font-family: $strongTitles-font;
+  color: $mainLM-color; 
+  span {
+    color: $tertiaryLM-color;
+  }
+}
+#paragraphInstructionsContentGifosCapture {
+  text-align: center;
+  font-size: calc(16px + 0.34722222vw); // =30px+(5px/1440px)
+  line-height: calc(29px + 0.69444444vw); // =40px+(10px/1440px)
+  font-family: $regularContent-font;
+  color: $quinaryLM-color; 
+}
+// ***************************************************************************************
+// ******************STEPS CREATE GIFOS***************************************************
+// ***************************************************************************************
+.createSteps-wrapper{
+  width: 47.777778vw; //=688px/1440px
+  height: 5.2083333vw; //=75px/1440px
+  @include flexContainerConfig(row, nowrap, center, center);
+}
+.step-wrapper {
+  width: 2.2222222vw; //=22px/1440px
+  height: 2.2222222vw; //=22px/1440px
+  border: 1px solid $mainLM-color;
+  border-radius: 50%;
+  font-size: 1.25vw; //=18px/1440px
+  @include flexContainerConfig(row, nowrap, center, center);
+  color: $mainLM-color;
+  font-family: $mediumContent-font;
+}
+.currentStep-wrapper {
+  color: $secondaryLM-color;
+  background-color: $mainLM-color;
+}
+#step2 {
+  margin-left: 1.7361111vw; //=25px/1440px
+  margin-right: 1.7361111vw; //=25px/1440px
+}
+// ***************************************************************************************
+// ******************COMMAND BUTTON CREATE GIFOS *****************************************
+// ***************************************************************************************
+.commandButtonCreateGifos-wrapper {
+  width: 55.277778vw; //=796px/1440px
+  @include flexContainerConfig(column, nowrap, center, center);
+}
+.borderTopCommandButton {
+  width: 55.277778vw; //=796px/1440px
+  height: 0.41666667vw; //=6px/1440px
+  border: 1px solid $mainLM-color;
+  border-radius: 1.7361111vw; //=25px/1440px
+  background-color: $mainLM-color;
+}
+#commandButtonCreateGifos {
+  margin-top: 20px;
+  width: 8.8194444vw; //=127px/1440px
+  height: 3.4722222vw; //=50px/1440px
+  border: 1px solid $mainLM-color;
+  border-radius: 1.7361111vw; //=25px/1440px
+  font-family: $strongTitles-font;
+  font-size: 0.90277778vw; //=13px/1440px
+  color: $mainLM-color;
+  &:hover {
+    color: $secondaryLM-color;
+    background-color: $mainLM-color;
+  }
+}
+// ***************************************************************************************
+// ******************CAMERA ASSETS********************************************************
+// ***************************************************************************************

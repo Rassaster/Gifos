@@ -3,6 +3,8 @@
 // ***************************************************************************************
 .trendingSection-container {
   @include flexContainerConfig(column, nowrap, center, center);
+  height: auto;
+  background-color: $trending-bg-color;
 }
 // ***************************************************************************************
 // ******************TRENDING TITLE*******************************************************

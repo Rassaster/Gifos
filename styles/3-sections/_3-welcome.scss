@@ -5,6 +5,9 @@
   width: 100vw;
   @include flexContainerConfig(column, nowrap, space-between, center);
 }
+.welcomeSearch-wrapper {
+  @include flexContainerConfig(column, nowrap, center, center)
+}
 // ***************************************************************************************
 // ******************WELCOME MESSAGE******************************************************
 // ***************************************************************************************
