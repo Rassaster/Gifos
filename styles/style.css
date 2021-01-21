@@ -740,22 +740,22 @@ nav ul {
   background-size: cover;
 }
 
-.trendingCardsFavButton svg, .trendingCardsDownloadButton svg, .trendingCardsMaxButton svg {
+.trendingCardsButton svg {
   width: 100%;
   height: 100%;
 }
 
-.trendingCardsFavButton svg .rectangle-cardIconBtn, .trendingCardsDownloadButton svg .rectangle-cardIconBtn, .trendingCardsMaxButton svg .rectangle-cardIconBtn {
+.trendingCardsButton svg .rectangle-cardIconBtn {
   fill: #FFFFFF;
   opacity: 0.7;
 }
 
-.trendingCardsFavButton svg .icon-cardIconBtn, .trendingCardsDownloadButton svg .icon-cardIconBtn, .trendingCardsMaxButton svg .icon-cardIconBtn {
+.trendingCardsButton svg .icon-cardIconBtn {
   opacity: 0.7;
   fill: #572EE5;
 }
 
-.trendingCardsFavButton svg:hover .rectangle-cardIconBtn, .trendingCardsFavButton svg:hover .icon-cardIconBtn, .trendingCardsDownloadButton svg:hover .rectangle-cardIconBtn, .trendingCardsDownloadButton svg:hover .icon-cardIconBtn, .trendingCardsMaxButton svg:hover .rectangle-cardIconBtn, .trendingCardsMaxButton svg:hover .icon-cardIconBtn {
+.trendingCardsButton svg:hover .rectangle-cardIconBtn, .trendingCardsButton svg:hover .icon-cardIconBtn {
   opacity: 1;
 }
 
@@ -1164,6 +1164,7 @@ nav ul {
 }
 
 .createSteps-wrapper {
+  position: relative;
   width: 47.777778vw;
   height: 5.2083333vw;
   -webkit-box-orient: horizontal;
@@ -1206,6 +1207,30 @@ nav ul {
 #step2 {
   margin-left: 1.7361111vw;
   margin-right: 1.7361111vw;
+}
+
+.repeatVideoAndDurationViewer {
+  position: absolute;
+  top: 2.0833333vw;
+  right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #572EE5;
+  font-family: "Montserrat-Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+#videoDurationViewer {
+  font-size: 1.0416667vw;
+}
+
+#repeatVideoButton {
+  border-bottom: 2px solid #5ED7C6;
+  font-size: 0.90277778vw;
 }
 
 .commandButtonCreateGifos-wrapper {
@@ -1291,10 +1316,10 @@ nav ul {
   height: 10.416667vw;
   -webkit-clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
           clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(80, 226, 195, 0.4)), to(rgba(80, 226, 195, 0)));
-  background: linear-gradient(90deg, rgba(80, 226, 195, 0.4) 0%, rgba(80, 226, 195, 0) 100%);
-  -webkit-animation: lightProjection 30s ease-in-out 2s  infinite normal;
-          animation: lightProjection 30s ease-in-out 2s  infinite normal;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(80, 226, 195, 0.6)), to(rgba(80, 226, 195, 0)));
+  background: linear-gradient(90deg, rgba(80, 226, 195, 0.6) 0%, rgba(80, 226, 195, 0) 100%);
+  -webkit-animation: lightProjection 29s ease-in-out 3s infinite normal;
+          animation: lightProjection 29s ease-in-out 3s infinite normal;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
@@ -1335,7 +1360,7 @@ nav ul {
   30% {
     opacity: 1;
   }
-  85% {
+  75% {
     opacity: 1;
   }
   100% {
@@ -1350,11 +1375,126 @@ nav ul {
   30% {
     opacity: 1;
   }
-  85% {
+  75% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+
+.cameraView-wrapper {
+  width: 33.333333vw;
+  height: 22.222222vw;
+  border: 1px solid #5ED7C6;
+}
+
+.cameraOverlay-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #562ee599;
+}
+
+.uploadingGifo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uploadingGifo-wrapper .uploadingGifoStatusImg {
+  width: 1.5277778vw;
+  height: 1.5277778vw;
+}
+
+.uploadingGifo-wrapper #uploadingGifoOnLoad {
+  -webkit-animation: onLoadRotation 3s ease-in-out 0s infinite alternate;
+          animation: onLoadRotation 3s ease-in-out 0s infinite alternate;
+}
+
+.uploadingGifo-wrapper #uploadingGifoStatusText {
+  margin-top: 10px;
+  font-size: calc(10px + 0.34722222vw);
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #FFFFFF;
+}
+
+#uploadingGifoButtons-wrapper {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uploadingGifoButtons {
+  margin-top: 0.69444444vw;
+  margin-right: 0.69444444vw;
+  width: 2.2222222vw;
+  height: 2.2222222vw;
+}
+
+.uploadingGifoButtons svg {
+  width: 100%;
+  height: 100%;
+}
+
+.uploadingGifoButtons svg .rectangle-cardIconBtn {
+  fill: #FFFFFF;
+  opacity: 0.7;
+}
+
+.uploadingGifoButtons svg .icon-cardIconBtn {
+  opacity: 0.7;
+  fill: #572EE5;
+}
+
+.uploadingGifoButtons svg:hover .rectangle-cardIconBtn, .uploadingGifoButtons svg:hover .icon-cardIconBtn {
+  opacity: 1;
+}
+
+@-webkit-keyframes onLoadRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes onLoadRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

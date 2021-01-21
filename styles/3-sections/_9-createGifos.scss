@@ -59,6 +59,7 @@
 // ******************STEPS CREATE GIFOS***************************************************
 // ***************************************************************************************
 .createSteps-wrapper{
+  position: relative;
   width: 47.777778vw; //=688px/1440px
   height: 5.2083333vw; //=75px/1440px
   @include flexContainerConfig(row, nowrap, center, center);
@@ -81,6 +82,24 @@
   margin-left: 1.7361111vw; //=25px/1440px
   margin-right: 1.7361111vw; //=25px/1440px
 }
+.repeatVideoAndDurationViewer {
+  position: absolute;
+  top: 2.0833333vw; // =30px/1440px
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  color: $mainLM-color;
+  font-family: $strongTitles-font;
+  text-transform: uppercase;
+}
+#videoDurationViewer {
+  font-size: 1.0416667vw; //=15px/1440px}
+}
+#repeatVideoButton {
+  border-bottom: 2px solid $tertiaryLM-color;
+  font-size: 0.90277778vw; //=13px/1440px}
+}
+
 // ***************************************************************************************
 // ******************COMMAND BUTTON CREATE GIFOS *****************************************
 // ***************************************************************************************
@@ -110,7 +129,7 @@
   }
 }
 // ***************************************************************************************
-// ******************CAMERA ASSETS********************************************************
+// ******************CAMERA ASSETS & ANIMATIONS*******************************************
 // ***************************************************************************************
 .cameraAssets-wrapper {
   position: absolute;
@@ -146,19 +165,19 @@
 }
 #cameraLightAsset {
   position: absolute;
-  top: 9.0277778vw; //=130px/1440px
-  left: 19.861111vw; //=286px/1440px
-  width: 6.25vw; //=90px/1440px
+  top: 9.0277778vw; // =130px/1440px
+  left: 19.861111vw; // =286px/1440px
+  width: 6.25vw; // =90px/1440px
   height: 10.416667vw; // =150px/1440px
   clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
-  background: linear-gradient(90deg, hsla(167, 72%, 60%, 0.4) 0%, hsla(167, 72%, 60%, 0) 100%);
-  animation: lightProjection 30s ease-in-out 2s  infinite normal;
+  background: linear-gradient(90deg, hsla(167, 72%, 60%, 0.6) 0%, hsla(167, 72%, 60%, 0) 100%);
+  animation: lightProjection 29s ease-in-out 3s infinite normal;
   animation-fill-mode: backwards;
 }
 #cameraRollFloorAsset {
-  top: 24.305556vw; //=350px/1440px
-  left: 78.472222vw; //=1130px/1440px
-  width: 9.7222222vw; //=140px/1440px
+  top: 24.305556vw; // =350px/1440px
+  left: 78.472222vw; // =1130px/1440px
+  width: 9.7222222vw; // =140px/1440px
   height: 9.7222222vw; // =140px/1440px
 }
 @keyframes cameraRollRotate {
@@ -172,6 +191,59 @@
 @keyframes lightProjection {
   0% {opacity: 0;}
   30% {opacity: 1;}
-  85% {opacity: 1;}
+  75% {opacity: 1;}
   100% {opacity: 0;}
+}
+// ***************************************************************************************
+// ******************CAMERA VIEW *********************************************************
+// ***************************************************************************************
+.cameraView-wrapper {
+  width: 33.333333vw; // =480px/1440px
+  height: 22.222222vw; // =320px/1440px
+  border: 1px solid $tertiaryLM-color;
+}
+.cameraOverlay-wrapper {
+  @include cardOverlay;
+}
+.uploadingGifo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include flexContainerConfig(column, nowrap, center, center);
+  .uploadingGifoStatusImg {
+    width: 1.5277778vw; // =px/1440px
+    height: 1.5277778vw; // =px/1440px
+  }
+  #uploadingGifoOnLoad {
+    animation: onLoadRotation 3s ease-in-out 0s infinite alternate;
+  }
+  #uploadingGifoStatusText {
+    margin-top: 10px;
+    font-size: calc(10px + 0.34722222vw); // =30px+(5px/1440px)
+    font-family: $strongTitles-font;
+    color: $secondaryLM-color; 
+  }
+}
+#uploadingGifoButtons-wrapper {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  right: 0;
+  @include flexContainerConfig(row, nowrap, center, center);
+}
+.uploadingGifoButtons {
+  margin-top: 0.69444444vw; // =10px/1440px
+  margin-right: 0.69444444vw; // =10px/1440px
+  width: 2.2222222vw; // =32px/1440px 
+  height: 2.2222222vw; // =32px/1440px 
+  @include cardButton;
+}
+@keyframes onLoadRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
