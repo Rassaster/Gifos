@@ -1245,4 +1245,116 @@ nav ul {
   color: #FFFFFF;
   background-color: #572EE5;
 }
+
+.cameraAssets-wrapper {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.cameraAssets-wrapper img {
+  position: absolute;
+}
+
+#cameraRollSmallAsset {
+  z-index: 10;
+  top: 8.6805556vw;
+  left: 9.5833333vw;
+  width: 4.1666667vw;
+  height: 4.1666667vw;
+  -webkit-animation: cameraRollRotate 30s ease-in-out 2.4s  infinite normal;
+          animation: cameraRollRotate 30s ease-in-out 2.4s  infinite normal;
+}
+
+#cameraRollBigAsset {
+  z-index: 10;
+  top: 7.2916667vw;
+  left: 13.888889vw;
+  width: 5.4166667vw;
+  height: 5.4166667vw;
+  -webkit-animation: cameraRollRotate 30s ease-in-out 2s  infinite normal;
+          animation: cameraRollRotate 30s ease-in-out 2s  infinite normal;
+}
+
+#cameraAloneAsset {
+  top: 12.152778vw;
+  left: 10.138889vw;
+  width: 9.7222222vw;
+  height: 8.6805556vw;
+}
+
+#cameraLightAsset {
+  position: absolute;
+  top: 9.0277778vw;
+  left: 19.861111vw;
+  width: 6.25vw;
+  height: 10.416667vw;
+  -webkit-clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+          clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(80, 226, 195, 0.4)), to(rgba(80, 226, 195, 0)));
+  background: linear-gradient(90deg, rgba(80, 226, 195, 0.4) 0%, rgba(80, 226, 195, 0) 100%);
+  -webkit-animation: lightProjection 30s ease-in-out 2s  infinite normal;
+          animation: lightProjection 30s ease-in-out 2s  infinite normal;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+#cameraRollFloorAsset {
+  top: 24.305556vw;
+  left: 78.472222vw;
+  width: 9.7222222vw;
+  height: 9.7222222vw;
+}
+
+@-webkit-keyframes cameraRollRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(16200deg);
+            transform: rotate(16200deg);
+  }
+}
+
+@keyframes cameraRollRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(16200deg);
+            transform: rotate(16200deg);
+  }
+}
+
+@-webkit-keyframes lightProjection {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lightProjection {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */

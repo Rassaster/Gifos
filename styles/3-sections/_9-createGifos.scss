@@ -112,3 +112,66 @@
 // ***************************************************************************************
 // ******************CAMERA ASSETS********************************************************
 // ***************************************************************************************
+.cameraAssets-wrapper {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  img {
+    position: absolute;
+  }
+}
+#cameraRollSmallAsset {
+  z-index: 10;
+  top: 8.6805556vw; // =125px/1440px
+  left: 9.5833333vw; // =138px/1440px
+  width: 4.1666667vw; // =60px/1440px
+  height: 4.1666667vw; // =60px/1440px
+//animation: -name, -duration, -timing-function, -delay, -iteration-count, -direction)
+  animation: cameraRollRotate 30s ease-in-out 2.4s  infinite normal;
+  // animation-fill-mode: forwards;
+}
+#cameraRollBigAsset {
+  z-index: 10;
+  top: 7.2916667vw; // =105px/1440px
+  left: 13.888889vw; // =200px/1440px
+  width: 5.4166667vw; // =78px/1440px
+  height: 5.4166667vw; // =78px/1440px
+  animation: cameraRollRotate 30s ease-in-out 2s  infinite normal;
+}
+#cameraAloneAsset {
+  top: 12.152778vw; // =175px/1440px
+  left: 10.138889vw; // =146px/1440px
+  width: 9.7222222vw; // =140px/1440px
+  height: 8.6805556vw; // =125px/1440px
+}
+#cameraLightAsset {
+  position: absolute;
+  top: 9.0277778vw; //=130px/1440px
+  left: 19.861111vw; //=286px/1440px
+  width: 6.25vw; //=90px/1440px
+  height: 10.416667vw; // =150px/1440px
+  clip-path: polygon(0 33%, 100% 0, 100% 100%, 0 66%);
+  background: linear-gradient(90deg, hsla(167, 72%, 60%, 0.4) 0%, hsla(167, 72%, 60%, 0) 100%);
+  animation: lightProjection 30s ease-in-out 2s  infinite normal;
+  animation-fill-mode: backwards;
+}
+#cameraRollFloorAsset {
+  top: 24.305556vw; //=350px/1440px
+  left: 78.472222vw; //=1130px/1440px
+  width: 9.7222222vw; //=140px/1440px
+  height: 9.7222222vw; // =140px/1440px
+}
+@keyframes cameraRollRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(16200deg);
+  }
+}
+@keyframes lightProjection {
+  0% {opacity: 0;}
+  30% {opacity: 1;}
+  85% {opacity: 1;}
+  100% {opacity: 0;}
+}
