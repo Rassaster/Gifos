@@ -216,6 +216,9 @@ nav {
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-width: 430px;
   width: 33.819444vw;
   max-width: 650px;
@@ -229,6 +232,10 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+nav input {
+  display: none;
 }
 
 .nav-anchor {
@@ -251,7 +258,6 @@ nav ul {
 }
 
 #createGifoLink {
-  display: block;
   min-width: 50px;
   width: 3.75vw;
   max-width: 60px;
@@ -303,6 +309,72 @@ nav ul {
 
 #createGifoLink:hover #cross-createGifosBtnActive {
   fill: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav input {
+    display: inline-block;
+  }
+  nav .fa-bars, nav .fa-times {
+    color: #572EE5;
+    font-size: calc(14px + 2.6666667vw);
+    width: calc(14px + 2.6666667vw);
+    height: calc(14px + 2.6666667vw);
+    text-align: center;
+  }
+  nav input {
+    visibility: hidden;
+    position: absolute;
+    margin: 0;
+    height: calc(14px + 2.6666667vw);
+    width: calc(14px + 2.6666667vw);
+  }
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 85px;
+    left: 0;
+    position: absolute;
+    min-width: unset;
+    width: 100vw;
+    max-width: unset;
+    height: 128vh;
+    background-color: rgba(86, 46, 229, 0.9);
+  }
+  nav ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 40px;
+  }
+  .nav-anchor {
+    position: relative;
+    font-size: calc(13px + 0.53333333vw);
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 60px;
+  }
+  .nav-anchor::before {
+    position: absolute;
+    opacity: 0.5;
+    top: 30px;
+    content: "________";
+    width: 100%;
+  }
+  #createGifoLink::before {
+    content: none;
+  }
 }
 
 .welcome-container {

@@ -6,12 +6,19 @@ nav {
   margin-top: 18px;
   margin-bottom: 18px;
 }
-nav ul {
+nav { 
+  ul {
+  display: flex;
   min-width: 430px;
   width: 33.819444vw;// =487px/1440px
   max-width: 650px;
-  @include flexContainerConfig(row, nowrap, space-between, center)
+  @include flexContainerConfig(row, nowrap, space-between, center);
+  }
+  input {
+    display: none;
+  }
 }
+
 // ***************************************************************************************
 // ******************ANCHORS STYLING******************************************************
 // ***************************************************************************************
@@ -33,7 +40,6 @@ nav ul {
 // ******************ANCHOR CREATE GIFO***************************************************
 // ***************************************************************************************
 #createGifoLink {
-  display: block;
   min-width: 50px;
   width: 3.75vw; // =54px/1440px
   max-width: 60px;
@@ -77,4 +83,65 @@ nav ul {
     fill: $secondaryLM-color;
   }
 }
-
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  nav { 
+    ul {
+      display: none;
+    }
+    input {
+      display: inline-block;
+    }
+    .fa-bars, .fa-times {
+      color: $mainLM-color;
+      font-size: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
+      width: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
+      height: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
+      text-align: center; 
+    }
+    input {
+      visibility: hidden;
+      position: absolute;
+      margin: 0;
+      height: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
+      width: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
+    }
+    ul {
+      @include flexContainerConfig(column, nowrap, flex-start, center);
+      top: 85px;
+      left: 0;
+      position: absolute;
+      min-width: unset;
+      width: 100vw;
+      max-width: unset;
+      height: 128vh;
+      background-color: $mainLM-color09;
+      li {
+        display: flex;
+        margin-top: 40px;//17px/375px (mobile reference)
+      }
+    }
+  }
+  .nav-anchor {
+    position: relative;
+    font-size: calc(13px + 0.53333333vw); // =11px + (2px/375px)
+    color: $secondaryLM-color;
+    text-align: center;
+    line-height: 60px;
+    &::before {
+      position: absolute;
+      opacity: 0.5;
+      top: 30px;
+      content: "________";
+      width: 100%;
+    }
+  }
+  #createGifoLink {
+    // display: none;
+    &::before {
+      content: none;
+    }
+  }
+}
