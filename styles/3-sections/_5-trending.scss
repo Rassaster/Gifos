@@ -17,6 +17,7 @@
   @include trendingSubtitle;
   font-size: calc(24px + 0.069444444vw); // =24px+(1px/1440px)
   line-height: 30px;
+  text-align: center;
 }
 .trendingTitle-wrapper p {
   margin-top: 12px;
@@ -34,14 +35,17 @@
   @include flexContainerConfig(row, nowrap, space-between, center);
 }
 .trendingGifosSlider-wrapper {
-  @include flexContainerConfig(row, nowrap, center, center);
+  overflow-x: scroll;
+  @include flexContainerConfig(row, nowrap, flex-start, center);
 }
 // ***************************************************************************************
 // ******************TRENDING CARD********************************************************
 // ***************************************************************************************
 .trendingGifoCard {
   position: relative;
+  min-width: 340px;
   width: 24.791667vw; // =357px/1440px
+  min-height: 260px;
   height: 19.097222vw; // =275px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
   margin-left: 0.83333333vw; // =12px/1440px
@@ -70,7 +74,9 @@
 .trendingCardsButton {
   margin-top: 2.8011204%; // =10px/357px (of parent)
   margin-right: 2.8011204%; // =10px/357px (of parent)
+  min-width: 24px;
   width: 2.2222222vw; // =32px/1440px 
+  min-height: 24px;
   height: 2.2222222vw; // =32px/1440px 
   @include cardButton;
 }
@@ -86,11 +92,11 @@
 .userTrendingCard{
   margin-bottom: 5px;
   font-family: $regularContent-font;
-  font-size: 1.0416667vw; // =15px/1440px
+  font-size: calc(15px + 0.13888889vw); // =15px+(2px/1440px)
 }
 .titleTrendingCard{
   font-family: $strongContent-font;
-  font-size: 1.1111111vw; // =16px/1440px
+  font-size: calc(16px + 0.13888889vw); // =16px+(2px/1440px)
 }
 // ***************************************************************************************
 // ******************TRENDING SLIDER BUTTONS**********************************************
@@ -131,6 +137,7 @@
     display: none;
   }
   .trendingGifosSlider-wrapper {
+    margin-left: 2.6041667vw; //20px/768px
     justify-content: flex-start;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -138,7 +145,10 @@
   .trendingGifoCard {
     min-width: 320px;
     width: 46.484375VW; // =357px/768px
+    max-width: 357px;
+    min-height: 220px;
     height: 35.807292VW; // =275px/768px
+    max-height: 275px;;
     margin-right: 1.5625vw; // =12px/768px
     margin-left: 1.5625vw; // =12px/768px
     .trendingGifoCard-overlay {

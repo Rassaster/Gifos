@@ -435,13 +435,30 @@ nav input {
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .welcomeMessage-wrapper {
+    margin-top: 10px;
+    min-width: 300px;
+    width: 52.083333vw;
+    max-width: 600px;
+  }
+  .welcomeMessage-wrapper h1 {
+    font-size: calc(25px + 0.78125vw);
+    line-height: calc(40px + 1.3020833vw);
+  }
+  .welcomeIlustration-wrapper {
+    min-width: 350px;
+    width: 51.953125vw;
+  }
+}
+
 .searchBar-container {
   min-width: 500px;
   width: 38.263889vw;
   max-width: 820px;
   min-height: 50px;
   border: 1px solid #572EE5;
-  border-radius: 27px;
+  border-radius: 1.875vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -486,6 +503,7 @@ nav input {
   height: 20px;
   margin-left: 20px;
   background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/button-search.svg);
+  background-size: contain;
 }
 
 #searchIcon-searchBar {
@@ -493,6 +511,7 @@ nav input {
   height: 20px;
   margin-right: 20px;
   background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/icon-search.svg);
+  background-size: contain;
 }
 
 #closeButton-searchBar {
@@ -500,6 +519,7 @@ nav input {
   height: 15px;
   margin-right: 20px;
   background-image: url(../assets/icon-close.svg);
+  background-size: contain;
 }
 
 .searchSuggestions-wrapper {
@@ -535,6 +555,7 @@ nav input {
 
 .searchSuggestionItem .item-suggestion::before {
   background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/button-search.svg);
+  background-size: contain;
   display: inline-block;
   background-size: 16px 16px;
   width: 16px;
@@ -616,6 +637,7 @@ nav input {
   line-height: 30px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #572EE5;
+  text-align: center;
 }
 
 .searchResultsGrid-wrapper {
@@ -633,8 +655,9 @@ nav input {
 }
 
 .resultsGrid {
-  -ms-grid-columns: (18.05556vw)[3];
-      grid-template-columns: repeat(3, 18.05556vw);
+  margin-top: 50px;
+  -ms-grid-columns: (18.05556vw)[4];
+      grid-template-columns: repeat(4, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;
@@ -652,7 +675,7 @@ nav input {
   min-height: 40px;
   height: 3.4722222vw;
   border: 1px solid #572EE5;
-  border-radius: 1.7361111vw;
+  border-radius: 19.685039vw;
   font-family: "Montserrat-Bold", sans-serif;
   font-size: calc(12px + 0.27777778vw);
   color: #572EE5;
@@ -691,16 +714,25 @@ nav input {
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #5ED7C6;
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .searchBar-container {
+    min-width: unset;
+    width: 71.744792vw;
+    max-width: unset;
+    min-height: 50px;
+    border: 1px solid #572EE5;
+    border-radius: 3.515625vw;
+  }
   .resultsGrid {
-    margin-top: 50px;
-    -ms-grid-columns: (230px)[3];
-        grid-template-columns: repeat(3, 230px);
-    -ms-grid-rows: (200px)[1];
-        grid-template-rows: repeat(1, 200px);
-    gap: 10px 10px;
+    margin-top: 30px;
+    -ms-grid-columns: (29.94792vw)[3];
+        grid-template-columns: repeat(3, 29.94792vw);
+    -ms-grid-rows: (26.04167vw)[1];
+        grid-template-rows: repeat(1, 26.04167vw);
+    gap: 1.3020833vw 1.3020833vw;
   }
 }
 
@@ -731,6 +763,7 @@ nav input {
   color: #572EE5;
   font-size: calc(24px + 0.069444444vw);
   line-height: 30px;
+  text-align: center;
 }
 
 .trendingTitle-wrapper p {
@@ -757,13 +790,14 @@ nav input {
 }
 
 .trendingGifosSlider-wrapper {
+  overflow-x: scroll;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -771,7 +805,9 @@ nav input {
 
 .trendingGifoCard {
   position: relative;
+  min-width: 340px;
   width: 24.791667vw;
+  min-height: 260px;
   height: 19.097222vw;
   margin-right: 0.83333333vw;
   margin-left: 0.83333333vw;
@@ -821,7 +857,9 @@ nav input {
 .trendingCardsButton {
   margin-top: 2.8011204%;
   margin-right: 2.8011204%;
+  min-width: 24px;
   width: 2.2222222vw;
+  min-height: 24px;
   height: 2.2222222vw;
 }
 
@@ -864,12 +902,12 @@ nav input {
 .userTrendingCard {
   margin-bottom: 5px;
   font-family: "Roboto-Regular", sans-serif;
-  font-size: 1.0416667vw;
+  font-size: calc(15px + 0.13888889vw);
 }
 
 .titleTrendingCard {
   font-family: "Roboto-Bold", sans-serif;
-  font-size: 1.1111111vw;
+  font-size: calc(16px + 0.13888889vw);
 }
 
 .trendingSliderButton {
@@ -913,6 +951,7 @@ nav input {
     display: none;
   }
   .trendingGifosSlider-wrapper {
+    margin-left: 2.6041667vw;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -922,7 +961,10 @@ nav input {
   .trendingGifoCard {
     min-width: 320px;
     width: 46.484375VW;
+    max-width: 357px;
+    min-height: 220px;
     height: 35.807292VW;
+    max-height: 275px;
     margin-right: 1.5625vw;
     margin-left: 1.5625vw;
   }
@@ -1059,6 +1101,7 @@ nav input {
   line-height: 30px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #572EE5;
+  text-align: center;
 }
 
 .myFavGrid-wrapper {
@@ -1076,8 +1119,9 @@ nav input {
 }
 
 .myFavGrid {
-  -ms-grid-columns: (18.05556vw)[3];
-      grid-template-columns: repeat(3, 18.05556vw);
+  margin-top: 50px;
+  -ms-grid-columns: (18.05556vw)[4];
+      grid-template-columns: repeat(4, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;
@@ -1116,6 +1160,18 @@ nav input {
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #5ED7C6;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .myFavGrid {
+    margin-top: 30px;
+    -ms-grid-columns: (29.94792vw)[3];
+        grid-template-columns: repeat(3, 29.94792vw);
+    -ms-grid-rows: (26.04167vw)[1];
+        grid-template-rows: repeat(1, 26.04167vw);
+    gap: 1.3020833vw 1.3020833vw;
+  }
 }
 
 .myGifos-container {
@@ -1161,6 +1217,7 @@ nav input {
   line-height: 30px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #572EE5;
+  text-align: center;
 }
 
 .myGifosGrid-wrapper {
@@ -1178,8 +1235,9 @@ nav input {
 }
 
 .myGifosGrid {
-  -ms-grid-columns: (18.05556vw)[3];
-      grid-template-columns: repeat(3, 18.05556vw);
+  margin-top: 50px;
+  -ms-grid-columns: (18.05556vw)[4];
+      grid-template-columns: repeat(4, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;
@@ -1218,6 +1276,18 @@ nav input {
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #5ED7C6;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .myGifosGrid {
+    margin-top: 30px;
+    -ms-grid-columns: (29.94792vw)[3];
+        grid-template-columns: repeat(3, 29.94792vw);
+    -ms-grid-rows: (26.04167vw)[1];
+        grid-template-rows: repeat(1, 26.04167vw);
+    gap: 1.3020833vw 1.3020833vw;
+  }
 }
 
 .createGifos-container {
