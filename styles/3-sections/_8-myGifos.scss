@@ -45,3 +45,8 @@
     @include gifsGridContainerTablet;
   }
 }
+@media screen and (max-width: 670px) {
+  .myGifosGrid {
+    @include gifsGridContainerTablet670;
+  }
+}
