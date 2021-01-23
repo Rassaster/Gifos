@@ -991,6 +991,31 @@ nav input {
   color: #000000;
 }
 
+@media screen and (max-width: 768px) {
+  .socialMedia-wrapper {
+    min-width: 200px;
+    width: 13.888889vw;
+    margin-left: 10.833333vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .socialMedia-wrapper a i {
+    color: #572EE5;
+    font-size: 2.0833333vw;
+  }
+  .socialMedia-wrapper a .fa-instagram {
+    font-size: 2.34375vw;
+  }
+}
+
 .myFav-container {
   width: 100vw;
   height: auto;

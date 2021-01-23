@@ -28,3 +28,23 @@
     @include footerText;
   }
 }
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .socialMedia-wrapper {
+    min-width: 200px;
+    width: 13.888889vw; // =200px/1440px
+    margin-left: 10.833333vw; // =156px/1440px
+    @include flexContainerConfig(row, nowrap, space-between, center);
+    a {
+      i {
+        color: $mainLM-color;
+        font-size: 2.0833333vw; //=16px/768px
+      }
+      .fa-instagram{
+          font-size: 2.34375vw; //=18px/768px
+      }
+    }
+  }
+}
