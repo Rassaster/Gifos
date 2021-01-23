@@ -72,8 +72,6 @@
   margin-right: 2.8011204%; // =10px/357px (of parent)
   width: 2.2222222vw; // =32px/1440px 
   height: 2.2222222vw; // =32px/1440px 
-  background-size: 2.2222222vw 2.2222222vw;
-  background-size: cover;
   @include cardButton;
 }
 // .trendingCardsFavButton, .trendingCardsDownloadButton, .trendingCardsMaxButton  {
@@ -121,4 +119,30 @@
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw; // =12px/1440px
   margin-right: 6.5277778vw; // =94px/1440px
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .trendingSlider-container {
+    justify-content: flex-start;
+  }
+  #trendingRightButtonSlider, #trendingLefttButtonSlider {
+    display: none;
+  }
+  .trendingGifosSlider-wrapper {
+    justify-content: flex-start;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trendingGifoCard {
+    min-width: 320px;
+    width: 46.484375VW; // =357px/768px
+    height: 35.807292VW; // =275px/768px
+    margin-right: 1.5625vw; // =12px/768px
+    margin-left: 1.5625vw; // =12px/768px
+    .trendingGifoCard-overlay {
+      display: none;
+    }
+  }
 }

@@ -84,6 +84,7 @@ table {
 
 *::-webkit-scrollbar {
   display: none;
+  overflow-y: hidden;
 }
 
 button {
@@ -822,8 +823,6 @@ nav input {
   margin-right: 2.8011204%;
   width: 2.2222222vw;
   height: 2.2222222vw;
-  background-size: 2.2222222vw 2.2222222vw;
-  background-size: cover;
 }
 
 .trendingCardsButton svg {
@@ -902,6 +901,34 @@ nav input {
 #trendingRightButtonSlider {
   margin-left: 0.83333333vw;
   margin-right: 6.5277778vw;
+}
+
+@media screen and (max-width: 768px) {
+  .trendingSlider-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #trendingRightButtonSlider, #trendingLefttButtonSlider {
+    display: none;
+  }
+  .trendingGifosSlider-wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trendingGifoCard {
+    min-width: 320px;
+    width: 46.484375VW;
+    height: 35.807292VW;
+    margin-right: 1.5625vw;
+    margin-left: 1.5625vw;
+  }
+  .trendingGifoCard .trendingGifoCard-overlay {
+    display: none;
+  }
 }
 
 .socialMedia-wrapper {
