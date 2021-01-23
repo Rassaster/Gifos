@@ -197,6 +197,18 @@ footer {
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  #anchorHome {
+    min-width: 48px;
+    width: 3.3333333vw;
+    max-width: 55px;
+    min-height: 48px;
+    height: 3.3333333vw;
+    max-height: 55px;
+    margin-left: 10.833333vw;
+  }
+}
+
 nav {
   margin-right: 10.833333vw;
   margin-top: 18px;
