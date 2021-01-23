@@ -137,3 +137,11 @@
   @include flexContainerConfig(column, nowrap, space-between, center);
   @include noSearchNoFavNoGifos;
 }
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .resultsGrid {
+    @include gifsGridContainerTablet;
+  }
+}

@@ -632,9 +632,8 @@ nav input {
 }
 
 .resultsGrid {
-  margin-top: 50px;
-  -ms-grid-columns: (18.05556vw)[4];
-      grid-template-columns: repeat(4, 18.05556vw);
+  -ms-grid-columns: (18.05556vw)[3];
+      grid-template-columns: repeat(3, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;
@@ -646,29 +645,21 @@ nav input {
 }
 
 .buttonVerMas {
+  margin-top: 20px;
+  min-width: 115px;
   width: 8.8194444vw;
+  min-height: 40px;
   height: 3.4722222vw;
-  margin-top: 80px;
-  background-size: 8.8194444vw 3.4722222vw;
-}
-
-.buttonVerMas .rectangle-verMasBtn {
-  stroke: #572EE5;
-  fill: #FFFFFF;
-}
-
-.buttonVerMas .text-verMasBtn {
-  fill: #572EE5;
+  border: 1px solid #572EE5;
+  border-radius: 1.7361111vw;
   font-family: "Montserrat-Bold", sans-serif;
-  font-size: calc(11px + 0.13888889vw);
+  font-size: calc(12px + 0.27777778vw);
+  color: #572EE5;
 }
 
-.buttonVerMas:hover .rectangle-verMasBtn {
-  fill: #572EE5;
-}
-
-.buttonVerMas:hover .text-verMasBtn {
-  fill: #FFFFFF;
+.buttonVerMas:hover {
+  color: #FFFFFF;
+  background-color: #572EE5;
 }
 
 .noResults-wrapper {
@@ -699,6 +690,17 @@ nav input {
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #5ED7C6;
+}
+
+@media screen and (max-width: 768px) {
+  .resultsGrid {
+    margin-top: 50px;
+    -ms-grid-columns: (230px)[3];
+        grid-template-columns: repeat(3, 230px);
+    -ms-grid-rows: (200px)[1];
+        grid-template-rows: repeat(1, 200px);
+    gap: 10px 10px;
+  }
 }
 
 .trendingSection-container {
@@ -1022,9 +1024,8 @@ nav input {
 }
 
 .myFavGrid {
-  margin-top: 50px;
-  -ms-grid-columns: (18.05556vw)[4];
-      grid-template-columns: repeat(4, 18.05556vw);
+  -ms-grid-columns: (18.05556vw)[3];
+      grid-template-columns: repeat(3, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;
@@ -1125,9 +1126,8 @@ nav input {
 }
 
 .myGifosGrid {
-  margin-top: 50px;
-  -ms-grid-columns: (18.05556vw)[4];
-      grid-template-columns: repeat(4, 18.05556vw);
+  -ms-grid-columns: (18.05556vw)[3];
+      grid-template-columns: repeat(3, 18.05556vw);
   -ms-grid-rows: (13.88889vw)[1];
       grid-template-rows: repeat(1, 13.88889vw);
   gap: 2.0833333vw 2.0833333vw;

@@ -29,9 +29,14 @@ color: $mainLM-color;
   font-family: $regularContent-font;
   color: $quinaryLM-color;
 }
-@mixin gifsGridContainer {
+@mixin gifsGridContainerTablet {
   margin-top: 50px;
-  grid-template-columns: repeat(4, 18.055556vw) ; // =260px/1440px
+  grid-template-columns: repeat(3, 230px) ; // =230px/768px
+  grid-template-rows: repeat(1, 200px); // =200px/768px
+  gap:  10px 10px; // =30px/1440px
+}
+@mixin gifsGridContainer {
+  grid-template-columns: repeat(3, 18.055556vw) ; // =260px/1440px
   grid-template-rows: repeat(1, 13.888889vw); // =200px/1440px
   gap: 2.0833333vw 2.0833333vw ; // =30px/1440px
 }
@@ -53,25 +58,19 @@ color: $mainLM-color;
   }
 }
 @mixin verMasButton {
-  width: 8.8194444vw; // =127px/1440px
-  height: 3.4722222vw; // =50px/1440px
-  margin-top: 80px;
-  background-size: 8.8194444vw 3.4722222vw;
-  // Applied on SVG:
-  .rectangle-verMasBtn { 
-    stroke: $mainLM-color;
-    fill: $secondaryLM-color;
-  }
-  .text-verMasBtn {
-    fill: $mainLM-color;
-    font-family: $strongTitles-font;
-    font-size: calc(11px + 0.13888889vw); // =11px+(2px/1440px)
-  }
-  &:hover .rectangle-verMasBtn{
-    fill: $mainLM-color;
-  }
-  &:hover .text-verMasBtn{
-    fill: $secondaryLM-color;
+  margin-top: 20px;
+  min-width: 115px;
+  width: 8.8194444vw; //=127px/1440px
+  min-height: 40px;
+  height: 3.4722222vw; //=50px/1440px
+  border: 1px solid $mainLM-color;
+  border-radius: 1.7361111vw; //=25px/1440px
+  font-family: $strongTitles-font;
+  font-size: calc(12px + 0.27777778vw); //=13px/1440px
+  color: $mainLM-color;
+  &:hover {
+    color: $secondaryLM-color;
+    background-color: $mainLM-color;
   }
 }
 @mixin myFavMyGifosHead {
