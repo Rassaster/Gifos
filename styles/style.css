@@ -237,7 +237,7 @@ nav {
   margin-bottom: 18px;
 }
 
-nav ul {
+nav .navUl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,11 +341,6 @@ nav input {
   .fa-bars {
     display: block;
   }
-  nav ul {
-    display: none;
-    -webkit-transition: display 2s ease;
-    transition: display 2s ease;
-  }
   nav .fa-bars, nav .fa-times {
     color: #572EE5;
     font-size: calc(14px + 2.6666667vw);
@@ -353,16 +348,28 @@ nav input {
     height: calc(14px + 2.6666667vw);
     text-align: center;
   }
-  nav input {
+  nav .hamburgerMenu {
     z-index: 100;
     display: inline-block;
-    opacity: 0;
-    position: absolute;
+    opacity: 1;
     margin: 0;
-    height: calc(14px + 2.6666667vw);
-    width: calc(14px + 2.6666667vw);
+    height: calc(20px + 0.26666667vw);
+    width: calc(20px + 0.26666667vw);
+    background-image: url("/assets/-1.headerSectionAssets/0.navMenuAssets/button-burger.svg");
+    background-size: contain;
   }
-  nav ul {
+  nav .showClose {
+    background-image: url("/assets/icon-close.svg");
+  }
+  nav .navUl {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    min-width: unset;
+    width: 100vw;
+    max-width: unset;
+    height: 128vh;
+    background-color: rgba(86, 46, 229, 0.9);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -373,20 +380,22 @@ nav input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    top: 85px;
-    left: 0;
-    position: absolute;
-    min-width: unset;
-    width: 100vw;
-    max-width: unset;
-    height: 128vh;
-    background-color: rgba(86, 46, 229, 0.9);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   }
-  nav ul li {
+  nav .navUl li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-top: 40px;
+  }
+  nav .showNav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .nav-anchor {
     position: relative;
