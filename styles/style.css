@@ -355,11 +355,11 @@ nav input {
     margin: 0;
     height: calc(20px + 0.26666667vw);
     width: calc(20px + 0.26666667vw);
-    background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-burger.svg);
+    background-image: url(../../assets/-1.headerSectionAssets/0.navMenuAssets/button-burger.svg);
     background-size: contain;
   }
   nav .showClose {
-    background-image: url(../assets/icon-close.svg);
+    background-image: url(../../assets/icon-close.svg);
   }
   nav .navUl {
     position: absolute;
