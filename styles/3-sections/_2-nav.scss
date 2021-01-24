@@ -108,7 +108,7 @@ nav {
     input {
       z-index: 100;
       display: inline-block;
-      opacity: 0.1;
+      opacity: 0;
       position: absolute;
       margin: 0;
       height: calc(14px + 2.6666667vw); //=14px+2(px/375) (mobile reference)
