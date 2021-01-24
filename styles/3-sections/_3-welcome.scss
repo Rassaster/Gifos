@@ -44,7 +44,7 @@
 //----------------------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
   .welcomeMessage-wrapper {
-    margin-top: 10px;
+    margin-top: 5px;
     min-width: 300px;
     width: 52.083333vw; //=400px/768px
     max-width: 600px;
@@ -56,5 +56,10 @@
   .welcomeIlustration-wrapper {
     min-width: 350px;
     width: 51.953125vw; // =399px/768px
+  }
+}
+@media screen and (max-width: 375px) {
+  .welcomeIlustration-wrapper {
+    min-width: 300px;
   }
 }

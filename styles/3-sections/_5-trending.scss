@@ -24,6 +24,7 @@
   font-size: calc(16px + 0.13888889vw); // =14px+(2px/1440px)
   font-family: $regularContent-font;
   color: $quinaryLM-color;
+  text-align: center;
 }
 // ***************************************************************************************
 // ******************TRENDING SLIDER GLOBALS**********************************************
@@ -37,6 +38,7 @@
 .trendingGifosSlider-wrapper {
   overflow-x: scroll;
   @include flexContainerConfig(row, nowrap, flex-start, center);
+  height: fit-content;
 }
 // ***************************************************************************************
 // ******************TRENDING CARD********************************************************
@@ -49,7 +51,6 @@
   height: 19.097222vw; // =275px/1440px
   margin-right: 0.83333333vw; // =12px/1440px
   margin-left: 0.83333333vw; // =12px/1440px
-  border: 1px solid violet;
   img {
     width: 100%;
     height: 100%;
@@ -131,7 +132,20 @@
 //----------------------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
   .trendingSlider-container {
+    margin-top: 30px;
+    margin-bottom: 80px;
     justify-content: flex-start;
+  }
+  .trendingTitle-wrapper {
+    margin-top: 45px;
+    h2 {
+      margin-bottom: 12px;
+    }
+    p {
+      width: 45vw;
+      margin: auto;
+      line-height: 24px;
+    }
   }
   #trendingRightButtonSlider, #trendingLefttButtonSlider {
     display: none;
@@ -144,10 +158,10 @@
   }
   .trendingGifoCard {
     min-width: 320px;
-    width: 46.484375VW; // =357px/768px
+    width: 46.484375vw; // =357px/768px
     max-width: 357px;
     min-height: 220px;
-    height: 35.807292VW; // =275px/768px
+    height: 35.807292vw; // =275px/768px
     max-height: 275px;;
     margin-right: 1.5625vw; // =12px/768px
     margin-left: 1.5625vw; // =12px/768px
@@ -156,3 +170,15 @@
     }
   }
 }
+@media screen and (max-width: 425px) {
+  .trendingGifoCard {
+    min-width: 243px;
+    width: 64.8vw; // =243px/375px
+    max-width: unset;
+    min-height: 187px;
+    height: 49.866667vw; // =187px/375px
+    max-height: unset;;
+    margin-right: 20px;
+    margin-left: unset; 
+  }
+} 
