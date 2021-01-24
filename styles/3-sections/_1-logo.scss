@@ -1,15 +1,27 @@
 #anchorHome {
   min-width: 59.1px;
   width: 4.1041667vw; // =59.1px/1440px
-  max-width: 65px;
+  max-width: 80px;
   min-height: 59.1px;
   height: 4.1041667vw; // =59.1px/1440px
-  max-height: 65px;
-  margin-top: 1.25vw; // =18px/1440px
-  margin-bottom: 0.89583333vw; // =12.9px/1440px
+  max-height: 80px;
   margin-left: 10.833333vw; // =156px/1440px
 }
 #logoHeader {
   width: 100%; // of parent
   height: 100%; // of parent
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  #anchorHome {
+    min-width: 48px;
+    width: 3.3333333vw; // =48px/1440px
+    max-width: 55px;
+    min-height: 48px;
+    height: 3.3333333vw; // =48px/1440px
+    max-height: 55px;
+    margin-left: 10.833333vw; // =156px/1440px
+  }
 }

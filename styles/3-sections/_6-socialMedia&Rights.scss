@@ -1,0 +1,88 @@
+.socialMedia-container {
+  min-width: 200px;
+  width: 13.888889vw; // =200px/1440px
+  margin-left: 10.833333vw; // =156px/1440px
+  @include flexContainerConfig(row, nowrap, space-between, center);
+  p {
+    @include footerText;
+  }
+  .socialMedia-wrapper {
+    @include flexContainerConfig(row, nowrap, space-between, center);
+    a {
+      margin-right: 15px;
+      width: 1.3888889vw; //=20px/1440px
+      height: 1.3888889vw; //=20px/1440px
+      @include flexContainerConfig(row, nowrap, center, center);
+      i {
+        color: $mainLM-color;
+        font-size: 1.3888889vw; //=20px/1440px
+      }
+      .fa-instagram{
+          font-size: 1.5277778vw; //=22px/1440px
+      }
+      &:hover i {
+        color: $quaternaryLM-color;
+      }
+    }
+  }  
+}
+.allRights-wrapper {
+  margin-right: 10.833333vw; // =156px/1440px
+  p {
+    @include footerText;
+  }
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .socialMedia-container {
+    min-width: 200px;
+    width: 13.888889vw; // =200px/1440px
+    margin-left: 10.833333vw; // =156px/1440px
+    .socialMedia-wrapper {
+      padding-right: 20px;
+    @include flexContainerConfig(row, nowrap, flex-start, center);
+      a {
+        margin-right: 20px;
+        i {
+          font-size: 2.0833333vw; //=16px/768px
+        }
+        .fa-instagram{
+            font-size: 2.34375vw; //=18px/768px
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .socialMedia-container {
+    margin-top: 20px;
+    margin-left: unset;
+    p {
+      font-size: 15px;
+    }
+    @include flexContainerConfig(column, nowrap, center, center);
+    .socialMedia-wrapper {
+      margin-top: 30px;
+      width: 85px; //
+      padding-right: unset;
+      @include flexContainerConfig(row, nowrap, space-between, center);
+      a {
+        margin-right: unset;
+        i {
+          font-size: 15px; //=16px/768px
+        }
+        .fa-instagram{
+          font-size: 17px; //=18px/768px
+        }
+      }
+    }
+  }
+  .allRights-wrapper {
+    margin-right: unset;
+    p {
+      font-size: 14px;
+    }
+  }
+}

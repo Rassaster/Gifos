@@ -1,0 +1,52 @@
+// ***************************************************************************************
+// ******************MY GIFOS SECTION GLOBALS*****************************************
+// ***************************************************************************************
+.myGifos-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 12px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+}
+// ***************************************************************************************
+// ******************MY GIFOS TITLE***************************************************
+// ***************************************************************************************
+.myGifosTitle-wrapper {
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+  @include myFavMyGifosHead;
+}
+// ***************************************************************************************
+// ******************MY GIFOS GRID****************************************************
+// ***************************************************************************************
+.myGifosGrid-wrapper{
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, flex-start, center);
+}
+.myGifosGrid {
+  @include gifsGridContainer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+// ***************************************************************************************
+// ******************NO MY GIFOS ********************************************************
+// ***************************************************************************************
+.noMyGifos-wrapper {
+  margin-bottom: 45px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+  @include noSearchNoFavNoGifos;
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 1024px) {
+  .myGifosGrid {
+    @include gifsGridContainerTablet;
+  }
+}
+@media screen and (max-width: 670px) {
+  .myGifosGrid {
+    @include gifsGridContainerTablet670;
+  }
+}

@@ -1,0 +1,184 @@
+// ***************************************************************************************
+// ******************TRENDING SECTION GLOBALS ********************************************
+// ***************************************************************************************
+.trendingSection-container {
+  @include flexContainerConfig(column, nowrap, center, center);
+  height: auto;
+  background-color: $trending-bg-color;
+}
+// ***************************************************************************************
+// ******************TRENDING TITLE*******************************************************
+// ***************************************************************************************
+.trendingTitle-wrapper {
+  margin-top: 67px;
+  text-align: center;
+}
+.trendingTitle-wrapper h2 {
+  @include trendingSubtitle;
+  font-size: calc(24px + 0.069444444vw); // =24px+(1px/1440px)
+  line-height: 30px;
+  text-align: center;
+}
+.trendingTitle-wrapper p {
+  margin-top: 12px;
+  font-size: calc(16px + 0.13888889vw); // =14px+(2px/1440px)
+  font-family: $regularContent-font;
+  color: $quinaryLM-color;
+  text-align: center;
+}
+// ***************************************************************************************
+// ******************TRENDING SLIDER GLOBALS**********************************************
+// ***************************************************************************************
+.trendingSlider-container {
+  width: 100vw;
+  margin-top: 54px;
+  margin-bottom: 182px;
+  @include flexContainerConfig(row, nowrap, space-between, center);
+}
+.trendingGifosSlider-wrapper {
+  overflow-x: scroll;
+  @include flexContainerConfig(row, nowrap, flex-start, center);
+  height: fit-content;
+}
+// ***************************************************************************************
+// ******************TRENDING CARD********************************************************
+// ***************************************************************************************
+.trendingGifoCard {
+  position: relative;
+  min-width: 340px;
+  width: 24.791667vw; // =357px/1440px
+  min-height: 260px;
+  height: 19.097222vw; // =275px/1440px
+  margin-right: 0.83333333vw; // =12px/1440px
+  margin-left: 0.83333333vw; // =12px/1440px
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+// ***************************************************************************************
+// ******************TRENDING CARD OVERLAY************************************************
+// ***************************************************************************************
+.trendingGifoCard-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include cardOverlay;
+  @include flexContainerConfig(column, nowrap, space-between, flex-start);
+}
+.socialTrendingCards-wrapper {
+  width: 100%; // of parent
+  height: auto;
+  @include flexContainerConfig(row, nowrap, flex-end, center);
+}
+.trendingCardsButton {
+  margin-top: 2.8011204%; // =10px/357px (of parent)
+  margin-right: 2.8011204%; // =10px/357px (of parent)
+  min-width: 24px;
+  width: 2.2222222vw; // =32px/1440px 
+  min-height: 24px;
+  height: 2.2222222vw; // =32px/1440px 
+  @include cardButton;
+}
+// .trendingCardsFavButton, .trendingCardsDownloadButton, .trendingCardsMaxButton  {
+// }
+.userTitleTrengingCards-wrapper {
+  width: 100%;
+  margin-left: 16px;
+  margin-bottom: 50px;
+  color: $secondaryLM-color;
+  @include flexContainerConfig(column, nowrap, center, flex-start);
+}
+.userTrendingCard{
+  margin-bottom: 5px;
+  font-family: $regularContent-font;
+  font-size: calc(15px + 0.13888889vw); // =15px+(2px/1440px)
+}
+.titleTrendingCard{
+  font-family: $strongContent-font;
+  font-size: calc(16px + 0.13888889vw); // =16px+(2px/1440px)
+}
+// ***************************************************************************************
+// ******************TRENDING SLIDER BUTTONS**********************************************
+// ***************************************************************************************
+.trendingSliderButton {
+  min-width: 38px;
+  width: 2.7777778vw; // =40px/1440
+  min-height: 38px;
+  height: 2.7777778vw; // =40px/1440
+  border: 1px solid $mainLM-color;
+  i {
+    color: $mainLM-color;
+    font-size: 1.1111111vw; //=16px/1440px
+  }
+  &:hover {
+    background-color: $mainLM-color;
+  }
+  &:hover i {
+    color: $secondaryLM-color;
+  }
+}
+#trendingLefttButtonSlider {
+  margin-left: 6.5277778vw; // =94px/1440px
+  margin-right: 0.83333333vw; // =12px/1440px
+}
+#trendingRightButtonSlider {
+  margin-left: 0.83333333vw; // =12px/1440px
+  margin-right: 6.5277778vw; // =94px/1440px
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .trendingSlider-container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    justify-content: flex-start;
+  }
+  .trendingTitle-wrapper {
+    margin-top: 45px;
+    h2 {
+      margin-bottom: 12px;
+    }
+    p {
+      width: 45vw;
+      margin: auto;
+      line-height: 24px;
+    }
+  }
+  #trendingRightButtonSlider, #trendingLefttButtonSlider {
+    display: none;
+  }
+  .trendingGifosSlider-wrapper {
+    margin-left: 2.6041667vw; //20px/768px
+    justify-content: flex-start;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .trendingGifoCard {
+    min-width: 320px;
+    width: 46.484375vw; // =357px/768px
+    max-width: 357px;
+    min-height: 220px;
+    height: 35.807292vw; // =275px/768px
+    max-height: 275px;;
+    margin-right: 1.5625vw; // =12px/768px
+    margin-left: 1.5625vw; // =12px/768px
+    .trendingGifoCard-overlay {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .trendingGifoCard {
+    min-width: 243px;
+    width: 64.8vw; // =243px/375px
+    max-width: unset;
+    min-height: 187px;
+    height: 49.866667vw; // =187px/375px
+    max-height: unset;;
+    margin-right: 20px;
+    margin-left: unset; 
+  }
+} 

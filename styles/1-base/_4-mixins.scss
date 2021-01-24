@@ -1,0 +1,118 @@
+// Flexbox Mixins
+@mixin flexContainerConfig($direction, $wrap, $justify, $aligni) {
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $aligni;
+}
+@mixin activeAnchor {
+  color: $quaternaryLM-color;
+}
+@mixin trendingSubtitle {
+  font-size: calc(17px + 0.069444444vw); // =17px+(1px/1440px)
+  line-height: 25px;
+  font-family: $strongTitles-font;
+  color: $mainLM-color;
+}
+@mixin sectionsSusbtitle {
+font-size: calc(20px + 0.69444444vw); // =20px + (10px/1440px);
+line-height: 30px;
+font-family: $strongTitles-font;
+color: $mainLM-color;
+text-align: center;
+}
+@mixin cardOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: $trendingCards-bg-color;
+}
+@mixin footerText {
+  font-size: calc(11px + 0.13888889vw); // =11px + (2px/1440px)
+  font-family: $regularContent-font;
+  color: $quinaryLM-color;
+}
+@mixin gifsGridContainer {
+  margin-top: 50px;
+  grid-template-columns: repeat(4, 18.055556vw) ; // =260px/1440px
+  grid-template-rows: repeat(1, 13.888889vw); // =200px/1440px
+  gap: 2.0833333vw 2.0833333vw ; // =30px/1440px
+}
+@mixin gifsGridContainerTablet {
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 29.947917vw) ; // =230px/768px
+  grid-template-rows: repeat(1, 26.041667vw); // =200px/768px
+  gap:  1.3020833vw 1.3020833vw; // =10px/768px
+}
+@mixin gifsGridContainerTablet670 {
+  margin-top: 30px;
+  grid-template-columns: repeat(2, 44.776119vw) ; // =300px/670px
+  grid-template-rows: repeat(2, 37.313433vw); // =250px/670px
+  gap: 2.9850746vw 2.9850746vw; // =18px/670px
+}
+@mixin gifsGridContainerTablet375 {
+  margin-top: 30px;
+  grid-template-columns: repeat(2, 44vw) ; // =165px/375px
+  grid-template-rows: repeat(2, 37.333333vw); // =140px/375px
+  gap: 2.6666667vw 2.6666667vw; // =20px/375px
+}
+@mixin cardButton {
+  svg {
+    width: 100%;
+    height: 100%;
+    .rectangle-cardIconBtn {
+      fill: $secondaryLM-color;
+      opacity: 0.7;
+    }
+    .icon-cardIconBtn {
+      opacity: 0.7;
+      fill: $mainLM-color;
+    }
+    &:hover .rectangle-cardIconBtn, &:hover .icon-cardIconBtn {
+      opacity: 1;
+    }
+  }
+}
+@mixin verMasButton {
+  margin-top: 20px;
+  min-width: 115px;
+  width: 8.8194444vw; //=127px/1440px
+  min-height: 40px;
+  height: 3.4722222vw; //=50px/1440px
+  border: 1px solid $mainLM-color;
+  border-radius: 19.685039vw; //=25px/127px
+  font-family: $strongTitles-font;
+  font-size: calc(12px + 0.27777778vw); //=13px/1440px
+  color: $mainLM-color;
+  &:hover {
+    color: $secondaryLM-color;
+    background-color: $mainLM-color;
+  }
+}
+@mixin myFavMyGifosHead {
+  img {
+    min-width: 40px;
+    width: 2.7777778vw; // =40px/1440px
+    min-height: 32px;
+    height: 2.2222222vw; // =32px/1440px
+  }
+  h2 {
+    margin-top: 16px;
+    @include sectionsSusbtitle;
+  }
+}
+@mixin noSearchNoFavNoGifos {
+  img {
+    min-width: 140px;
+    width: 10.416667vw; // =150px/1440px
+    min-height: 140px;
+    height: 10.416667vw; // =150px/1440px
+    margin-top: 110px;
+  }
+  p {
+    margin-top: 29px;
+    font-size: calc(20px + 0.13888889vw); // =10px+(2px/1440px)
+    line-height: 25px;
+    font-family: $strongTitles-font;
+    color: $tertiaryLM-color;
+    text-align: center;
+  }
+}

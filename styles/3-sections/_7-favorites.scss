@@ -1,0 +1,52 @@
+// ***************************************************************************************
+// ******************MY FAVORITES SECTION GLOBALS*****************************************
+// ***************************************************************************************
+.myFav-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 12px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+}
+// ***************************************************************************************
+// ******************MY FAVORITES TITLE***************************************************
+// ***************************************************************************************
+.myFavTitle-wrapper {
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+  @include myFavMyGifosHead;
+}
+// ***************************************************************************************
+// ******************MY FAVORITES GRID****************************************************
+// ***************************************************************************************
+.myFavGrid-wrapper{
+  width: 100vw;
+  @include flexContainerConfig(column, nowrap, flex-start, center);
+}
+.myFavGrid {
+  @include gifsGridContainer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+// ***************************************************************************************
+// ******************NO FAVORITES ********************************************************
+// ***************************************************************************************
+.noMyFav-wrapper {
+  margin-bottom: 45px;
+  @include flexContainerConfig(column, nowrap, space-between, center);
+  @include noSearchNoFavNoGifos;
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 1024px) {
+  .myFavGrid {
+    @include gifsGridContainerTablet;
+  }
+}
+@media screen and (max-width: 670px) {
+  .myFavGrid {
+    @include gifsGridContainerTablet670;
+  }
+}

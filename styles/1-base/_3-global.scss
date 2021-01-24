@@ -1,13 +1,55 @@
 // This Partial defines global initial values for some HTML elements.
+
 * {
   box-sizing: border-box;
   letter-spacing: 0;
   scroll-behavior: smooth; 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+  display: none;
+  overflow-y: hidden;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  // Background values for svg.
+  background-position: center;
+  background-size: cover;
+  background-color: unset;
+  background-repeat: no-repeat;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
 }
-
 .flexContainer {
   display: flex;
+}
+// ********************************
+// ************CLASSES*************
+// ********************************
+.flexContainer {
+  display: flex;
+}
+.gridContainer {
+  display: grid;
+}
+.visibility-hidden{
+  visibility: hidden;
+}
+.visibility-visible {
+  visibility: visible;
+}
+.display-none{
+  display: none;
+}
+.display-block{
+  display: block;
+}
+.display-inline{
+  display: inline;
 }
