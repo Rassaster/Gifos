@@ -260,6 +260,10 @@ nav input {
   display: none;
 }
 
+.fa-bars, .fa-times {
+  display: none;
+}
+
 .nav-anchor {
   font-size: calc(11px + 0.13888889vw);
   font-family: "Montserrat-Bold", sans-serif;
@@ -334,11 +338,13 @@ nav input {
 }
 
 @media screen and (max-width: 768px) {
+  .fa-bars {
+    display: block;
+  }
   nav ul {
     display: none;
-  }
-  nav input {
-    display: inline-block;
+    -webkit-transition: display 2s ease;
+    transition: display 2s ease;
   }
   nav .fa-bars, nav .fa-times {
     color: #572EE5;
@@ -348,7 +354,9 @@ nav input {
     text-align: center;
   }
   nav input {
-    visibility: hidden;
+    z-index: 20;
+    display: inline-block;
+    opacity: 0;
     position: absolute;
     margin: 0;
     height: calc(14px + 2.6666667vw);
