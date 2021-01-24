@@ -21,4 +21,3 @@ const displayHideNavList = () => {
   }
 }
 userNavToggleView.addEventListener('change', displayHideNavList);
-userNavToggleView.addEventListener('touchstart', displayHideNavList);
