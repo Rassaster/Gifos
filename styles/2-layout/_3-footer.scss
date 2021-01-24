@@ -5,3 +5,12 @@ footer {
   height: 116px;
   @include flexContainerConfig(row, nowrap, space-between, center); 
 }
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 670px) {
+  footer {
+    height: 196px;
+    @include flexContainerConfig(column, nowrap, space-around, center); 
+  } 
+}

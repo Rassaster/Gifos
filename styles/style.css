@@ -183,6 +183,21 @@ footer {
           align-items: center;
 }
 
+@media screen and (max-width: 670px) {
+  footer {
+    height: 196px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 #anchorHome {
   min-width: 59.1px;
   width: 4.1041667vw;
@@ -444,7 +459,7 @@ nav input {
   }
   .welcomeMessage-wrapper h1 {
     font-size: calc(25px + 0.78125vw);
-    line-height: calc(40px + 1.3020833vw);
+    line-height: calc(33px + 1.3020833vw);
   }
   .welcomeIlustration-wrapper {
     min-width: 350px;
@@ -984,7 +999,7 @@ nav input {
   }
 }
 
-.socialMedia-wrapper {
+.socialMedia-container {
   min-width: 200px;
   width: 13.888889vw;
   margin-left: 10.833333vw;
@@ -1000,13 +1015,27 @@ nav input {
           align-items: center;
 }
 
-.socialMedia-wrapper p {
+.socialMedia-container p {
   font-size: calc(11px + 0.13888889vw);
   font-family: "Roboto-Regular", sans-serif;
   color: #000000;
 }
 
-.socialMedia-wrapper a {
+.socialMedia-container .socialMedia-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialMedia-container .socialMedia-wrapper a {
+  margin-right: 15px;
   width: 1.3888889vw;
   height: 1.3888889vw;
   -webkit-box-orient: horizontal;
@@ -1021,16 +1050,16 @@ nav input {
           align-items: center;
 }
 
-.socialMedia-wrapper a i {
+.socialMedia-container .socialMedia-wrapper a i {
   color: #572EE5;
   font-size: 1.3888889vw;
 }
 
-.socialMedia-wrapper a .fa-instagram {
+.socialMedia-container .socialMedia-wrapper a .fa-instagram {
   font-size: 1.5277778vw;
 }
 
-.socialMedia-wrapper a:hover i {
+.socialMedia-container .socialMedia-wrapper a:hover i {
   color: #9cafc3;
 }
 
@@ -1045,10 +1074,57 @@ nav input {
 }
 
 @media screen and (max-width: 768px) {
-  .socialMedia-wrapper {
+  .socialMedia-container {
     min-width: 200px;
     width: 13.888889vw;
     margin-left: 10.833333vw;
+  }
+  .socialMedia-container .socialMedia-wrapper {
+    padding-right: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .socialMedia-container .socialMedia-wrapper a {
+    margin-right: 20px;
+  }
+  .socialMedia-container .socialMedia-wrapper a i {
+    font-size: 2.0833333vw;
+  }
+  .socialMedia-container .socialMedia-wrapper a .fa-instagram {
+    font-size: 2.34375vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .socialMedia-container {
+    margin-top: 20px;
+    margin-left: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .socialMedia-container p {
+    font-size: 15px;
+  }
+  .socialMedia-container .socialMedia-wrapper {
+    margin-top: 30px;
+    width: 100px;
+    padding-right: unset;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -1060,12 +1136,20 @@ nav input {
         -ms-flex-align: center;
             align-items: center;
   }
-  .socialMedia-wrapper a i {
-    color: #572EE5;
-    font-size: 2.0833333vw;
+  .socialMedia-container .socialMedia-wrapper a {
+    margin-right: unset;
   }
-  .socialMedia-wrapper a .fa-instagram {
-    font-size: 2.34375vw;
+  .socialMedia-container .socialMedia-wrapper a i {
+    font-size: 15px;
+  }
+  .socialMedia-container .socialMedia-wrapper a .fa-instagram {
+    font-size: 17px;
+  }
+  .allRights-wrapper {
+    margin-right: unset;
+  }
+  .allRights-wrapper p {
+    font-size: 14px;
   }
 }
 
