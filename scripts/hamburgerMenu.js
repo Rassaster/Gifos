@@ -20,4 +20,5 @@ const displayHideNavList = () => {
     closeIconNav.style.display = 'none';
   }
 }
-userNavToggleView.addEventListener('change', displayHideNavList)
+userNavToggleView.addEventListener('change', displayHideNavList);
+userNavToggleView.addEventListener('touchstart', displayHideNavList);
