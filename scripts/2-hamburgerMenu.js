@@ -9,4 +9,3 @@ const displayHideNavList = () => {
   userNavToggleView.classList.toggle('showClose')
 }
 userNavToggleView.addEventListener('click', displayHideNavList);
-console.log(hello)
