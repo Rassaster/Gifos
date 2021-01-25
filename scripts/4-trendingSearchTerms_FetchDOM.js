@@ -13,4 +13,4 @@ gifsRequest(Giphy_Trending_Search_Terms_Node)
       trendingSearchTermsToDOM(data[i]);
     }
   })
-  .catch(err => alert(err));
+  .catch(err => console.error(err));

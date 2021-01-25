@@ -27,6 +27,7 @@ const arrayTrendingGifsResults = [];
 const gifsRequest = async (giphyNode, searchQuery = '', resultsLimit = '',) => { 
   let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + searchQuery + resultsLimit);
   let gifObject = await response.json();
+  console.log(`${giphyNode} -> ${searchQuery} -> ${resultsLimit}:`);
   console.log(gifObject.data);
   return gifObject.data;
 }

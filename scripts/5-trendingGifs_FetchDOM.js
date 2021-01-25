@@ -95,4 +95,4 @@ gifsRequest(Giphy_Trending_Node, Giphy_Results_Limit)
       arrayTrendingGifsResults.push(data[i]);
     }
   })
-  .catch(err => alert(err));
+  .catch(err => console.error(err));
