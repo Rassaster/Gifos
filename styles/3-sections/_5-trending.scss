@@ -55,11 +55,15 @@
     width: 100%;
     height: 100%;
   }
+  &:hover .trendingGifoCard-overlay{
+    visibility: visible;
+  }
 }
 // ***************************************************************************************
 // ******************TRENDING CARD OVERLAY************************************************
 // ***************************************************************************************
 .trendingGifoCard-overlay {
+  visibility: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -86,12 +90,12 @@
 .userTitleTrengingCards-wrapper {
   width: 100%;
   margin-left: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $secondaryLM-color;
   @include flexContainerConfig(column, nowrap, center, flex-start);
 }
 .userTrendingCard{
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   font-family: $regularContent-font;
   font-size: calc(15px + 0.13888889vw); // =15px+(2px/1440px)
 }

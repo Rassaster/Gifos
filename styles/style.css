@@ -898,7 +898,12 @@ nav input {
   height: 100%;
 }
 
+.trendingGifoCard:hover .trendingGifoCard-overlay {
+  visibility: visible;
+}
+
 .trendingGifoCard-overlay {
+  visibility: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -964,7 +969,7 @@ nav input {
 .userTitleTrengingCards-wrapper {
   width: 100%;
   margin-left: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: #FFFFFF;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -979,7 +984,7 @@ nav input {
 }
 
 .userTrendingCard {
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   font-family: "Roboto-Regular", sans-serif;
   font-size: calc(15px + 0.13888889vw);
 }
