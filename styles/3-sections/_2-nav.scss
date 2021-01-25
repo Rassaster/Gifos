@@ -124,7 +124,7 @@ nav {
       height: 128vh;
       background-color: $mainLM-color09;
       @include flexContainerConfig(column, nowrap, flex-start, center);
-      transform: translateX(100%);
+      transform: translateX(120%);
       transition: transform 0.4s ease;
       li {
         display: flex;
