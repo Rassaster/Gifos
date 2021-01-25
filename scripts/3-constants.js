@@ -4,6 +4,7 @@
  * @const Giphy_APIKey
  * @const Giphy_Search_Node 
  * @const Giphy_Trending_Node
+ * @const Giphy_Trending_Search_Terms_Node
  * @const Giphy_Search_Query
  * @const Giphy_Trending_Limit
  * @const arrayTrendingGifsResults
@@ -11,6 +12,7 @@
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
 const Giphy_Search_Node = 'gifs/search';
+const Giphy_Trending_Search_Terms_Node = 'trending/searches'
 const Giphy_Trending_Node = "gifs/trending";
 // const Giphy_Search_Query = TBC;
 const Giphy_Results_Limit = '&limit=10';

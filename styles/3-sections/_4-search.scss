@@ -92,13 +92,23 @@
 .trendingSuggestions-wrapper h3 {
   @include trendingSubtitle;
 }
-.trendingSuggestions-wrapper p {
+#trendingSearchTermsDOM {
+  @include flexContainerConfig(row, wrap, center, center);
+}
+.trendingSuggestions-wrapper a {
   margin-top: 7px;
+  margin-right: 10px;
   font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)
   line-height: 25px;
   font-family: $mediumTitles-font;
   color: $mainLM-color;
   text-align: center;
+  &:hover {
+    text-decoration: underline $tertiaryLM-color;
+  }
+  &:active {
+    color: $quaternaryLM-color;
+  }
 }
 // ***************************************************************************************
 // ******************RESULTS SECTION GLOBALS**********************************************
@@ -178,6 +188,9 @@
 @media screen and (max-width: 425px) {
   .searchBar-container {
     width: 89.066667vw; // =334px/375px
+  }
+  .results-container {
+    margin-top: 30px
   }
   .resultItem-wrapper {
     &::before{

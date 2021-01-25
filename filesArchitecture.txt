@@ -34,11 +34,11 @@
 |____________________________________________________________________
 |---- /scripts
 |     |
-|     |--/1-darkMode.js
-|     |--/2-hamburguerMenu.js
+|     |--/1-darkMode_Toggle.js
+|     |--/2-hamburguerMenu_Toggle.js
 |     |--/3-constants.js
-|     |--/4-.js
-|     |--/5-.js
+|     |--/4-trendingSearch_TermsFetchDOM.js
+|     |--/5-trendingGifs_FetchDOM.js
 |     |--/6-.js
 |     |--/7-.js
 |     |

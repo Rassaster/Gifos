@@ -4,10 +4,10 @@
  * @description Creates the trendingCardWrapper with an overlay containing the Gif, Username and Title information. All the info is defined with .innerHTML and appended to the #trendingGifoCardDOM node.
  * @fires .appendChild(.createElement.innerHTML)
  */
-const trendingGifsResultsToDOM = (gifObject) => {
-  let gifUser = gifObject.username;
-  let gifTitle = gifObject.title;
-  let gifImg = gifObject.images.downsized.url
+const trendingGifsResultsToDOM = (trendingGifsObject) => {
+  let gifUser = trendingGifsObject.username;
+  let gifTitle = trendingGifsObject.title;
+  let gifImg = trendingGifsObject.images.downsized.url
 
   let trendingGifsContainer = document.getElementById('trendingGifoCardDOM');
   let trendingCardWrapper = document.createElement('div');
