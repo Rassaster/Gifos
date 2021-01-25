@@ -1,17 +1,10 @@
-
-const Giphy_URL = "https://api.giphy.com/v1/";
-const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
-const Giphy_Trending_Node = "gifs/trending"
-const Giphy_Trending_Limit = '&limit=10'
-let arrayTrendingGifsResults = [];
-
-const trendingGifsRequest = async () => { 
-  let response = await fetch(Giphy_URL + Giphy_Trending_Node + Giphy_APIKey + Giphy_Trending_Limit);
-  let gifObject = await response.json();
-  console.log(gifObject.data);
-  return gifObject.data;
-}
-const trendingGifsResultsToArray = (gifObject) => {
+/**
+ * @function trendingGifsResultsToDOM
+ * @param Array of Objects with Gif data.
+ * @description Creates the trendingCardWrapper with an overlay containing the Gif, Username and Title information. All the info is defined with .innerHTML and appended to the #trendingGifoCardDOM node.
+ * @fires .appendChild(.createElement.innerHTML)
+ */
+const trendingGifsResultsToDOM = (gifObject) => {
   let gifUser = gifObject.username;
   let gifTitle = gifObject.title;
   let gifImg = gifObject.images.downsized.url
@@ -88,10 +81,17 @@ const trendingGifsResultsToArray = (gifObject) => {
   `
   trendingGifsContainer.appendChild(trendingCardWrapper)
 }
-trendingGifsRequest()
+/**
+ * @async
+ * @function Call-gifsRequest() 
+ * @fires Promise If fullfiled, a for-loop will iterate over the array returned by the fetch, adding each element to the DOM, and pushing each element to the arrayTrendingGifsResults array.
+ * @var arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest()
+ * @callback trendingGifsResultsToDOM(gifObject)
+ */
+gifsRequest(Giphy_Trending_Node, Giphy_Results_Limit)
   .then((data) => {
     for (i = 0; i < data.length; i++) {
-      trendingGifsResultsToArray(data[i]);
+      trendingGifsResultsToDOM(data[i]);
       arrayTrendingGifsResults.push(data[i]);
     }
   })
