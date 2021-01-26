@@ -33,10 +33,12 @@
 |     |--/1-darkMode_Toggle.js
 |     |--/2-hamburguerMenu_Toggle.js
 |     |--/3-constants.js
-|     |--/4-searchGifs_FetchDOM.js 
-|     |--/5-trendingSearchTerms_FetchDOM.js
-|     |--/6-trendingGifs_FetchDOM.js
-|     |--/7-.js
+|     |--/4-autocomplete_FetchDOM.js
+|     |--/5-searchSuggestion_FetchDom.js
+|     |--/6-searchGifs_FetchDOM.js 
+|     |--/7-trendingSearchTerms_FetchDOM.js
+|     |--/8-trendingGifs_FetchDOM.js
+|     |--/9-.js
 |     |
 |     |______________________________________________________________
 |____________________________________________________________________
