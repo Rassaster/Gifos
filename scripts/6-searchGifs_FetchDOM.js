@@ -85,6 +85,7 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
   `
   searchResultsGifsGridContainer.appendChild(searchResultGiCardfWrapper);
   userSearchQuery.innerText = userSearchInput.value;
+  searchResultsContainer.classList.remove('display-none');
 }
 /**
  * @function addEventListener

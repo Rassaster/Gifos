@@ -9,6 +9,7 @@
  * @const Giphy_Trending_Limit
  * @const userSearchInput #searchBar
  * @const searchButton #searchButton-searchBar
+ * @const searchResultsContainer #searchResultsContainerDOM
  * @const userSearchQuery #searchResultItemDOM
  * @const arraySearchGifsResults To access the data of Array of Objects refer to index [0]
  * @const arrayTrendingGifsResults
@@ -22,6 +23,7 @@ const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=48';
 const userSearchInput = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton-searchBar');
+const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const arraySearchGifsResults = [];
 const arrayTrendingGifsResults = [];

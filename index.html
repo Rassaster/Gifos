@@ -86,7 +86,7 @@
           <!-- Search Bar starts -->
         <div class="flexContainer searchBar-wrapper">
           <button id="searchButton-searchBar" class="visibility-hidden" title="Buscar"></button> 
-          <input id="searchBar" type="text" name="searchGifs" placeholder="Busca GIFOS y más...">
+          <input id="searchBar" type="text" name="searchGifs" placeholder="Busca GIFOS y más..." autofocus>
           <button id="searchIcon-searchBar" title="Buscar" class=""></button>
           <button id="closeButton-searchBar" class="display-none" title="Cerrar búsqueda"></button>
         </div>
@@ -119,7 +119,7 @@
       </div>
       <!-- Trending Suggestions ends -->
       <!-- Results Section starts -->
-      <div class="flexContainer results-container display-nne">
+      <div id="searchResultsContainerDOM" class="flexContainer results-container display-none">
         <div class="flexContainer resultItem-wrapper">
           <p id="searchResultItemDOM"></p>
         </div>
@@ -193,6 +193,7 @@
   <!-- Scripts Section -->
   <script src="scripts/2-hamburgerMenu_Toggle.js"></script> 
   <script src="scripts/3-constants.js"></script>
+  <script src="scripts/4-autocomplete_FetchDOM.js"></script>
   <script src="scripts/6-searchGifs_FetchDOM.js"></script>
   <script src="scripts/7-trendingSearchTerms_FetchDOM.js"></script>
   <script src="scripts/8-trendingGifs_FetchDOM.js"></script> 
