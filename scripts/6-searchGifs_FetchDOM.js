@@ -94,7 +94,7 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
  * @fires Fetch If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
  * @const cleanSearchResults Function.
  * @const gifsSearchRequest Function.
- * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest(). To access Object data, refer to index [0].
+ * @const arrayTrendingGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
  * @const searchGifsResultsToDOM Function.
  * @throws 
  */
@@ -118,7 +118,7 @@ searchButton.addEventListener('click', ()=>{
  * @fires Fetch If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
  * @const cleanSearchResults Function.
  * @const gifsSearchRequest Function.
- * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest(). To access Object data, refer to index [0].
+ * @const arrayTrendingGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
  * @const searchGifsResultsToDOM Function.
  * @throws
  */
