@@ -1,7 +1,12 @@
 /**
  * @function searchGifsResultsToDOM
- * @param {array} Objects with Gif data.
- * @description Creates the searchResultGiCardfWrapper with an overlay containing the Gif, Username and Title information. All the info is defined with .innerHTML and appended to the #searchResultsGifsGridDOM node.
+ * @param {array} searchResultsGifObject.
+ * @description Creates new Node Element: "calledsearchResultGiCardfWrapper" with an overlay containing the Gif, Username and Title information. All the info is defined with .innerHTML and appended to the #searchResultsGifsGridDOM node.
+ * @var gifUser {GifData}["username"]
+ * @var gifTitle {GifData}["title"]
+ * @var gifImg {GifData}["images"]["downsized"]["url"]
+ * @var searchResultsGifsGridContainer #searchResultsGifsGridDOM
+ * @var searchResultGiCardfWrapper <div> new Node Element 
  * @fires .appendChild(.createElement.innerHTML)
  */
 const searchGifsResultsToDOM = (searchResultsGifObject) => {
@@ -81,17 +86,20 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
   searchResultsGifsGridContainer.appendChild(searchResultGiCardfWrapper)
 }
 /**
- * @async
+ * @function addEventListener
  * @event click on #searchButton
- * @fires Promise If fullfiled, a for-loop will iterate over the array returned by the fetch, adding each element to the DOM, and pushing each element to the arraySearchGifsResults array.
- * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest()
- * @callback anonymous() First, empties the #searchResultsGifsGridContainer in DOM and the [arraySearchGifsResults]. Finally calls searchGifsResultsToDOM(searchResultsGifObject) and push what the fetch returns to the [arraySearchGifsResults].Finally, calls searchGifsResultsToDOM(searchResultsGifObject) and pushes what the fetch returned to the [arraySearchGifsResults].
+ * @listens #searchButton-searchBar const = searchButton;
+ * @param {event, callBack()}
+ * @callback anonymous() Calls cleanSearchResults() and fetches the search with gifsSearchRequest().
+ * @fires Fetch If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
+ * @const cleanSearchResults Function.
+ * @const gifsSearchRequest Function.
+ * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest(). To access Object data, refer to index [0].
+ * @const searchGifsResultsToDOM Function.
+ * @throws 
  */
 searchButton.addEventListener('click', ()=>{
-  let searchResultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
-    searchResultsGifsGridContainer.innerHTML = '';
-    arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
-
+  cleanSearchResults();
   gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
     .then((data) => {
       arraySearchGifsResults.push(data);
@@ -102,18 +110,21 @@ searchButton.addEventListener('click', ()=>{
     .catch(err => console.error(err));
 })
 /**
- * @async
- * @event keypress enter
- * @fires Promise If fullfiled, a for-loop will iterate over the array returned by the fetch, adding each element to the DOM, and pushing each element to the arraySearchGifsResults array.
- * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest().
- * @callback anonymous(event) First, checks if the 'keypress' equals the Enter key. Then, empties the #searchResultsGifsGridContainer in DOM and the [arraySearchGifsResults]. Finally calls searchGifsResultsToDOM(searchResultsGifObject) and pushes what the fetch returned to the [arraySearchGifsResults].
+ * @function addEventListener()
+ * @event keypress "Enter"
+ * @listens #searchBar const = userSearchInput;
+ * @param {event, callBack(event)}
+ * @callback anonymous(event) First, checks if the 'keypress' equals the Enter key. Then, calls cleanSearchResults() and fetches the search with gifsSearchRequest()
+ * @fires Fetch If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
+ * @const cleanSearchResults Function.
+ * @const gifsSearchRequest Function.
+ * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest(). To access Object data, refer to index [0].
+ * @const searchGifsResultsToDOM Function.
+ * @throws
  */
 userSearchInput.addEventListener('keypress', event => {
   if (event.keyCode === 13) {
-    let searchResultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
-    searchResultsGifsGridContainer.innerHTML = '';
-    arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
-
+    cleanSearchResults();
     gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
       .then((data) => {
         arraySearchGifsResults.push(data);
