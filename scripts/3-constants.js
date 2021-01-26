@@ -26,14 +26,14 @@ const arrayTrendingGifsResults = [];
 /**
  * @async
  * @function gifsRequest()
- * @param {giphyNode, searchQuery, resultsLimit}
+ * @param {giphyNode, resultsLimit}
  * @description Launches a request to Giphy's Trending Gifs end point.
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
-const gifsTrendingsRequest = async (giphyNode, searchQuery = '', resultsLimit = '',) => { 
-  let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + searchQuery +  resultsLimit);
+const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => { 
+  let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + Giphy_Results_Limit);
   let gifObject = await response.json();
-  console.log(`${giphyNode} -> ${searchQuery} -> ${resultsLimit}:`);
+  console.log(`${giphyNode} -> ${resultsLimit}:`);
   console.table(gifObject.data);
   return gifObject.data;
 }
