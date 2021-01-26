@@ -83,12 +83,13 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
 }
 /**
  * @async
- * @function Call-gifsSearchRequest() 
+ * @event click on #searchButton
  * @fires Promise If fullfiled, a for-loop will iterate over the array returned by the fetch, adding each element to the DOM, and pushing each element to the arraySearchGifsResults array.
  * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest()
- * @callback searchGifsResultsToDOM(searchResultsGifObject)
+ * @callback anonymous() Calls searchGifsResultsToDOM(searchResultsGifObject)
  */
-gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
+searchButton.addEventListener('click', ()=>{
+  gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
   .then((data) => {
     for (i = 0; i < data.length; i++) {
       searchGifsResultsToDOM(data[i]);
@@ -96,3 +97,23 @@ gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
     }
   })
   .catch(err => console.error(err));
+})
+/**
+ * @async
+ * @event keypres enter
+ * @fires Promise If fullfiled, a for-loop will iterate over the array returned by the fetch, adding each element to the DOM, and pushing each element to the arraySearchGifsResults array.
+ * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest().
+ * @callback anonymous(event) Checks if the 'keypress' equals the Enter key and calls searchGifsResultsToDOM(searchResultsGifObject).
+ */
+userSearchInput.addEventListener('keypress', event => {
+  if (event.keyCode === 13) {
+    gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
+      .then((data) => {
+        for (i = 0; i < data.length; i++) {
+          searchGifsResultsToDOM(data[i]);
+          arraySearchGifsResults.push(data[i]);
+        }
+      })
+      .catch(err => console.error(err));
+  }
+})
