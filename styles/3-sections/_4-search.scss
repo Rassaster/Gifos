@@ -185,13 +185,14 @@
 // }
 .userTitleSearchrResultGifCards-wrapper {
   width: 100%;
-  margin-left: 16px;
+  padding-left: 8px;
+  padding-right: 5px;
   margin-bottom: 30px;
   color: $secondaryLM-color;
   @include flexContainerConfig(column, nowrap, center, flex-start);
 }
 .userSearchResultGifCard {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   font-family: $regularContent-font;
   font-size: calc(15px + 0.13888889vw); // =15px+(2px/1440px)
 }

@@ -834,7 +834,8 @@ nav input {
 
 .userTitleSearchrResultGifCards-wrapper {
   width: 100%;
-  margin-left: 16px;
+  padding-left: 8px;
+  padding-right: 5px;
   margin-bottom: 30px;
   color: #FFFFFF;
   -webkit-box-orient: vertical;
@@ -850,7 +851,7 @@ nav input {
 }
 
 .userSearchResultGifCard {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   font-family: "Roboto-Regular", sans-serif;
   font-size: calc(15px + 0.13888889vw);
 }
@@ -1096,7 +1097,8 @@ nav input {
 
 .userTitleTrengingCards-wrapper {
   width: 100%;
-  margin-left: 16px;
+  padding-left: 16px;
+  padding-right: 5px;
   margin-bottom: 30px;
   color: #FFFFFF;
   -webkit-box-orient: vertical;

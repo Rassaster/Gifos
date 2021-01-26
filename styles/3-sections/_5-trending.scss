@@ -89,7 +89,8 @@
 // }
 .userTitleTrengingCards-wrapper {
   width: 100%;
-  margin-left: 16px;
+  padding-left: 16px;
+  padding-right: 5px;
   margin-bottom: 30px;
   color: $secondaryLM-color;
   @include flexContainerConfig(column, nowrap, center, flex-start);
