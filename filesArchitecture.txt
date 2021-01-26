@@ -33,9 +33,9 @@
 |     |--/1-darkMode_Toggle.js
 |     |--/2-hamburguerMenu_Toggle.js
 |     |--/3-constants.js
-|     |--/4-trendingSearchTerms_FetchDOM.js
-|     |--/5-trendingGifs_FetchDOM.js
-|     |--/6-searchGifs_FetchDOM.js 
+|     |--/4-searchGifs_FetchDOM.js 
+|     |--/5-trendingSearchTerms_FetchDOM.js
+|     |--/6-trendingGifs_FetchDOM.js
 |     |--/7-.js
 |     |
 |     |______________________________________________________________

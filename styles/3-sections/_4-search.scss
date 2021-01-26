@@ -126,7 +126,7 @@
     color: $quaternaryDM-color;
   }
 }
-#resultItem {
+#searchResultItemDOM {
   margin-top: 84px;
   @include sectionsSusbtitle;
 }
@@ -139,13 +139,65 @@
 }
 .resultsGrid {
   @include gifsGridContainer;
-  img {
+  .searchResultGifCard {
+    position: relative;
     width: 100%;
     height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover .searchResultGifCard-overlay{
+      visibility: visible;
+    }
   }
 }
 .buttonVerMas {
   @include verMasButton;
+}
+// ***************************************************************************************
+// ******************SEARCH RESULT GIF CARD OVERLAY***************************************
+// ***************************************************************************************
+.searchResultGifCard-overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include cardOverlay;
+  @include flexContainerConfig(column, nowrap, space-between, flex-start);
+}
+.socialSearchResultGifCards-wrapper {
+  width: 100%; // of parent
+  height: auto;
+  @include flexContainerConfig(row, nowrap, flex-end, center);
+}
+.searchResultGifCardsButton {
+  margin-top: 2.8011204%; // =10px/357px (of parent)
+  margin-right: 2.8011204%; // =10px/357px (of parent)
+  min-width: 24px;
+  width: 2.2222222vw; // =32px/1440px 
+  min-height: 24px;
+  height: 2.2222222vw; // =32px/1440px 
+  @include cardButton;
+}
+// .trendingCardsFavButton, .trendingCardsDownloadButton, .trendingCardsMaxButton  {
+// }
+.userTitleSearchrResultGifCards-wrapper {
+  width: 100%;
+  margin-left: 16px;
+  margin-bottom: 30px;
+  color: $secondaryLM-color;
+  @include flexContainerConfig(column, nowrap, center, flex-start);
+}
+.userSearchResultGifCard {
+  margin-bottom: 12px;
+  font-family: $regularContent-font;
+  font-size: calc(15px + 0.13888889vw); // =15px+(2px/1440px)
+}
+.titleSearchResultGifCard {
+  font-family: $strongContent-font;
+  font-size: calc(16px + 0.13888889vw); // =16px+(2px/1440px)
 }
 // ***************************************************************************************
 // ******************NO RESULTS***********************************************************
