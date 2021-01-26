@@ -91,14 +91,17 @@ searchButton.addEventListener('click', ()=>{
   let searchResultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
     searchResultsGifsGridContainer.innerHTML = '';
     arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
+
   gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
-  .then((data) => {
-    for (i = 0; i < data.length; i++) {
-      searchGifsResultsToDOM(data[i]);
-      arraySearchGifsResults.push(data[i]);
-    }
-  })
-  .catch(err => console.error(err));
+    .then((data) => {
+      arraySearchGifsResults.push(data);
+    })
+    .then(() => {
+      for (i = 0; i < 12; i++) {
+        searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
+      }
+    })
+    .catch(err => console.error(err));
 })
 /**
  * @async
@@ -112,11 +115,12 @@ userSearchInput.addEventListener('keypress', event => {
     let searchResultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
     searchResultsGifsGridContainer.innerHTML = '';
     arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
+
     gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
       .then((data) => {
-        for (i = 0; i < data.length; i++) {
-          searchGifsResultsToDOM(data[i]);
-          arraySearchGifsResults.push(data[i]);
+        arraySearchGifsResults.push(data);
+        for (i = 0; i < 12; i++) {
+          searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
         }
       })
       .catch(err => console.error(err));
