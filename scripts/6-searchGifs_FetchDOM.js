@@ -95,8 +95,6 @@ searchButton.addEventListener('click', ()=>{
   gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
     .then((data) => {
       arraySearchGifsResults.push(data);
-    })
-    .then(() => {
       for (i = 0; i < 12; i++) {
         searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
       }
