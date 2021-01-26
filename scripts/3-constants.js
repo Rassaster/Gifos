@@ -7,9 +7,10 @@
  * @const Giphy_Trending_Search_Terms_Node
  * @const Giphy_Search_Query
  * @const Giphy_Trending_Limit
- * @const userSearchInput
- * @const searchButton
- * @const arraySearchGifsResults To access the Array of Object data, refer to index [0]. 
+ * @const userSearchInput #searchBar
+ * @const searchButton #searchButton-searchBar
+ * @const userSearchQuery #searchResultItemDOM
+ * @const arraySearchGifsResults To access the data of Array of Objects refer to index [0]
  * @const arrayTrendingGifsResults
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -21,6 +22,7 @@ const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=48';
 const userSearchInput = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton-searchBar');
+const userSearchQuery = document.getElementById('searchResultItemDOM');
 const arraySearchGifsResults = [];
 const arrayTrendingGifsResults = [];
 /**
@@ -30,8 +32,8 @@ const arrayTrendingGifsResults = [];
  */
 
 /**
- * @description cleanSearchResults() Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
  * @function cleanSearchResults
+ * @description cleanSearchResults() Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
  * @param {}
  * @var resultsGifsGridContainer #searchResultsGifsGridDOM
  * @var arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
@@ -42,8 +44,8 @@ const cleanSearchResults = () => {
   arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
 }
 /**
- * @description Launches a request to Giphy. It works for Giphy_Trending_Node and Giphy_Trending_Search_Terms_Node.
  * @function gifsTrendingsRequest()
+ * @description Launches a request to Giphy. It works for Giphy_Trending_Node and Giphy_Trending_Search_Terms_Node.
  * @async
  * @param {giphyNode, resultsLimit = ''}
  * @const Giphy_BaseURL
@@ -60,8 +62,8 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
   return gifObject.data;
 }
 /**
- * @description Launches a request to Giphy_Search_Node with the query submitted by User.
  * @function gifsSearchRequest()
+ * @description Launches a request to Giphy_Search_Node with the query submitted by User.
  * @async
  * @param {giphyNode, searchQuery, resultsLimit}
  * @const Giphy_BaseURL

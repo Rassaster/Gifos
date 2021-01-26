@@ -83,7 +83,8 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
               </div>
             </div>
   `
-  searchResultsGifsGridContainer.appendChild(searchResultGiCardfWrapper)
+  searchResultsGifsGridContainer.appendChild(searchResultGiCardfWrapper);
+  userSearchQuery.innerText = userSearchInput.value;
 }
 /**
  * @function addEventListener
