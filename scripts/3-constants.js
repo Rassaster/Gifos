@@ -1,5 +1,5 @@
 /**
- * @description Declaration of constants for fetching Trending Gifs to Gihpy.
+ * @description Declaration of constants for fetching to Giphy, and to further DOM functions.
  * @const Giphy_BaseURL
  * @const Giphy_APIKey
  * @const Giphy_Search_Node 
@@ -9,7 +9,7 @@
  * @const Giphy_Trending_Limit
  * @const userSearchInput
  * @const searchButton
- * @const arraySearchGifsResults
+ * @const arraySearchGifsResults To access the Array of Object data, refer to index [0]. 
  * @const arrayTrendingGifsResults
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -24,11 +24,33 @@ const searchButton = document.getElementById('searchButton-searchBar');
 const arraySearchGifsResults = [];
 const arrayTrendingGifsResults = [];
 /**
+ *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...
+ * @const trendingGifCardInnerHTML
+ * @const searchGifResultCardInnerHTML
+ */
+
+/**
+ * @description cleanSearchResults() Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
+ * @function cleanSearchResults
+ * @param {}
+ * @var resultsGifsGridContainer #searchResultsGifsGridDOM
+ * @var arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
+ */
+const cleanSearchResults = () => {
+  let resultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
+  resultsGifsGridContainer.innerHTML = '';
+  arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
+}
+/**
+ * @description Launches a request to Giphy. It works for Giphy_Trending_Node and Giphy_Trending_Search_Terms_Node.
+ * @function gifsTrendingsRequest()
  * @async
- * @function gifsRequest()
- * @param {giphyNode, resultsLimit}
- * @description Launches a request to Giphy's Trending Gifs end point.
- * @returns {array} An array containing the Trending Gifs JSON data received in the request.
+ * @param {giphyNode, resultsLimit = ''}
+ * @const Giphy_BaseURL
+ * @const Giphy_APIKey
+ * @consoleLogs String: Node that was Fetched +  Results Limit.
+ * @tableLogs Array of the JSON data returned as promise is full
+ * @returns {array} Containing the Trending Gifs JSON data received from the request.
  */
 const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => { 
   let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + Giphy_Results_Limit);
@@ -38,10 +60,15 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
   return gifObject.data;
 }
 /**
- * @async
+ * @description Launches a request to Giphy_Search_Node with the query submitted by User.
  * @function gifsSearchRequest()
+ * @async
  * @param {giphyNode, searchQuery, resultsLimit}
- * @description Launches a request to Giphy's Search Gifs end point. It listens to the usearSearchInput.value to define the query value.
+ * @const Giphy_BaseURL
+ * @const Giphy_APIKey
+ * @const userSearchInput.value #searchBar.value
+ * @consoleLogs String: Node that was Fetched + User's Query + the Results Limit.
+ * @tableLogs Array of the JSON data returned as promise is full
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
 const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',) => { 
