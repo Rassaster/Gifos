@@ -18,7 +18,7 @@ const Giphy_Search_Node = 'gifs/search';
 const Giphy_Trending_Search_Terms_Node = 'trending/searches'
 const Giphy_Trending_Node = "gifs/trending";
 const Giphy_Search_Query = `&q=`;
-const Giphy_Results_Limit = '&limit=12';
+const Giphy_Results_Limit = '&limit=48';
 const userSearchInput = document.getElementById('searchBar');
 const searchButton = document.getElementById('searchButton-searchBar');
 const arraySearchGifsResults = [];
