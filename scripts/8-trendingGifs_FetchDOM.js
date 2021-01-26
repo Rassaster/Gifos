@@ -13,8 +13,7 @@ const trendingGifsResultsToDOM = (trendingGifsObject) => {
   let trendingCardWrapper = document.createElement('div');
   trendingCardWrapper.className = 'trendingGifoCard';
   trendingCardWrapper.innerHTML = 
-  `
-  <img src=${gifImg} alt="Trending Gif"
+  `<img src=${gifImg} alt="Trending Gif"
             />
             <div class="flexContainer trendingGifoCard-overlay">
               <div class="flexContainer socialTrendingCards-wrapper">
