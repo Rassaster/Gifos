@@ -1,18 +1,21 @@
 /**
  * @description Declaration of constants for fetching to Giphy, and to further DOM functions.
- * @const Giphy_BaseURL
- * @const Giphy_APIKey
- * @const Giphy_Search_Node 
- * @const Giphy_Trending_Node
- * @const Giphy_Trending_Search_Terms_Node
- * @const Giphy_Search_Query
- * @const Giphy_Trending_Limit
- * @const userSearchInput #searchBar
- * @const searchButton #searchButton-searchBar
- * @const searchResultsContainer #searchResultsContainerDOM
- * @const userSearchQuery #searchResultItemDOM
- * @const arraySearchGifsResults To access the data of Array of Objects refer to index [0]
- * @const arrayTrendingGifsResults
+ * @const Giphy_BaseURL string
+ * @const Giphy_APIKey string
+ * @const Giphy_Search_Node string
+ * @const Giphy_Trending_Node string
+ * @const Giphy_Trending_Search_Terms_Node string
+ * @const Giphy_Search_Query string
+ * @const Giphy_Trending_Limit string
+ * @const userSearchInput #searchBar DOM Node
+ * @const searchIconBar #searchIcon-searchBar DOM Node
+ * @const searchCloseSuggestions #closeButton-searchBar DOM Node
+ * @const searchButton #searchButton-searchBar DOM Node
+ * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
+ * @const searchResultsContainer #searchResultsContainerDOM DOM Node
+ * @const userSearchQuery #searchResultItemDOM DOM Node
+ * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
+ * @const arrayTrendingGifsResults [array]
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
@@ -22,6 +25,9 @@ const Giphy_Trending_Node = "gifs/trending";
 const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=48';
 const userSearchInput = document.getElementById('searchBar');
+const searchIconhBar= document.getElementById('searchIcon-searchBar');
+const searchCloseSuggestions = document.getElementById('closeButton-searchBar');
+const searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
 const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
@@ -70,7 +76,7 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
  * @param {giphyNode, searchQuery, resultsLimit}
  * @const Giphy_BaseURL
  * @const Giphy_APIKey
- * @const userSearchInput.value #searchBar.value
+ * @const userSearchInput.value #searchBar.value DOM
  * @consoleLogs String: Node that was Fetched + User's Query + the Results Limit.
  * @tableLogs Array of the JSON data returned as promise is full
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
