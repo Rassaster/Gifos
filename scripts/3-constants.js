@@ -3,6 +3,7 @@
  * @const Giphy_BaseURL string
  * @const Giphy_APIKey string
  * @const Giphy_Search_Node string
+ * @const Giphy_Search_Autocomplete string
  * @const Giphy_Trending_Node string
  * @const Giphy_Trending_Search_Terms_Node string
  * @const Giphy_Search_Query string
@@ -20,6 +21,7 @@
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
 const Giphy_Search_Node = 'gifs/search';
+const Giphy_Search_Autocomplete = 'gifs/search/tags';
 const Giphy_Trending_Search_Terms_Node = 'trending/searches'
 const Giphy_Trending_Node = "gifs/trending";
 const Giphy_Search_Query = `&q=`;
@@ -50,6 +52,14 @@ const cleanSearchResults = () => {
   let resultsGifsGridContainer = document.getElementById('searchResultsGifsGridDOM');
   resultsGifsGridContainer.innerHTML = '';
   arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
+}
+/**
+ * @function 
+ * @description
+ */
+const cleanAutocompleteSuggestions = () => {
+  let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
+  searchSuggestionsContainer.innerHTML = '';
 }
 /**
  * @function gifsTrendingsRequest()
@@ -85,6 +95,17 @@ const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',
   let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + searchQuery + userSearchInput.value + resultsLimit);
   let gifObject = await response.json();
   console.log(`${giphyNode} -> User searched: ${userSearchInput.value} -> ${resultsLimit}:`);
+  console.table(gifObject.data);
+  return gifObject.data;
+}
+
+/**
+ * @description
+ */
+const gifsSearchAutocomplete = async (giphyNode) => { 
+  let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + Giphy_Search_Query + userSearchInput.value);
+  let gifObject = await response.json();
+  console.log(`${giphyNode} autocomplete -> User typed: ${userSearchInput.value}: `);
   console.table(gifObject.data);
   return gifObject.data;
 }

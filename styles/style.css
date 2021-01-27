@@ -566,9 +566,11 @@ nav input {
   background-size: contain;
 }
 
-.searchSuggestions-wrapper {
+.searchSuggestions-container {
   width: 91.651543%;
-  height: 170px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-top: 14px;
   padding-bottom: 8px;
   border-top: 1px solid #9cafc3;
@@ -583,7 +585,9 @@ nav input {
           align-items: flex-start;
 }
 
-.searchSuggestionItem {
+.searchSuggestionTerm-wrapper {
+  width: 100%;
+  height: 35px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -591,13 +595,20 @@ nav input {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.searchSuggestionItem .item-suggestion::before {
+.searchSuggestionTerm-wrapper:hover {
+  background-color: rgba(96, 215, 199, 0.1);
+}
+
+.searchSuggestionTerm-wrapper:hover .termSuggestion::before {
+  color: rgba(86, 46, 229, 0.9);
+}
+
+.searchSuggestionTerm-wrapper .termSuggestion::before {
   background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/button-search.svg);
   background-size: contain;
   display: inline-block;
@@ -608,7 +619,13 @@ nav input {
   margin-right: 20px;
 }
 
-.searchSuggestionItem .item-suggestion {
+.searchSuggestionTerm-wrapper:hover .termSuggestion {
+  color: rgba(86, 46, 229, 0.9);
+  -webkit-text-decoration: 2px underline #5ED7C6;
+          text-decoration: 2px underline #5ED7C6;
+}
+
+.searchSuggestionTerm-wrapper .termSuggestion {
   font-size: calc(14px + 0.13888889vw);
   font-family: "Roboto-Regular", sans-serif;
   color: #9cafc3;

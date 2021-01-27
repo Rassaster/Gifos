@@ -1,6 +1,6 @@
 /**
- * @description
  * @function addEventListener
+ * @description
  * @event input on #searchBar.value
  * @listens  #searchBar const = userSearchInput
  * @param {} 
@@ -26,3 +26,40 @@ userSearchInput.addEventListener('input', () => {
     }
   }
 );
+/**
+ * @function autocompleteSuggestionToDOM
+ * @description
+ * @param {array} autocompleteSuggestionObject
+ * @var autocompleteTermSuggestion {termData}[name]
+ * @var searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
+ * @var searchSuggestionWrapper <div> new Node Element
+ * @var searchTermSuggestion <p> new Node Element
+ * @fires  @fires .appendChild(.createElement.(createElement.innerText)
+ */
+const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
+  let autocompleteTermSuggestion = autocompleteSuggestionObject.name;
+
+  let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
+  let searchSuggestionWrapper = document.createElement('div');
+  searchSuggestionWrapper.classList.add('flexContainer');
+  searchSuggestionWrapper.classList.add('searchSuggestionTerm-wrapper');
+  searchTermSuggestion = document.createElement('p');
+  searchTermSuggestion.classList.add('termSuggestion');
+  searchTermSuggestion.innerText = autocompleteTermSuggestion
+  // searchSuggestionWrapper.innerHTML = `<p class="termSuggestion">${autocompleteTermSuggestion}</p>`;
+  searchSuggestionWrapper.appendChild(searchTermSuggestion);
+  searchSuggestionsContainer.appendChild(searchSuggestionWrapper);
+}
+/**
+ * @description
+ */
+userSearchInput.addEventListener('input', ()=>{
+  cleanAutocompleteSuggestions();
+  gifsSearchAutocomplete(Giphy_Search_Autocomplete)
+    .then((data) => {
+      for (i = 0; i < data.length; i++) {
+        autocompleteSuggestionToDOM(data[i]);
+      }
+    })
+    .catch(err => console.error(err));
+})
