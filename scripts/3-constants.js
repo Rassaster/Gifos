@@ -13,10 +13,10 @@
  * @const searchCloseSuggestions #closeButton-searchBar DOM Node
  * @const searchButton #searchButton-searchBar DOM Node
  * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
+ * @const autocompleteSuggestionTermsWrapper .searchSuggestionTerm-wrapper DOM Node
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node
  * @const userSearchQuery #searchResultItemDOM DOM Node
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
- * @const arrayAutocompleteSuggestions [array]
  * @const arrayTrendingGifsResults [array]
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -31,11 +31,11 @@ const userSearchInput = document.getElementById('searchBar');
 const searchIconhBar= document.getElementById('searchIcon-searchBar');
 const searchCloseSuggestions = document.getElementById('closeButton-searchBar');
 const searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
+const autocompleteSuggestionTermsWrapper = document.getElementsByClassName('searchSuggestionTerm-wrapper');
 const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const arraySearchGifsResults = [];
-const arrayAutocompleteSuggestions = [];
 const arrayTrendingGifsResults = [];
 /**
  *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...
@@ -62,7 +62,6 @@ const cleanSearchResults = () => {
 const cleanAutocompleteSuggestions = () => {
   let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
   searchSuggestionsContainer.innerHTML = '';
-  arrayAutocompleteSuggestions.splice(0, arrayAutocompleteSuggestions.length);
 }
 /**
  * @function gifsTrendingsRequest()
@@ -101,8 +100,20 @@ const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',
   console.table(gifObject.data);
   return gifObject.data;
 }
+/**
+ * @function searchAutocompleteSuggestions
+ * @description
+ */
+const searchAutocompleteSuggestions = async (suggestedTerm ,resultsLimit = '',) => { 
+  let response = await fetch(Giphy_BaseURL + Giphy_Search_Node + Giphy_APIKey + Giphy_Search_Query + suggestedTerm + resultsLimit);
+  let gifObject = await response.json();
+  console.log(`${giphyNode} -> User searched: ${userSearchInput.value} -> ${resultsLimit}:`);
+  console.table(gifObject.data);
+  return gifObject.data;
+}
 
 /**
+ * @function gifsSearchAutocomplete
  * @description
  */
 const gifsSearchAutocomplete = async (giphyNode) => { 

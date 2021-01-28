@@ -27,6 +27,40 @@ userSearchInput.addEventListener('input', () => {
   }
 );
 /**
+ * @function listenToAutocompleteSuggestions
+ * @description Listens to the searchSuggestionTerm-wrapper class and converts the {HTML Object} to an [Array]. The applies the Array.forEach() method, and for each element creates an addEventListener('click'). This will set the searchBar value to the suggested term and fires de triggerSearch().
+ * @fires .forEach() 
+ * @const suggestedTerm string.
+ * @const userSearchInput .value property of #searchBar
+ * @const triggerSearch function.
+ */
+const listenToAutocompleteSuggestions = () => {
+  Array.from(autocompleteSuggestionTermsWrapper).forEach(termWrapper => {
+    termWrapper.addEventListener('click', () => {
+      let suggestedTerm = termWrapper.firstChild.innerText;
+      userSearchInput.value = suggestedTerm;
+      triggerSearch();
+    })
+  });
+}
+/**
+ * @function triggerAutocomplete
+ * @fires gifsSearchAutocomplete() Fetch. If fullfiled: First, iterates with a for-loop  over the Array of Objects returned by the fetch and calls autocompleteSuggestionToDOM( over each element. Then calls listenToAutocompleteSuggestions().
+ * @const autocompleteSuggestionToDOM Function.
+ * @const listenToAutocompleteSuggestions Function
+ * @throws
+*/
+const triggerAutocomplete = () => {
+  gifsSearchAutocomplete(Giphy_Search_Autocomplete)
+    .then((data) => {
+      for (i = 0; i < data.length; i++) {
+        autocompleteSuggestionToDOM(data[i]);
+      }
+      listenToAutocompleteSuggestions();
+    })
+    .catch(err => console.error(err));
+}
+/**
  * @function autocompleteSuggestionToDOM
  * @description
  * @param {array} autocompleteSuggestionObject
@@ -51,16 +85,15 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
   searchSuggestionsContainer.appendChild(searchSuggestionWrapper);
 }
 /**
- * @description
+ * @function addEventListener
+ * @event click on #searchButton
+ * @listens #searchButton-searchBar const = searchButton;
+ * @param {event, callBack()}
+ * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
+ * @const cleanSearchResults Function.
+ * @const triggerSearch Function.
  */
 userSearchInput.addEventListener('input', ()=>{
   cleanAutocompleteSuggestions();
-  gifsSearchAutocomplete(Giphy_Search_Autocomplete)
-    .then((data) => {
-      for (i = 0; i < data.length; i++) {
-        autocompleteSuggestionToDOM(data[i]);
-        arrayAutocompleteSuggestions.push(data[i])
-      }
-    })
-    .catch(err => console.error(err));
+  setTimeout(triggerAutocomplete(), 1000);
 })
