@@ -114,10 +114,10 @@ const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',
  * @tableLogs Array of the JSON data returned as promise is fullfiled.
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
-const gifsSearchAutocomplete = async (giphyNode) => { 
-  let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + Giphy_Search_Query + userSearchInput.value);
+const gifsSearchAutocomplete = async () => { 
+  let response = await fetch(Giphy_BaseURL + Giphy_Search_Autocomplete + Giphy_APIKey + Giphy_Search_Query + userSearchInput.value);
   let gifObject = await response.json();
-  console.log(`${giphyNode} autocomplete -> User typed: ${userSearchInput.value}: `);
+  console.log(`Autocomplete -> User typed: ${userSearchInput.value}: `);
   console.table(gifObject.data);
   return gifObject.data;
 }
