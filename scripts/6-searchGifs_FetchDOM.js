@@ -7,7 +7,7 @@
  * @throws
  */
 const triggerSearch = () => {
-  gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
+  gifsSearchRequest()
   .then((data) => {
     arraySearchGifsResults.push(data);
     displaySearchTermAsResultsTitle();
