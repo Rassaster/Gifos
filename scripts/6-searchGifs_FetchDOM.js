@@ -1,9 +1,17 @@
 /**
  * @function triggerSearch
- * @fires gifsSearchRequest() Fetch. If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
+ * @fires gifsSearchRequest() Fetch. If fullfiled: 
+ * 1. pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; 
+ * 2. Iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
+ * 3. Sets the value of [copyOfarraySearchGifsResults] by slicing the first 12 elements of [arrayTrendingGifsResults].
+ * 4. Calls closeAutocompleteSuggestions().
+ * 5. Calls emptySearchValue().
  * @const gifsSearchRequest Function.
- * @const arrayTrendingGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
+ * @const arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
+ * @const copyOfarraySearchGifsResults [Array].
  * @const searchGifsResultsToDOM Function.
+ * @const closeAutocompleteSuggestions Function.
+ * @const emptySearchValue Function.
  * @throws
  */
 const triggerSearch = () => {
@@ -14,6 +22,7 @@ const triggerSearch = () => {
     for (i = 0; i < 12; i++) {
       searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
     }
+    copyOfarraySearchGifsResults = arraySearchGifsResults[0].slice(12);
     closeAutocompleteSuggestions();
     emptySearchValue();
   })
@@ -141,3 +150,9 @@ userSearchInput.addEventListener('keypress', event => {
  * @listens #closeButton-searchBar
  */
 closeSearchButton.addEventListener('click', closeRestartSearch);
+/**
+ * @function addEventListener
+ * @event click on const searchCloseSuggestions = #closeButton-searchBar
+ * @listens #closeButton-searchBar
+ */
+verMasSearchResultsButtonDOM.addEventListener('click', verMasButtonsFunctionality);

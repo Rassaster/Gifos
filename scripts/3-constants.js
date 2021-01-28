@@ -16,6 +16,7 @@
  * @const searchButton #searchButton-searchBar DOM Node.
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node.
  * @const userSearchQuery #searchResultItemDOM DOM Node.
+ * @const verMasSearchResultsButton #verMasSearchResultsButtonDOM
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @const arrayTrendingGifsResults [array].
  */
@@ -35,7 +36,9 @@ const autocompleteSuggestionTermsWrapper = document.getElementsByClassName('sear
 const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
+const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM')
 const arraySearchGifsResults = [];
+let copyOfarraySearchGifsResults = [];
 const arrayTrendingGifsResults = [];
 /**
  *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...
@@ -146,4 +149,10 @@ const closeAutocompleteSuggestions = () => {
 const closeRestartSearch = () => {
   emptySearchValue();
   closeAutocompleteSuggestions();
+}
+const verMasButtonsFunctionality = () => {
+  for (i = 0; i < 12; i++) {
+    searchGifsResultsToDOM(copyOfarraySearchGifsResults[i]);
+  }
+  copyOfarraySearchGifsResults = copyOfarraySearchGifsResults.slice(12);
 }
