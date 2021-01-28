@@ -533,7 +533,7 @@ nav input {
 #searchBar {
   border: none;
   width: 85.480944%;
-  margin-left: 5px;
+  margin-left: 15px;
   font-size: calc(14px + 0.13888889vw);
   font-family: "Roboto-Regular", sans-serif;
 }
