@@ -10,10 +10,10 @@
  * @const Giphy_Trending_Limit string
  * @const userSearchInput #searchBar DOM Node
  * @const searchIconBar #searchIcon-searchBar DOM Node
- * @const searchCloseSuggestions #closeButton-searchBar DOM Node
- * @const searchButton #searchButton-searchBar DOM Node
+ * @const closeSearchButton #closeButton-searchBar DOM Node
  * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
  * @const autocompleteSuggestionTermsWrapper .searchSuggestionTerm-wrapper DOM Node
+ * @const searchButton #searchButton-searchBar DOM Node
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node
  * @const userSearchQuery #searchResultItemDOM DOM Node
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
@@ -29,7 +29,7 @@ const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=48';
 const userSearchInput = document.getElementById('searchBar');
 const searchIconhBar= document.getElementById('searchIcon-searchBar');
-const searchCloseSuggestions = document.getElementById('closeButton-searchBar');
+const closeSearchButton = document.getElementById('closeButton-searchBar');
 const searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
 const autocompleteSuggestionTermsWrapper = document.getElementsByClassName('searchSuggestionTerm-wrapper');
 const searchButton = document.getElementById('searchButton-searchBar');
@@ -45,7 +45,7 @@ const arrayTrendingGifsResults = [];
 
 /**
  * @function cleanSearchResults
- * @description cleanSearchResults() Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
+ * @description Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
  * @param {}
  * @var resultsGifsGridContainer #searchResultsGifsGridDOM
  * @var arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
@@ -56,8 +56,8 @@ const cleanSearchResults = () => {
   arraySearchGifsResults.splice(0, arraySearchGifsResults.length);
 }
 /**
- * @function 
- * @description
+ * @function cleanAutocompleteSuggestions
+ * @description Clears the displayed autocomplete suggested terms in DOM.
  */
 const cleanAutocompleteSuggestions = () => {
   let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
@@ -90,7 +90,7 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
  * @const Giphy_APIKey
  * @const userSearchInput.value #searchBar.value DOM
  * @consoleLogs String: Node that was Fetched + User's Query + the Results Limit.
- * @tableLogs Array of the JSON data returned as promise is full
+ * @tableLogs Array of the JSON data returned as promise is fullfiled.
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
 const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',) => { 
@@ -101,20 +101,17 @@ const gifsSearchRequest = async (giphyNode, searchQuery = '', resultsLimit = '',
   return gifObject.data;
 }
 /**
- * @function searchAutocompleteSuggestions
- * @description
- */
-const searchAutocompleteSuggestions = async (suggestedTerm ,resultsLimit = '',) => { 
-  let response = await fetch(Giphy_BaseURL + Giphy_Search_Node + Giphy_APIKey + Giphy_Search_Query + suggestedTerm + resultsLimit);
-  let gifObject = await response.json();
-  console.log(`${giphyNode} -> User searched: ${userSearchInput.value} -> ${resultsLimit}:`);
-  console.table(gifObject.data);
-  return gifObject.data;
-}
-
-/**
  * @function gifsSearchAutocomplete
  * @description
+ * @async
+ * @param {giphyNode}
+ * @const Giphy_BaseURL
+ * @const Giphy_APIKey
+ * @const Giphy_Search_Query
+ * @const userSearchInput.value #searchBar.value DOM
+ * @consoleLogs String: Node that was Fetched + 'User typed' + serSearchInput.value.
+ * @tableLogs Array of the JSON data returned as promise is fullfiled.
+ * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
 const gifsSearchAutocomplete = async (giphyNode) => { 
   let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + Giphy_Search_Query + userSearchInput.value);
@@ -122,4 +119,30 @@ const gifsSearchAutocomplete = async (giphyNode) => {
   console.log(`${giphyNode} autocomplete -> User typed: ${userSearchInput.value}: `);
   console.table(gifObject.data);
   return gifObject.data;
+}
+// ***************************************************************************************
+// ++++++++++++++++++++++++++++++++++++++++HELPERS++++++++++++++++++++++++++++++++++++++++
+// ****************************************HELPERS****************************************
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+const emptySearchValue = () => {
+  userSearchInput.value = '';
+}
+const displaySearchTermAsResultsTitle = () => {
+  userSearchQuery.innerText = userSearchInput.value;
+}
+const displayAutcompleteSuggestions = () => {
+  searchButton.classList.remove('visibility-hidden');
+  searchSuggestionsContainer.classList.remove('display-none');
+  searchIconhBar.classList.add('display-none');
+  closeSearchButton.classList.remove('display-none');
+}
+const closeAutocompleteSuggestions = () => {
+  searchButton.classList.add('visibility-hidden');
+  searchSuggestionsContainer.classList.add('display-none');
+  searchIconhBar.classList.remove('display-none')
+  closeSearchButton.classList.add('display-none');
+}
+const closeRestartSearch = () => {
+  emptySearchValue();
+  closeAutocompleteSuggestions();
 }

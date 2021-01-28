@@ -14,15 +14,9 @@
  */
 userSearchInput.addEventListener('input', () => {
     if (userSearchInput.value !== '') { 
-      searchButton.classList.remove('visibility-hidden');
-      searchSuggestionsContainer.classList.remove('display-none');
-      searchIconhBar.classList.add('display-none');
-      searchCloseSuggestions.classList.remove('display-none');
+      displayAutcompleteSuggestions();
     } else {
-      searchButton.classList.add('visibility-hidden');
-      searchSuggestionsContainer.classList.add('display-none');
-      searchIconhBar.classList.remove('display-none')
-      searchCloseSuggestions.classList.add('display-none');
+      closeAutocompleteSuggestions();
     }
   }
 );
@@ -86,7 +80,7 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
 }
 /**
  * @function addEventListener
- * @event click on #searchButton
+ * @event input 
  * @listens #searchButton-searchBar const = searchButton;
  * @param {event, callBack()}
  * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
@@ -95,5 +89,5 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
  */
 userSearchInput.addEventListener('input', ()=>{
   cleanAutocompleteSuggestions();
-  setTimeout(triggerAutocomplete(), 1000);
+  triggerAutocomplete();
 })

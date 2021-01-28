@@ -10,9 +10,12 @@ const triggerSearch = () => {
   gifsSearchRequest(Giphy_Search_Node, Giphy_Search_Query, Giphy_Results_Limit)
   .then((data) => {
     arraySearchGifsResults.push(data);
+    displaySearchTermAsResultsTitle();
     for (i = 0; i < 12; i++) {
       searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
     }
+    closeAutocompleteSuggestions();
+    emptySearchValue();
   })
   .catch(err => console.error(err));
 }
@@ -102,12 +105,11 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
             </div>
   `
   searchResultsGifsGridContainer.appendChild(searchResultGiCardfWrapper);
-  userSearchQuery.innerText = userSearchInput.value;
   searchResultsContainer.classList.remove('display-none');
 }
 /**
  * @function addEventListener
- * @event click on #searchButton
+ * @event click on searchButton = #searchButton
  * @listens #searchButton-searchBar const = searchButton;
  * @param {event, callBack()}
  * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
@@ -133,3 +135,9 @@ userSearchInput.addEventListener('keypress', event => {
     triggerSearch();
   }
 })
+/**
+ * @function addEventListener
+ * @event click on const searchCloseSuggestions = #closeButton-searchBar
+ * @listens #closeButton-searchBar
+ */
+closeSearchButton.addEventListener('click', closeRestartSearch);
