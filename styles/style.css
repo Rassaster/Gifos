@@ -668,7 +668,7 @@ nav input {
           align-items: center;
 }
 
-.trendingSuggestions-wrapper a {
+.trendingSuggestions-wrapper p {
   margin-top: 7px;
   margin-right: 10px;
   font-size: calc(14px + 0.13888889vw);
@@ -678,12 +678,17 @@ nav input {
   text-align: center;
 }
 
-.trendingSuggestions-wrapper a:hover {
-  -webkit-text-decoration: underline #5ED7C6;
-          text-decoration: underline #5ED7C6;
+.trendingSuggestions-wrapper p::after, .trendingSuggestions-wrapper p::before {
+  content: '-|-';
 }
 
-.trendingSuggestions-wrapper a:active {
+.trendingSuggestions-wrapper p:hover {
+  cursor: pointer;
+  -webkit-text-decoration: 2px underline #5ED7C6;
+          text-decoration: 2px underline #5ED7C6;
+}
+
+.trendingSuggestions-wrapper p:active {
   color: #9cafc3;
 }
 

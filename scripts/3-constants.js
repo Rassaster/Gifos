@@ -16,8 +16,11 @@
  * @const searchButton #searchButton-searchBar DOM Node.
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node.
  * @const userSearchQuery #searchResultItemDOM DOM Node.
- * @const verMasSearchResultsButton #verMasSearchResultsButtonDOM
+ * @const verMasSearchResultsButton #verMasSearchResultsButtonDOM DOM Node.
+ * @const trendingSuggestionsWrapper #trendingSuggestionsWrapperDOM DOM Node.
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
+ * @const copyOfarraySearchGifsResults [array]
+ * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const arrayTrendingGifsResults [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -36,9 +39,11 @@ const autocompleteSuggestionTermsWrapper = document.getElementsByClassName('sear
 const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
-const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM')
+const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM');
+const trendingSuggestionsWrapper = document.getElementById('trendingSuggestionsWrapperDOM');
 const arraySearchGifsResults = [];
 let copyOfarraySearchGifsResults = [];
+const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const arrayTrendingGifsResults = [];
 /**
  *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...

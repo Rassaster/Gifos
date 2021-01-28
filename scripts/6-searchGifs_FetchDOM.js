@@ -17,14 +17,13 @@
 const triggerSearch = () => {
   gifsSearchRequest()
   .then((data) => {
-    arraySearchGifsResults.push(data);
     displaySearchTermAsResultsTitle();
+    arraySearchGifsResults.push(data);
     for (i = 0; i < 12; i++) {
       searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
     }
     copyOfarraySearchGifsResults = arraySearchGifsResults[0].slice(12);
-    closeAutocompleteSuggestions();
-    emptySearchValue();
+    closeRestartSearch();
   })
   .catch(err => console.error(err));
 }

@@ -108,7 +108,7 @@
 #trendingSearchTermsDOM {
   @include flexContainerConfig(row, wrap, center, center);
 }
-.trendingSuggestions-wrapper a {
+.trendingSuggestions-wrapper p {
   margin-top: 7px;
   margin-right: 10px;
   font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)
@@ -116,8 +116,12 @@
   font-family: $mediumTitles-font;
   color: $mainLM-color;
   text-align: center;
+  &::after, &::before {
+    content: '-|-';
+  }
   &:hover {
-    text-decoration: underline $tertiaryLM-color;
+    cursor: pointer;
+    text-decoration: 2px underline $tertiaryLM-color;
   }
   &:active {
     color: $quaternaryLM-color;
