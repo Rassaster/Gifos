@@ -59,6 +59,7 @@ userSearchInput.addEventListener('input', ()=>{
     .then((data) => {
       for (i = 0; i < data.length; i++) {
         autocompleteSuggestionToDOM(data[i]);
+        arrayAutocompleteSuggestions.push(data[i])
       }
     })
     .catch(err => console.error(err));

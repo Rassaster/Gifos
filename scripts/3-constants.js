@@ -16,6 +16,7 @@
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node
  * @const userSearchQuery #searchResultItemDOM DOM Node
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
+ * @const arrayAutocompleteSuggestions [array]
  * @const arrayTrendingGifsResults [array]
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -34,6 +35,7 @@ const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const arraySearchGifsResults = [];
+const arrayAutocompleteSuggestions = [];
 const arrayTrendingGifsResults = [];
 /**
  *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...
@@ -60,6 +62,7 @@ const cleanSearchResults = () => {
 const cleanAutocompleteSuggestions = () => {
   let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
   searchSuggestionsContainer.innerHTML = '';
+  arrayAutocompleteSuggestions.splice(0, arrayAutocompleteSuggestions.length);
 }
 /**
  * @function gifsTrendingsRequest()
