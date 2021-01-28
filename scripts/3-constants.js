@@ -1,23 +1,23 @@
 /**
  * @description Declaration of constants for fetching to Giphy, and to further DOM functions.
- * @const Giphy_BaseURL string
- * @const Giphy_APIKey string
- * @const Giphy_Search_Node string
- * @const Giphy_Search_Autocomplete string
- * @const Giphy_Trending_Node string
- * @const Giphy_Trending_Search_Terms_Node string
- * @const Giphy_Search_Query string
- * @const Giphy_Trending_Limit string
- * @const userSearchInput #searchBar DOM Node
- * @const searchIconBar #searchIcon-searchBar DOM Node
- * @const closeSearchButton #closeButton-searchBar DOM Node
- * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
- * @const autocompleteSuggestionTermsWrapper .searchSuggestionTerm-wrapper DOM Node
- * @const searchButton #searchButton-searchBar DOM Node
- * @const searchResultsContainer #searchResultsContainerDOM DOM Node
- * @const userSearchQuery #searchResultItemDOM DOM Node
+ * @const Giphy_BaseURL string.
+ * @const Giphy_APIKey string.
+ * @const Giphy_Search_Node string.
+ * @const Giphy_Search_Autocomplete string.
+ * @const Giphy_Trending_Node string.
+ * @const Giphy_Trending_Search_Terms_Node string.
+ * @const Giphy_Search_Query string.
+ * @const Giphy_Trending_Limit string.
+ * @const userSearchInput #searchBar DOM Node.
+ * @const searchIconBar #searchIcon-searchBar DOM Node.
+ * @const closeSearchButton #closeButton-searchBar DOM Node.
+ * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node.
+ * @const autocompleteSuggestionTermsWrapper .searchSuggestionTerm-wrapper DOM Node.
+ * @const searchButton #searchButton-searchBar DOM Node.
+ * @const searchResultsContainer #searchResultsContainerDOM DOM Node.
+ * @const userSearchQuery #searchResultItemDOM DOM Node.
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
- * @const arrayTrendingGifsResults [array]
+ * @const arrayTrendingGifsResults [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
@@ -58,6 +58,7 @@ const cleanSearchResults = () => {
 /**
  * @function cleanAutocompleteSuggestions
  * @description Clears the displayed autocomplete suggested terms in DOM.
+ * @var searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node.
  */
 const cleanAutocompleteSuggestions = () => {
   let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
@@ -88,7 +89,7 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
  * @param {giphyNode, searchQuery, resultsLimit}
  * @const Giphy_BaseURL
  * @const Giphy_APIKey
- * @const userSearchInput.value #searchBar.value DOM
+ * @const userSearchInput.value #searchBar.value DOM Node
  * @consoleLogs String: Node that was Fetched + User's Query + the Results Limit.
  * @tableLogs Array of the JSON data returned as promise is fullfiled.
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
