@@ -110,13 +110,9 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
  * @event click on #searchButton
  * @listens #searchButton-searchBar const = searchButton;
  * @param {event, callBack()}
- * @callback anonymous() Calls cleanSearchResults() and fetches the search with gifsSearchRequest().
- * @fires Fetch If fullfiled: First, pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; Secondly, iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
+ * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
  * @const cleanSearchResults Function.
- * @const gifsSearchRequest Function.
- * @const arrayTrendingGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
- * @const searchGifsResultsToDOM Function.
- * @throws 
+ * @const triggerSearch Function.
  */
 searchButton.addEventListener('click', ()=>{
   cleanSearchResults();
