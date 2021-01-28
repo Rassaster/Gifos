@@ -231,13 +231,21 @@
     max-width: unset;
     min-height: 50px;
     border: 1px solid $mainLM-color;
-    border-radius: 7.2vw; // 27px/768px
+    border-radius: 2.6367188vw; // 27px/1024px
   }
   .resultsGrid {
     @include gifsGridContainerTablet;
   }
 }
+@media screen and (max-width: 768px) {
+  .searchBar-container {
+    border-radius: 3.515625vw; // 27px/768px
+  }
+}
 @media screen and (max-width: 670px) {
+  .searchBar-container {
+    border-radius: 4.0298507vw; // 27px/670px
+  }
   .resultItem-wrapper {
     &::before{
       content: "_____________________";
@@ -254,6 +262,7 @@
 @media screen and (max-width: 425px) {
   .searchBar-container {
     width: 89.066667vw; // =334px/375px
+    border-radius: 6.3529412vw; // 27px/425px
   }
   .results-container {
     margin-top: 30px
@@ -262,5 +271,15 @@
     &::before{
       content: "_________________";
     }
+  }
+}
+@media screen and (max-width: 375px) {
+  .searchBar-container {
+    border-radius: 7.2vw; // 27px/375px
+  }
+}
+@media screen and (max-width: 320px) {
+  .searchBar-container {
+    border-radius: 8.4375vw; // 27px/320px
   }
 }

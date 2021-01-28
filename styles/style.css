@@ -917,7 +917,7 @@ nav input {
     max-width: unset;
     min-height: 50px;
     border: 1px solid #572EE5;
-    border-radius: 7.2vw;
+    border-radius: 2.6367188vw;
   }
   .resultsGrid {
     margin-top: 30px;
@@ -929,7 +929,16 @@ nav input {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .searchBar-container {
+    border-radius: 3.515625vw;
+  }
+}
+
 @media screen and (max-width: 670px) {
+  .searchBar-container {
+    border-radius: 4.0298507vw;
+  }
   .resultItem-wrapper::before {
     content: "_____________________";
   }
@@ -950,12 +959,25 @@ nav input {
 @media screen and (max-width: 425px) {
   .searchBar-container {
     width: 89.066667vw;
+    border-radius: 6.3529412vw;
   }
   .results-container {
     margin-top: 30px;
   }
   .resultItem-wrapper::before {
     content: "_________________";
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .searchBar-container {
+    border-radius: 7.2vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchBar-container {
+    border-radius: 8.4375vw;
   }
 }
 
