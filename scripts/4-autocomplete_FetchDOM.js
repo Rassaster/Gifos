@@ -22,8 +22,11 @@ userSearchInput.addEventListener('input', () => {
 );
 /**
  * @function listenToAutocompleteSuggestions
- * @description Listens to the searchSuggestionTerm-wrapper class and converts the {HTML Object} to an [Array]. The applies the Array.forEach() method, and for each element creates an addEventListener('click'). This will set the searchBar value to the suggested term and fires de triggerSearch().
- * @fires .forEach() 
+ * @fires .forEach()
+ * @function addEventListener
+ * @event click
+ * @listens  
+ * @description Listens to the .searchSuggestionTerm-wrapper class, converts the {HTML Object} to an [Array] and applies the Array.forEach() method to create the addEventListener('click') on every class element. Finally, once the 'click'is made, the suggested term is setted as the searchBar.value and fires de triggerSearch().
  * @const suggestedTerm string.
  * @const userSearchInput .value property of #searchBar
  * @const triggerSearch function.
