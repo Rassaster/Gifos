@@ -68,6 +68,7 @@
   @include flexContainerConfig(row, nowrap, flex-start, center);
   &:hover {
     background-color: $tertiaryLM-color01;
+    cursor: pointer;
   }
   &:hover .termSuggestion::before {
     color: $mainLM-color09;

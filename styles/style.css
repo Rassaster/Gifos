@@ -602,6 +602,7 @@ nav input {
 
 .searchSuggestionTerm-wrapper:hover {
   background-color: rgba(96, 215, 199, 0.1);
+  cursor: pointer;
 }
 
 .searchSuggestionTerm-wrapper:hover .termSuggestion::before {
