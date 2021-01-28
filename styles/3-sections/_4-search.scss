@@ -22,7 +22,7 @@
 #searchBar {
   border: none;
   width: 85.480944%; // =(551px-80px)/1440px
-  margin-left: 15px;
+  margin-left: 16px;
   font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)
   font-family: $regularContent-font;
   &:focus{
