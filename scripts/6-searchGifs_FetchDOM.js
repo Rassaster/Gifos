@@ -14,13 +14,19 @@
  * @const emptySearchValue Function.
  * @throws
  */
-const triggerSearch = () => {
-  gifsSearchRequest()
+const triggerSearch = (searchTerm) => {
+  gifsSearchRequest(searchTerm)
   .then((data) => {
-    displaySearchTermAsResultsTitle();
+    displaySearchTermAsResultsTitle(searchTerm);
     arraySearchGifsResults.push(data);
-    for (i = 0; i < 12; i++) {
-      searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
+    if (arraySearchGifsResults[0].length <= 12) {
+      for (i = 0; i < arraySearchGifsResults[0].length; i++) {
+        searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
+      }
+    } else {
+      for (i = 0; i < 12; i++) {
+        searchGifsResultsToDOM(arraySearchGifsResults[0][i]);
+      }
     }
     copyOfarraySearchGifsResults = arraySearchGifsResults[0].slice(12);
     closeRestartSearch();
@@ -126,7 +132,7 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
  */
 searchButton.addEventListener('click', ()=>{
   cleanSearchResults();
-  triggerSearch();
+  triggerSearch(userSearchInput.value);
 })
 /**
  * @function addEventListener()
@@ -140,7 +146,7 @@ searchButton.addEventListener('click', ()=>{
 userSearchInput.addEventListener('keypress', event => {
   if (event.keyCode === 13) {
     cleanSearchResults();
-    triggerSearch();
+    triggerSearch(userSearchInput.value);
   }
 })
 /**

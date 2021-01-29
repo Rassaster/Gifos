@@ -21,8 +21,7 @@ gifsTrendingsRequest(Giphy_Trending_Search_Terms_Node)
       term.addEventListener('click', () => {
         cleanSearchResults(); 
         let trendingTerm = term.innerText;
-        userSearchInput.value = trendingTerm;
-        triggerSearch();
+        // triggerSearch(trendingTerm); 
       })
     });
   }

@@ -102,10 +102,10 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
  * @tableLogs Array of the JSON data returned as promise is fullfiled.
  * @returns {array} An array containing the Trending Gifs JSON data received in the request.
  */
-const gifsSearchRequest = async () => { 
-  let response = await fetch(Giphy_BaseURL + Giphy_Search_Node + Giphy_APIKey + Giphy_Search_Query + userSearchInput.value + Giphy_Results_Limit);
+const gifsSearchRequest = async (termQuery) => { 
+  let response = await fetch(Giphy_BaseURL + Giphy_Search_Node + Giphy_APIKey + Giphy_Search_Query + termQuery + Giphy_Results_Limit);
   let gifObject = await response.json();
-  console.log(`User searched: ${userSearchInput.value} -> ${Giphy_Results_Limit}:`);
+  console.log(`User searched: ${termQuery} -> ${Giphy_Results_Limit}:`);
   console.table(gifObject.data);
   return gifObject.data;
 }
@@ -136,8 +136,8 @@ const gifsSearchAutocompleteRequest = async () => {
 const emptySearchValue = () => {
   userSearchInput.value = '';
 }
-const displaySearchTermAsResultsTitle = () => {
-  userSearchQuery.innerText = userSearchInput.value;
+const displaySearchTermAsResultsTitle = (term) => {
+  userSearchQuery.innerText = term;
 }
 const displayAutcompleteSuggestions = () => {
   searchButton.classList.remove('visibility-hidden');

@@ -35,8 +35,7 @@ const listenToAutocompleteSuggestions = () => {
   Array.from(autocompleteSuggestionTermsWrapper).forEach(termWrapper => {
     termWrapper.addEventListener('click', () => {
       let suggestedTerm = termWrapper.firstChild.innerText;
-      userSearchInput.value = suggestedTerm;
-      triggerSearch();
+      triggerSearch(suggestedTerm);
     })
   });
 }
