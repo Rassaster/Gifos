@@ -17,6 +17,7 @@
 const triggerSearch = (searchTerm) => {
   gifsSearchRequest(searchTerm)
   .then((data) => {
+    cleanSearchResults();
     displaySearchTermAsResultsTitle(searchTerm);
     arraySearchGifsResults.push(data);
     if (arraySearchGifsResults[0].length <= 12) {
@@ -131,7 +132,6 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
  * @const triggerSearch Function.
  */
 searchButton.addEventListener('click', ()=>{
-  cleanSearchResults();
   triggerSearch(userSearchInput.value);
 })
 /**
@@ -145,7 +145,6 @@ searchButton.addEventListener('click', ()=>{
  */
 userSearchInput.addEventListener('keypress', event => {
   if (event.keyCode === 13) {
-    cleanSearchResults();
     triggerSearch(userSearchInput.value);
   }
 })

@@ -9,7 +9,6 @@ const trendingGifsResultsToDOM = (trendingGifsObject) => {
   let gifTitle = trendingGifsObject.title;
   let gifImg = trendingGifsObject.images.downsized.url
 
-  let trendingGifsContainer = document.getElementById('trendingGifoCardDOM');
   let trendingCardWrapper = document.createElement('div');
   trendingCardWrapper.className = 'trendingGifoCard';
   trendingCardWrapper.innerHTML = 
@@ -78,7 +77,7 @@ const trendingGifsResultsToDOM = (trendingGifsObject) => {
               </div>
             </div>
   `
-  trendingGifsContainer.appendChild(trendingCardWrapper)
+  trendingGifsSliderContainer.appendChild(trendingCardWrapper)
 }
 /**
  * @async
@@ -95,3 +94,23 @@ gifsTrendingsRequest(Giphy_Trending_Node, Giphy_Results_Limit)
     }
   })
   .catch(err => console.error(err));
+
+
+/**
+ * @function addEventListener
+ * @description Moves slider carousel to the right.
+ * @event click 
+ * @listens #
+ */
+buttonSliderNext.addEventListener('click', () => {
+  trendingGifsSliderDOM.scrollLeft += 600;
+});
+/**
+ * @function addEventListener
+ * @description Moves slider carousel to the left.
+ * @event click 
+ * @listens #
+ */
+buttonSliderPrev.addEventListener('click', () => {
+  trendingGifsSliderDOM.scrollLeft -= 600;
+});

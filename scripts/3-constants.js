@@ -17,8 +17,10 @@
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node.
  * @const userSearchQuery #searchResultItemDOM DOM Node.
  * @const verMasSearchResultsButton #verMasSearchResultsButtonDOM DOM Node.
- * @const trendingSearchTermsContainer #trendingSuggestionsContainerDOM DOM Node.
  * @const trendingSearchTermsWrapper #trendingSearchTermsWrapperDOM DOM Node.
+ * @const trendingGifsSliderContainer #trendingGifsSliderDOM DOM Node.
+ * @const buttonSliderNext #trendingRightButtonSlider DOM Node.
+ * @const buttonSliderPrev #trendingLefttButtonSlider DOM Node.
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @const copyOfarraySearchGifsResults [array]
@@ -37,12 +39,15 @@ const searchIconhBar= document.getElementById('searchIcon-searchBar');
 const closeSearchButton = document.getElementById('closeButton-searchBar');
 const searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
 const autocompleteSuggestionTermsWrapper = document.getElementsByClassName('searchSuggestionTerm-wrapper');
+const trendingGifsSliderContainer = document.getElementById('trendingGifsSliderDOM');
+const buttonSliderNext = document.getElementById('trendingRightButtonSlider');
+const buttonSliderPrev = document.getElementById('trendingLefttButtonSlider');
 const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM');
-const trendingSearchTermsContainer = document.getElementById('trendingSuggestionsContainerDOM');
 const trendingSearchTermsWrapper = document.getElementById('trendingSearchTermsWrapperDOM')
+
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const arraySearchGifsResults = [];
 let copyOfarraySearchGifsResults = [];
