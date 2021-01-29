@@ -34,6 +34,7 @@
   margin-top: 54px;
   margin-bottom: 182px;
   @include flexContainerConfig(row, nowrap, space-between, center);
+  height: fit-content;
 }
 .trendingGifosSlider-wrapper {
   scroll-snap-type: x mandatory;

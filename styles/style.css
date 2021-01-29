@@ -753,8 +753,7 @@ nav input {
   margin-top: 50px;
   -ms-grid-columns: (18.05556vw)[4];
       grid-template-columns: repeat(4, 18.05556vw);
-  -ms-grid-rows: (13.88889vw)[1];
-      grid-template-rows: repeat(1, 13.88889vw);
+  grid-auto-rows: 13.888889vw;
   gap: 2.0833333vw 2.0833333vw;
 }
 
@@ -928,8 +927,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (29.94792vw)[3];
         grid-template-columns: repeat(3, 29.94792vw);
-    -ms-grid-rows: (26.04167vw)[1];
-        grid-template-rows: repeat(1, 26.04167vw);
+    grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
   }
 }
@@ -955,8 +953,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (44.77612vw)[2];
         grid-template-columns: repeat(2, 44.77612vw);
-    -ms-grid-rows: (37.31343vw)[2];
-        grid-template-rows: repeat(2, 37.31343vw);
+    grid-auto-rows: 37.313433vw;
     gap: 2.9850746vw 2.9850746vw;
   }
 }
@@ -1038,6 +1035,9 @@ nav input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .trendingGifosSlider-wrapper {
@@ -1479,8 +1479,7 @@ nav input {
   margin-top: 50px;
   -ms-grid-columns: (18.05556vw)[4];
       grid-template-columns: repeat(4, 18.05556vw);
-  -ms-grid-rows: (13.88889vw)[1];
-      grid-template-rows: repeat(1, 13.88889vw);
+  grid-auto-rows: 13.888889vw;
   gap: 2.0833333vw 2.0833333vw;
 }
 
@@ -1525,8 +1524,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (29.94792vw)[3];
         grid-template-columns: repeat(3, 29.94792vw);
-    -ms-grid-rows: (26.04167vw)[1];
-        grid-template-rows: repeat(1, 26.04167vw);
+    grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
   }
 }
@@ -1536,8 +1534,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (44.77612vw)[2];
         grid-template-columns: repeat(2, 44.77612vw);
-    -ms-grid-rows: (37.31343vw)[2];
-        grid-template-rows: repeat(2, 37.31343vw);
+    grid-auto-rows: 37.313433vw;
     gap: 2.9850746vw 2.9850746vw;
   }
 }
@@ -1606,8 +1603,7 @@ nav input {
   margin-top: 50px;
   -ms-grid-columns: (18.05556vw)[4];
       grid-template-columns: repeat(4, 18.05556vw);
-  -ms-grid-rows: (13.88889vw)[1];
-      grid-template-rows: repeat(1, 13.88889vw);
+  grid-auto-rows: 13.888889vw;
   gap: 2.0833333vw 2.0833333vw;
 }
 
@@ -1652,8 +1648,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (29.94792vw)[3];
         grid-template-columns: repeat(3, 29.94792vw);
-    -ms-grid-rows: (26.04167vw)[1];
-        grid-template-rows: repeat(1, 26.04167vw);
+    grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
   }
 }
@@ -1663,8 +1658,7 @@ nav input {
     margin-top: 30px;
     -ms-grid-columns: (44.77612vw)[2];
         grid-template-columns: repeat(2, 44.77612vw);
-    -ms-grid-rows: (37.31343vw)[2];
-        grid-template-rows: repeat(2, 37.31343vw);
+    grid-auto-rows: 37.313433vw;
     gap: 2.9850746vw 2.9850746vw;
   }
 }

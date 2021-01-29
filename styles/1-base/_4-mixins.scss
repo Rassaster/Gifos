@@ -33,25 +33,25 @@ text-align: center;
 @mixin gifsGridContainer {
   margin-top: 50px;
   grid-template-columns: repeat(4, 18.055556vw) ; // =260px/1440px
-  grid-template-rows: repeat(1, 13.888889vw); // =200px/1440px
+  grid-auto-rows: 13.888889vw; // =200px/1440px
   gap: 2.0833333vw 2.0833333vw ; // =30px/1440px
 }
 @mixin gifsGridContainerTablet {
   margin-top: 30px;
   grid-template-columns: repeat(3, 29.947917vw) ; // =230px/768px
-  grid-template-rows: repeat(1, 26.041667vw); // =200px/768px
+  grid-auto-rows: 26.041667vw; // =200px/768px
   gap:  1.3020833vw 1.3020833vw; // =10px/768px
 }
 @mixin gifsGridContainerTablet670 {
   margin-top: 30px;
   grid-template-columns: repeat(2, 44.776119vw) ; // =300px/670px
-  grid-template-rows: repeat(2, 37.313433vw); // =250px/670px
+  grid-auto-rows: 37.313433vw; // =250px/670px
   gap: 2.9850746vw 2.9850746vw; // =18px/670px
 }
 @mixin gifsGridContainerTablet375 {
   margin-top: 30px;
   grid-template-columns: repeat(2, 44vw) ; // =165px/375px
-  grid-template-rows: repeat(2, 37.333333vw); // =140px/375px
+  grid-auto-rows: 37.333333vw; // =140px/375px
   gap: 2.6666667vw 2.6666667vw; // =20px/375px
 }
 @mixin cardButton {
