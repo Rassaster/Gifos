@@ -96,19 +96,19 @@
 // ***************************************************************************************
 // ******************TRENDING SUGGESTIONS*************************************************
 // ***************************************************************************************
-.trendingSuggestions-wrapper {
+#trendingSuggestionsContainerDOM {
   width: 100vw;
   height: auto;
   margin-top: 73px;
   @include flexContainerConfig(column, nowrap, center, center);
 }
-.trendingSuggestions-wrapper h3 {
+#trendingSuggestionsContainerDOM h3 {
   @include trendingSubtitle;
 }
-#trendingSearchTermsDOM {
+#trendingSearchTermsWrapperDOM {
   @include flexContainerConfig(row, wrap, center, center);
 }
-.trendingSuggestions-wrapper p {
+.trendingTermsDOM {
   margin-top: 7px;
   margin-right: 10px;
   font-size: calc(14px + 0.13888889vw); // =14px+(2px/1440px)

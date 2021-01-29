@@ -17,10 +17,11 @@
  * @const searchResultsContainer #searchResultsContainerDOM DOM Node.
  * @const userSearchQuery #searchResultItemDOM DOM Node.
  * @const verMasSearchResultsButton #verMasSearchResultsButtonDOM DOM Node.
- * @const trendingSuggestionsWrapper #trendingSuggestionsWrapperDOM DOM Node.
+ * @const trendingSearchTermsContainer #trendingSuggestionsContainerDOM DOM Node.
+ * @const trendingSearchTermsWrapper #trendingSearchTermsWrapperDOM DOM Node.
+ * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @const copyOfarraySearchGifsResults [array]
- * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const arrayTrendingGifsResults [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -40,17 +41,12 @@ const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM');
-const trendingSuggestionsWrapper = document.getElementById('trendingSuggestionsWrapperDOM');
+const trendingSearchTermsContainer = document.getElementById('trendingSuggestionsContainerDOM');
+const trendingSearchTermsWrapper = document.getElementById('trendingSearchTermsWrapperDOM')
+const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const arraySearchGifsResults = [];
 let copyOfarraySearchGifsResults = [];
-const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const arrayTrendingGifsResults = [];
-/**
- *  * @description Declaration of constants containing innerHTML to display Gifs. Used in gifsTrendingsRequest(), gifsSearchRequest()...
- * @const trendingGifCardInnerHTML
- * @const searchGifResultCardInnerHTML
- */
-
 /**
  * @function cleanSearchResults
  * @description Clears the displayed-appended Gif results in DOM and empties the [arraySearchGifsResults]
@@ -94,7 +90,7 @@ const gifsTrendingsRequest = async (giphyNode, resultsLimit = '') => {
  * @function gifsSearchRequest()
  * @description Launches a request to Giphy_Search_Node with the query submitted by User.
  * @async
- * @param {giphyNode, searchQuery, resultsLimit}
+ * @param {termQuery}
  * @const Giphy_BaseURL
  * @const Giphy_APIKey
  * @const userSearchInput.value #searchBar.value DOM Node

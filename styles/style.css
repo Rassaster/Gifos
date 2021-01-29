@@ -632,7 +632,7 @@ nav input {
   color: #9cafc3;
 }
 
-.trendingSuggestions-wrapper {
+#trendingSuggestionsContainerDOM {
   width: 100vw;
   height: auto;
   margin-top: 73px;
@@ -648,14 +648,14 @@ nav input {
           align-items: center;
 }
 
-.trendingSuggestions-wrapper h3 {
+#trendingSuggestionsContainerDOM h3 {
   font-size: calc(17px + 0.069444444vw);
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
   color: #572EE5;
 }
 
-#trendingSearchTermsDOM {
+#trendingSearchTermsWrapperDOM {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -668,7 +668,7 @@ nav input {
           align-items: center;
 }
 
-.trendingSuggestions-wrapper p {
+.trendingTermsDOM {
   margin-top: 7px;
   margin-right: 10px;
   font-size: calc(14px + 0.13888889vw);
@@ -678,17 +678,17 @@ nav input {
   text-align: center;
 }
 
-.trendingSuggestions-wrapper p::after, .trendingSuggestions-wrapper p::before {
+.trendingTermsDOM::after, .trendingTermsDOM::before {
   content: '-|-';
 }
 
-.trendingSuggestions-wrapper p:hover {
+.trendingTermsDOM:hover {
   cursor: pointer;
   -webkit-text-decoration: 2px underline #5ED7C6;
           text-decoration: 2px underline #5ED7C6;
 }
 
-.trendingSuggestions-wrapper p:active {
+.trendingTermsDOM:active {
   color: #9cafc3;
 }
 
