@@ -13,7 +13,6 @@ gifsTrendingsRequest(Giphy_Trending_Search_Terms_Node)
     };
     Array.from(trendingTerms).forEach(term => {
       term.addEventListener('click', () => {
-        cleanSearchResults(); 
         triggerSearch(term.innerText); 
       })
     })

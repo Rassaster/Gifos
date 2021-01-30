@@ -5,13 +5,13 @@
  * 2. Iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
  * 3. Sets the value of [copyOfarraySearchGifsResults] by slicing the first 12 elements of [arrayTrendingGifsResults].
  * 4. Calls closeAutocompleteSuggestions().
- * 5. Calls emptySearchValue().
+ * 5. Calls closeRestartSearch().
  * @const gifsSearchRequest Function.
  * @const arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
  * @const copyOfarraySearchGifsResults [Array].
  * @const searchGifsResultsToDOM Function.
  * @const closeAutocompleteSuggestions Function.
- * @const emptySearchValue Function.
+ * @const closeRestartSearch Function.
  * @throws
  */
 const triggerSearch = (searchTerm) => {
@@ -127,8 +127,7 @@ const searchGifsResultsToDOM = (searchResultsGifObject) => {
  * @event click on searchButton = #searchButton
  * @listens #searchButton-searchBar const = searchButton;
  * @param {event, callBack()}
- * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
- * @const cleanSearchResults Function.
+ * @callback anonymous() Calls triggerSearch().
  * @const triggerSearch Function.
  */
 searchButton.addEventListener('click', ()=>{
@@ -139,8 +138,7 @@ searchButton.addEventListener('click', ()=>{
  * @event keypress "Enter"
  * @listens #searchBar const = userSearchInput;
  * @param {event, callBack(event)}
- * @callback anonymous(event) First, checks if the 'keypress' equals the Enter key. Then, calls cleanSearchResults() and triggerSearch().
- * @const cleanSearchResults Function.
+ * @callback anonymous(event) First, checks if the 'keypress' equals the Enter key. Then, calls triggerSearch().
  * @const triggerSearch Function.
  */
 userSearchInput.addEventListener('keypress', event => {

@@ -34,6 +34,7 @@ const Giphy_Trending_Search_Terms_Node = 'trending/searches'
 const Giphy_Trending_Node = "gifs/trending";
 const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=48';
+
 const userSearchInput = document.getElementById('searchBar');
 const searchIconhBar= document.getElementById('searchIcon-searchBar');
 const closeSearchButton = document.getElementById('closeButton-searchBar');
@@ -46,7 +47,7 @@ const searchButton = document.getElementById('searchButton-searchBar');
 const searchResultsContainer = document.getElementById('searchResultsContainerDOM');
 const userSearchQuery = document.getElementById('searchResultItemDOM');
 const verMasSearchResultsButton = document.getElementById('verMasSearchResultsButtonDOM');
-const trendingSearchTermsWrapper = document.getElementById('trendingSearchTermsWrapperDOM')
+const trendingSearchTermsWrapper = document.getElementById('trendingSearchTermsWrapperDOM');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const arraySearchGifsResults = [];
@@ -129,36 +130,4 @@ const gifsSearchAutocompleteRequest = async () => {
   console.log(`Autocomplete -> User typed: ${userSearchInput.value}: `);
   console.table(gifObject.data);
   return gifObject.data;
-}
-// ***************************************************************************************
-// ++++++++++++++++++++++++++++++++++++++++HELPERS++++++++++++++++++++++++++++++++++++++++
-// ****************************************HELPERS****************************************
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-const emptySearchValue = () => {
-  userSearchInput.value = '';
-}
-const displaySearchTermAsResultsTitle = (term) => {
-  userSearchQuery.innerText = term;
-}
-const displayAutcompleteSuggestions = () => {
-  searchButton.classList.remove('visibility-hidden');
-  searchSuggestionsContainer.classList.remove('display-none');
-  searchIconhBar.classList.add('display-none');
-  closeSearchButton.classList.remove('display-none');
-}
-const closeAutocompleteSuggestions = () => {
-  searchButton.classList.add('visibility-hidden');
-  searchSuggestionsContainer.classList.add('display-none');
-  searchIconhBar.classList.remove('display-none')
-  closeSearchButton.classList.add('display-none');
-}
-const closeRestartSearch = () => {
-  emptySearchValue();
-  closeAutocompleteSuggestions();
-}
-const verMasButtonsFunctionality = () => {
-  for (i = 0; i < 12; i++) {
-    searchGifsResultsToDOM(copyOfarraySearchGifsResults[i]);
-  }
-  copyOfarraySearchGifsResults = copyOfarraySearchGifsResults.slice(12);
 }

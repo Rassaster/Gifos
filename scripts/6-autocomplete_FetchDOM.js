@@ -1,16 +1,11 @@
 /**
  * @function addEventListener
- * @description
+ * @description When the input searchBar is not empty, the autocomplete suggestion, the searchButton and the closeButton are shown. If empty, all the previous are hidden and the layout behaves as default onload.
  * @event input on #searchBar.value
  * @listens  #searchBar const = userSearchInput
- * @param {} 
- * @callback anonymous()
- * @fires .remove()
- * @fires .add()
- * @constant userSearchInput #searchBar DOM Node
- * @const searchSuggestionsContainer #searchSuggestionsContainerDOM DOM Node
- * @const searchIconBar #searchIcon-searchBar DOM Node
- * @const searchCloseSuggestions #closeButton-searchBar DOM Node
+ * @callback anonymous() if statement.
+ * @fires displayAutcompleteSuggestions() if true
+ * @fires closeAutocompleteSuggestions() else
  */
 userSearchInput.addEventListener('input', () => {
     if (userSearchInput.value !== '') { 
@@ -75,8 +70,7 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
   searchSuggestionWrapper.classList.add('searchSuggestionTerm-wrapper');
   searchTermSuggestion = document.createElement('p');
   searchTermSuggestion.classList.add('termSuggestion');
-  searchTermSuggestion.innerText = autocompleteTermSuggestion
-  // searchSuggestionWrapper.innerHTML = `<p class="termSuggestion">${autocompleteTermSuggestion}</p>`;
+  searchTermSuggestion.innerText = autocompleteTermSuggestion;
   searchSuggestionWrapper.appendChild(searchTermSuggestion);
   searchSuggestionsContainer.appendChild(searchSuggestionWrapper);
 }
@@ -85,8 +79,8 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
  * @event input 
  * @listens #searchButton-searchBar const = searchButton;
  * @param {event, callBack()}
- * @callback anonymous() Calls cleanSearchResults() and triggerSearch().
- * @const cleanSearchResults Function.
+ * @callback anonymous() Calls cleanAutocompleteSuggestions() and triggerSearch().
+ * @const cleanAutocompleteSuggestions Function.
  * @const triggerSearch Function.
  */
 userSearchInput.addEventListener('input', ()=>{
