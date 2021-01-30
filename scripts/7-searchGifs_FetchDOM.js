@@ -1,12 +1,12 @@
 /**
  * @function triggerSearch
- * @fires gifsSearchRequest() Fetch. If fullfiled: 
+ * @fires requestToGiphy() Fetch. If fullfiled: 
  * 1. pushes the Array of Objects returned by the fetch  to the [arraySearchGifsResults] as a new element. To access this data use index [0]; 
  * 2. Iterates with a for-loop through the first 12 elements and calls searchGifsResultsToDOM() on each element to add each Gif to the Results Grid.
  * 3. Sets the value of [copyOfarraySearchGifsResults] by slicing the first 12 elements of [arrayTrendingGifsResults].
  * 4. Calls closeAutocompleteSuggestions().
  * 5. Calls closeRestartSearch().
- * @const gifsSearchRequest Function.
+ * @const requestToGiphy Function.
  * @const arraySearchGifsResults [Array] that will store all the data returned from fetch gifsRequest() as a new element. To access Object data, refer to index [0].
  * @const copyOfarraySearchGifsResults [Array].
  * @const searchGifsResultsToDOM Function.
@@ -15,7 +15,7 @@
  * @throws
  */
 const triggerSearch = (searchTerm) => {
-  gifsSearchRequest(searchTerm)
+  requestToGiphy(Giphy_Search_Node, Giphy_Search_Query, searchTerm, Giphy_Results_Limit, 48)
   .then((data) => {
     cleanSearchResults();
     displaySearchTermAsResultsTitle(searchTerm);

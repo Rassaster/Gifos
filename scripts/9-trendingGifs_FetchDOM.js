@@ -7,7 +7,8 @@
 const trendingGifsResultsToDOM = (trendingGifsObject) => {
   let gifUser = trendingGifsObject.username;
   let gifTitle = trendingGifsObject.title;
-  let gifImg = trendingGifsObject.images.downsized.url
+  let gifImg = trendingGifsObject.images.original.url
+  // let gifImg = trendingGifsObject.images.downsized.url
 
   let trendingCardWrapper = document.createElement('div');
   trendingCardWrapper.className = 'trendingGifoCard';
@@ -17,6 +18,19 @@ const trendingGifsResultsToDOM = (trendingGifsObject) => {
             <div class="flexContainer trendingGifoCard-overlay">
               <div class="flexContainer socialTrendingCards-wrapper">
                 <button class="trendingCardsButton trendingCardsFavButton">
+                  <svg class="favActive display-none" width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                      <path d="M275.322322,427 C276.828175,427 278.272313,427.609648 279.336861,428.694752 C280.40162,429.779051 281,431.250383 281,432.784592 C281,434.318801 280.40162,435.790133 279.336716,436.87458 L271.617243,444.739417 C271.27622,445.086861 270.723313,445.086861 270.38229,444.739417 L262.662816,436.87458 C260.445728,434.615742 260.445728,430.953442 262.662816,428.694604 C264.879905,426.435766 268.474516,426.435766 270.691605,428.694604 L270.999766,429.008569 L271.307783,428.694752 C272.372332,427.609648 273.81647,427 275.322322,427 Z" id="favIcon-active"></path>
+                    </defs>
+                    <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="24-Mobile-Gifo-Max" transform="translate(-261.000000, -427.000000)">
+                        <mask id="mask-2" fill="white">
+                          <use xlink:href="#favIcon-active"></use>
+                        </mask>
+                        <use id="icon-fav-active" fill="#572EE5" fill-rule="nonzero" xlink:href="#favIcon-active"></use>
+                      </g>
+                    </g>
+                  </svg>
                   <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
                       <path d="M16.277005,9.49708565 C17.2350987,8.53854203 18.5348228,8 19.8900901,8 C21.2453574,8 22.5450815,8.53854203 23.5031752,9.49708565 C24.461458,10.4549185 25,11.7546426 25,13.1099099 C25,14.4651772 24.461458,15.7649013 23.5030448,16.7228646 L16.5555186,23.6703908 C16.2485981,23.9773114 15.7509815,23.9773114 15.444061,23.6703908 L8.49653479,16.7228646 C6.50115505,14.7274848 6.50115507,11.492335 8.49653484,9.49695525 C10.4919146,7.50157548 13.7270644,7.50157545 15.7224442,9.4969552 L15.9997898,9.77430079 L16.277005,9.49708565 Z M15.9997898,22.0032043 L21.5585127,16.4444814 L22.3917176,15.6112765 C23.0553247,14.9479809 23.4281615,14.0481719 23.4281615,13.1099099 C23.4281615,12.1716479 23.0553247,11.271839 22.3917176,10.6085433 C21.728161,9.94467529 20.8283521,9.5718385 19.8900901,9.5718385 C18.9518281,9.5718385 18.0520191,9.94467529 17.388593,10.6084129 L16.5555186,11.4414873 C16.2485981,11.7484078 15.7509815,11.7484078 15.444061,11.4414873 L14.6109866,10.6084129 C13.2294479,9.22687423 10.9895312,9.22687425 9.6079925,10.6084129 C8.22645385,11.9899516 8.22645383,14.2298683 9.60799246,15.611407 L15.9997898,22.0032043 Z" id="path-fav"></path>
@@ -86,7 +100,7 @@ const trendingGifsResultsToDOM = (trendingGifsObject) => {
  * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest()
  * @callback trendingGifsResultsToDOM(trendingGifsObject)
  */
-gifsTrendingsRequest(Giphy_Trending_Node, Giphy_Results_Limit)
+requestToGiphy(Giphy_Trending_Node, Giphy_Results_Limit, 12)
   .then((data) => {
     for (i = 0; i < data.length; i++) {
       trendingGifsResultsToDOM(data[i]);
@@ -94,8 +108,6 @@ gifsTrendingsRequest(Giphy_Trending_Node, Giphy_Results_Limit)
     }
   })
   .catch(err => console.error(err));
-
-
 /**
  * @function addEventListener
  * @description Moves slider carousel to the right.

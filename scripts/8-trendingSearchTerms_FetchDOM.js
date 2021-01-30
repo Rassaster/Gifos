@@ -6,7 +6,7 @@ const trendingSearchTermsToDOM = (trendingSearchTermsObject) => {
   trendingSearchTermsAnchor.innerText = `${trendingSearchTerm}`;
   trendingSearchTermsWrapper.appendChild(trendingSearchTermsAnchor)
 }
-gifsTrendingsRequest(Giphy_Trending_Search_Terms_Node)
+requestToGiphy(Giphy_Trending_Search_Terms_Node)
   .then((data) => {
     for (i = 0; i < 5; i++) {
       trendingSearchTermsToDOM(data[i]);

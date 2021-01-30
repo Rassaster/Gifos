@@ -1116,6 +1116,7 @@ nav input {
 }
 
 .trendingCardsButton {
+  position: relative;
   margin-top: 2.8011204%;
   margin-right: 2.8011204%;
   min-width: 24px;
@@ -1141,6 +1142,13 @@ nav input {
 
 .trendingCardsButton svg:hover .rectangle-cardIconBtn, .trendingCardsButton svg:hover .icon-cardIconBtn {
   opacity: 1;
+}
+
+.trendingCardsButton .favActive {
+  position: absolute;
+  width: 56%;
+  left: 20%;
+  display: none;
 }
 
 .userTitleTrengingCards-wrapper {

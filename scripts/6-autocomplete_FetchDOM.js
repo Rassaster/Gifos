@@ -36,13 +36,13 @@ const listenToAutocompleteSuggestions = () => {
 }
 /**
  * @function triggerAutocomplete
- * @fires gifsSearchAutocompleteRequest() Fetch. If fullfiled: First, iterates with a for-loop  over the Array of Objects returned by the fetch and calls autocompleteSuggestionToDOM( over each element. Then calls listenToAutocompleteSuggestions().
+ * @fires requestToGiphy() Fetch. If fullfiled: First, iterates with a for-loop  over the Array of Objects returned by the fetch and calls autocompleteSuggestionToDOM( over each element. Then calls listenToAutocompleteSuggestions().
  * @const autocompleteSuggestionToDOM Function.
  * @const listenToAutocompleteSuggestions Function
  * @throws
 */
 const triggerAutocomplete = () => {
-  gifsSearchAutocompleteRequest()
+  requestToGiphy(Giphy_Search_Autocomplete, Giphy_Search_Query, userSearchInput.value)
     .then((data) => {
       for (i = 0; i < data.length; i++) {
         autocompleteSuggestionToDOM(data[i]);
