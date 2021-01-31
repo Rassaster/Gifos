@@ -1,11 +1,11 @@
-const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject) => {
+const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, emptyFavsGrid) => {
   Array.from(favButtonClass).forEach(buttonFav => {
     buttonFav.addEventListener('click', () => {
       let indexOfButton = Array.from(favButtonClass).indexOf(buttonFav);
       alert(indexOfButton);
       favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
       localStorage.localFavGifs = JSON.stringify(favoriteGifs);
-      emptyInnerHTMLofElement(favGifsGridContainer)
+      emptyInnerHTMLofElement(favGifsGridContainer);
       primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
     })
   })

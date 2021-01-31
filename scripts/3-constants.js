@@ -198,5 +198,5 @@ const verMasButtonsFunctionality = () => {
   for (i = 0; i < 12; i++) {
     displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
-  slicedArrayOfSearchGifsResults = slicedArrayOfSearchGifsResults.slice(12);
+  slicedArrayOfSearchGifsResults = slicedArrayOfSearchGifsResults.slice(12)
 }

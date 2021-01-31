@@ -7,6 +7,9 @@ const emptyInnerHTMLofElement = (DOMNodeElement) => {
 const emptyArray = (array) => {
   array.splice(0, array.length)
 }
+const sliceArray = (array, untillNumIndex) => {
+  array.slice(untillNumIndex)
+}
 const cleanSearchResults = () => {
   emptyInnerHTMLofElement(searchResultsGifsGridContainer);
   emptyArray(arraySearchGifsResults);
@@ -51,5 +54,5 @@ window.onload = () => {
     localStorageFavsToFavsArray();
   }
   primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
-  
+
 }

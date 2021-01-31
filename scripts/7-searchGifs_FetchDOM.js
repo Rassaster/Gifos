@@ -63,4 +63,7 @@ closeSearchButton.addEventListener('click', closeRestartSearch);
  * @event click on const searchCloseSuggestions = #closeButton-searchBar
  * @listens #closeButton-searchBar
  */
-verMasSearchResultsButtonDOM.addEventListener('click', verMasButtonsFunctionality)
+verMasSearchResultsButtonDOM.addEventListener('click', () => {
+  verMasButtonsFunctionality(slicedArrayOfSearchGifsResults);
+
+})
