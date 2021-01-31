@@ -22,16 +22,9 @@ const triggerSearch = (searchTerm) => {
     arraySearchGifsResults.push(data);
     slicedArrayOfSearchGifsResults = arraySearchGifsResults[0].slice(12);
 
-    if (arraySearchGifsResults[0].length <= 12) {
-      for (i = 0; i < arraySearchGifsResults[0].length; i++) {
-        displayGifsObjectInGrid((arraySearchGifsResults[0][i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton', removeClass(searchResultsContainer, 'display-none'))
-      }
-    } else {
-      for (i = 0; i < 12; i++) {
-        displayGifsObjectInGrid((arraySearchGifsResults[0][i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton', removeClass(searchResultsContainer, 'display-none'))
-      }
-    }
+    primaryDisplayOnGrid(arraySearchGifsResults[0], searchResultsGifsGridContainer, removeClass(searchResultsContainer, 'display-none'));
     closeRestartSearch();
+    triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0]);
   })
   .catch(err => console.error(err));
 }

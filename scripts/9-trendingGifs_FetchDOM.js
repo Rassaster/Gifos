@@ -11,6 +11,7 @@ requestToGiphy(Giphy_Trending_Node, Giphy_Results_Limit, 12)
   for (i = 0; i < data.length; i++) {
     displayGifsObjectInGrid(data[i], 'trendingGifoCard', trendingGifsSliderContainer, 'trendingGifoCard-overlay', 'socialTrendingCards-wrapper', 'trendingCardsFavButton', 'trendingCardsDownloadButton', 'trendingCardsMaxButton');
   }
+  triggerAddFavButtonGif(trendingCardsFavButton, arrayTrendingGifsResults[0]);
   })
   .catch(err => console.error(err));
 /**

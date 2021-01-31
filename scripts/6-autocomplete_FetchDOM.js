@@ -83,6 +83,6 @@ const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
  * @const triggerSearch Function.
  */
 userSearchInput.addEventListener('input', ()=>{
-  cleanAutocompleteSuggestions();
+  emptyInnerHTMLofElement(searchSuggestionsContainer);
   triggerAutocomplete();
 })

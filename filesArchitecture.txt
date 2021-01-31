@@ -39,7 +39,7 @@
 |     |--/7-searchGifs_FetchDOM.js 
 |     |--/8-trendingSearchTerms_FetchDOM.js
 |     |--/9-trendingGifs_FetchDOM.js
-|     |--/10-createGifos.js
+|     |--/10-createGifo.js
 |     |
 |     |______________________________________________________________
 |____________________________________________________________________

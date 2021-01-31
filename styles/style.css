@@ -1491,9 +1491,19 @@ nav input {
   gap: 2.0833333vw 2.0833333vw;
 }
 
-.myFavGrid img {
+.myFavGrid .searchResultGifCard {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+.myFavGrid .searchResultGifCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.myFavGrid .searchResultGifCard:hover .searchResultGifCard-overlay {
+  visibility: visible;
 }
 
 .noMyFav-wrapper {

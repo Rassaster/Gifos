@@ -196,7 +196,7 @@
   width: 2.2222222vw; // =32px/1440px 
   min-height: 24px;
   height: 2.2222222vw; // =32px/1440px 
-  @include cardButton;
+  @include cardButton; 
 }
 .userTitleSearchrResultGifCards-wrapper {
   width: 100%;
