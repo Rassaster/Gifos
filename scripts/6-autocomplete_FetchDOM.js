@@ -63,7 +63,6 @@ const triggerAutocomplete = () => {
  */
 const autocompleteSuggestionToDOM = (autocompleteSuggestionObject) => {
   let autocompleteTermSuggestion = autocompleteSuggestionObject.name;
-
   let searchSuggestionsContainer = document.getElementById('searchSuggestionsContainerDOM');
   let searchSuggestionWrapper = document.createElement('div');
   searchSuggestionWrapper.classList.add('flexContainer');

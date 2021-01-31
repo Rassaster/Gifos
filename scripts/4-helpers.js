@@ -4,17 +4,23 @@ const emptySearchValue = () => {
 const displaySearchTermAsResultsTitle = (term) => {
   userSearchQuery.innerText = term;
 }
+const addClass = (nodeElement, className) => {
+  nodeElement.classList.add(className);
+}
+const removeClass = (nodeElement, className) => {
+  nodeElement.classList.remove(className);
+}
 const displayAutcompleteSuggestions = () => {
-  searchButton.classList.remove('visibility-hidden');
-  searchSuggestionsContainer.classList.remove('display-none');
-  searchIconhBar.classList.add('display-none');
-  closeSearchButton.classList.remove('display-none');
+  removeClass(searchButton, 'visibility-hidden');
+  removeClass(searchSuggestionsContainer, 'display-none');
+  removeClass(closeSearchButton, 'display-none');
+  addClass(searchIconhBar, 'display-none')  ;
 }
 const closeAutocompleteSuggestions = () => {
-  searchButton.classList.add('visibility-hidden');
-  searchSuggestionsContainer.classList.add('display-none');
-  searchIconhBar.classList.remove('display-none')
-  closeSearchButton.classList.add('display-none');
+  removeClass(searchIconhBar, 'display-none');
+  addClass(searchButton, 'visibility-hidden');
+  addClass(searchSuggestionsContainer, 'display-none');
+  addClass(closeSearchButton, 'display-none');
 }
 const closeRestartSearch = () => {
   emptySearchValue();
@@ -22,7 +28,7 @@ const closeRestartSearch = () => {
 }
 const verMasButtonsFunctionality = () => {
   for (i = 0; i < 12; i++) {
-    searchGifsResultsToDOM(copyOfarraySearchGifsResults[i]);
+    displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
-  copyOfarraySearchGifsResults = copyOfarraySearchGifsResults.slice(12);
+  slicedArrayOfSearchGifsResults = slicedArrayOfSearchGifsResults.slice(12);
 }

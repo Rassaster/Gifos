@@ -16,21 +16,22 @@ const localFavsToFavsArray = () => {
   favoriteGifs = favoritesToJSON;
 }
 
-/**
+
+
+
+window.onload = setTimeout(()=>{
+
+    /**
  * @function pushFavGifToArray
  */
 Array.from(trendingCardsFavButton).forEach(buttonFav => {
   buttonFav.addEventListener('click', () => {
     let indexOfButton = Array.from(trendingCardsFavButton).indexOf(buttonFav);
     alert(indexOfButton);
-    favoriteGifs.push(arrayTrendingGifsResults[indexOfButton]);
+    favoriteGifs.push(arrayTrendingGifsResults[0][indexOfButton]);
     localStorage.localFavGifs = JSON.stringify(favoriteGifs);
   })
 })
-
-
-window.onload = setTimeout(()=>{
-
 
 
   Array.from(trendingCardsDownloadButton).forEach(buttonDownload => {
@@ -48,10 +49,10 @@ window.onload = setTimeout(()=>{
   })
 
   
-}, 3000)
+}, 1000)
 
 
-window.onload = () => {
-  localFavsToFavsArray();
-  localStorage.localFavGifs = JSON.stringify(favoriteGifs);
-}
+// window.onload = () => {
+//   localFavsToFavsArray();
+//   localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+// }
