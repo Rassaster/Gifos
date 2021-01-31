@@ -50,9 +50,11 @@ const localStorageFavsToFavsArray = () => {
 // Constant Calls
 window.onload = () => {
   if (localStorage.getItem('localFavGifs') !== null) {
-    alert('local is here')
+    // alert('local is here')
     localStorageFavsToFavsArray();
   }
-  primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
+  if (favGifsGridContainer) {
+    primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
+  }
 
 }
