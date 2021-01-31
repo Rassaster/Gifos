@@ -40,7 +40,17 @@ const closeRestartSearch = () => {
   closeAutocompleteSuggestions();
 }
 
-
+const checkIfIsFavoriteByGifid = (targetGifid, arrayToSearchIn) => {
+  let gifIsFav;
+  for (i = 0; i < arrayToSearchIn.length; i++) {
+    if(targetGifid === arrayToSearchIn[i].id) {
+      gifIsFav = true;
+    } else {
+      gifIsFav = false;
+    }
+  }
+  return gifIsFav;
+}
 const localStorageFavsToFavsArray = () => {
   let returnedFavsLocal = localStorage.getItem('localFavGifs');
   favoritesToJSON = JSON.parse(returnedFavsLocal)

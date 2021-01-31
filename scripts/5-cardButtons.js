@@ -1,16 +1,21 @@
-const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, emptyFavsGrid) => {
+const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject) => {
   Array.from(favButtonClass).forEach(buttonFav => {
     buttonFav.addEventListener('click', () => {
       let indexOfButton = Array.from(favButtonClass).indexOf(buttonFav);
-      alert(indexOfButton);
-      favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-      localStorage.localFavGifs = JSON.stringify(favoriteGifs);
-      emptyInnerHTMLofElement(favGifsGridContainer);
-      primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
+      let gifIsFavorite = checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs)
+
+      if (gifIsFavorite === false || gifIsFavorite === undefined) {
+        favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+        localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+        emptyInnerHTMLofElement(favGifsGridContainer);
+        primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
+      }
+      if (gifIsFavorite === true) {
+        alert('Is already your favorite!')
+      }
     })
   })
 }
-
 
 // window.onload = setTimeout(()=>{
 
