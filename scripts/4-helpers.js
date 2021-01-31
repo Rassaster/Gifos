@@ -56,5 +56,4 @@ window.onload = () => {
   if (favGifsGridContainer) {
     primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
   }
-
 }
