@@ -88,11 +88,10 @@
   min-height: 24px;
   height: 2.2222222vw; // =32px/1440px 
   @include cardButton;
-  .favActive {
+  .favActiveTrending, .favActiveSearchResults {
     position: absolute;
     width: 56%;
     left: 20%;
-    display: none;
   }
 }
 .userTitleTrengingCards-wrapper {

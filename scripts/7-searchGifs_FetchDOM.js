@@ -21,10 +21,10 @@ const triggerSearch = (searchTerm) => {
     displaySearchTermAsResultsTitle(searchTerm);
     arraySearchGifsResults.push(data);
     slicedArrayOfSearchGifsResults = arraySearchGifsResults[0].slice(12);
-
-    primaryDisplayOnGrid(arraySearchGifsResults[0], searchResultsGifsGridContainer, removeClass(searchResultsContainer, 'display-none'));
+    primaryDisplayOnGrid(arraySearchGifsResults[0], searchResultsGifsGridContainer, 'searchResultsFavButton', 'display-none', removeClass(searchResultsContainer, 'display-none'));
     closeRestartSearch();
-    triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0]);
+    triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
+    checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], favoriteGifs, favActiveSearchResults);
   })
   .catch(err => console.error(err));
 }

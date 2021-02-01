@@ -40,16 +40,36 @@ const closeRestartSearch = () => {
   closeAutocompleteSuggestions();
 }
 
+const checkIfFavoritesAreSaved = () => {
+  if (favoriteGifs.length !== 0) {
+    removeClass(displayFavoritesGridContainer, 'display-none');
+    addClass(NoFavoritesContentCcontainer, 'display-none');
+  } 
+  if (favoriteGifs.length === 0) {
+    addClass(displayFavoritesGridContainer, 'display-none');
+    removeClass(NoFavoritesContentCcontainer, 'display-none');
+  }
+}
 const checkIfIsFavoriteByGifid = (targetGifid, arrayToSearchIn) => {
   let gifIsFav;
   for (i = 0; i < arrayToSearchIn.length; i++) {
     if(targetGifid === arrayToSearchIn[i].id) {
-      gifIsFav = true;
+      return true;
     } else {
       gifIsFav = false;
     }
   }
   return gifIsFav;
+}
+const checkInArrayGifsIfAnyIsFavorite = (resourceArrayOfGifs, arrayToSearchIn, removeFavClass) => {
+  resourceArrayOfGifs.forEach(gif => {
+    for (i = 0; i < arrayToSearchIn.length; i++) {
+      if (gif.id === arrayToSearchIn[i].id) {
+        removeClass(removeFavClass[resourceArrayOfGifs.indexOf(gif)], 'display-none');
+        console.log(resourceArrayOfGifs.indexOf(gif))
+      }
+    }
+  })
 }
 const localStorageFavsToFavsArray = () => {
   let returnedFavsLocal = localStorage.getItem('localFavGifs');
@@ -60,10 +80,11 @@ const localStorageFavsToFavsArray = () => {
 // Constant Calls
 window.onload = () => {
   if (localStorage.getItem('localFavGifs') !== null) {
-    // alert('local is here')
     localStorageFavsToFavsArray();
   }
   if (favGifsGridContainer) {
-    primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
+    primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+    triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
+    checkIfFavoritesAreSaved();
   }
 }

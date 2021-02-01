@@ -9,9 +9,10 @@ requestToGiphy(Giphy_Trending_Node, Giphy_Results_Limit, 12)
 .then((data) => {
   arrayTrendingGifsResults.push(data);
   for (i = 0; i < data.length; i++) {
-    displayGifsObjectInGrid(data[i], 'trendingGifoCard', trendingGifsSliderContainer, 'trendingGifoCard-overlay', 'socialTrendingCards-wrapper', 'trendingCardsFavButton', 'trendingCardsDownloadButton', 'trendingCardsMaxButton');
+    displayGifsObjectInGrid(data[i], 'trendingGifoCard', trendingGifsSliderContainer, 'trendingGifoCard-overlay', 'socialTrendingCards-wrapper', 'trendingCardsFavButton', 'favActiveTrending', 'display-none', 'trendingCardsDownloadButton', 'trendingCardsMaxButton');
   }
-  triggerAddFavButtonGif(trendingCardsFavButton, arrayTrendingGifsResults[0]);
+  triggerAddFavButtonGif(trendingCardsFavButton, arrayTrendingGifsResults[0], favActiveTrending);
+  checkInArrayGifsIfAnyIsFavorite(arrayTrendingGifsResults[0], favoriteGifs, favActiveTrending);
   })
   .catch(err => console.error(err));
 /**

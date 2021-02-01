@@ -1144,11 +1144,10 @@ nav input {
   opacity: 1;
 }
 
-.trendingCardsButton .favActive {
+.trendingCardsButton .favActiveTrending, .trendingCardsButton .favActiveSearchResults {
   position: absolute;
   width: 56%;
   left: 20%;
-  display: none;
 }
 
 .userTitleTrengingCards-wrapper {

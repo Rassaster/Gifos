@@ -1,17 +1,35 @@
-const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject) => {
+const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favActiveClass) => {
   Array.from(favButtonClass).forEach(buttonFav => {
     buttonFav.addEventListener('click', () => {
       let indexOfButton = Array.from(favButtonClass).indexOf(buttonFav);
-      let gifIsFavorite = checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs)
 
-      if (gifIsFavorite === false || gifIsFavorite === undefined) {
-        favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-        localStorage.localFavGifs = JSON.stringify(favoriteGifs);
-        emptyInnerHTMLofElement(favGifsGridContainer);
-        primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer);
-      }
-      if (gifIsFavorite === true) {
-        alert('Is already your favorite!')
+      // Is NOT favorite:
+      if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === undefined) {
+          favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+          localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+          removeClass(favActiveClass[indexOfButton], 'display-none');
+
+          if (favGifsGridContainer) {
+            emptyInnerHTMLofElement(favGifsGridContainer);
+            primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+            triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
+            checkIfFavoritesAreSaved();
+          }
+        // It IS favorite:
+        } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === true) {
+          for (i = 0; i < favoriteGifs.length; i++) {
+            if(sourceArrayToGetGifObject[indexOfButton].id === favoriteGifs[i].id) {
+              favoriteGifs.splice(i, 1);
+            }
+          }
+          localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+          addClass(favActiveClass[indexOfButton], 'display-none');
+          if (favGifsGridContainer) {
+            emptyInnerHTMLofElement(favGifsGridContainer);
+            primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+            triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
+            checkIfFavoritesAreSaved();
+          }
       }
     })
   })

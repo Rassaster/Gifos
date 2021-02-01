@@ -24,14 +24,20 @@
  * @const buttonSliderNext #trendingRightButtonSlider DOM Node.
  * @const buttonSliderPrev #trendingLefttButtonSlider DOM Node.
  * @const favGifsGridContainer #favGifsGridDOM DOM Node.
+ * @const favoritesGridCcontainer #favoritesGrid-containerDOM DOM Node.
+ * @const displayFavoritesGridContainer #displayFavoritesGridContainer DOM Node.
+ * @const NoFavoritesContentCcontainer #NoFavoritesContent-containerDOM DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
+ * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
  * @const searchResultsFavButton .searchResultsFavButton DOM Nodes.
  * @const searchResultsDownloadButton .searchResultsDownloadButton DOM Nodes.
  * @const searchResultsMaxButton .searchResultsMaxButton DOM Nodes.
+ * @const favActiveTrending .favActiveTrending DOM Nodes
  * @const trendingCardsFavButton .trendingCardsFavButton DOM Nodes.
  * @const trendingCardsDownloadButton .trendingCardsDownloadButton DOM Nodes.
  * @const trendingCardsMaxButton .trendingCardsMaxButton DOM Nodes.
+ * @const favFavButton .favFavButton DOM Nodes.
 
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @var slicedArrayOfSearchGifsResults [array]
@@ -62,15 +68,20 @@ const trendingSearchTermsWrapper = document.getElementById('trendingSearchTermsW
 const trendingGifsSliderContainer = document.getElementById('trendingGifsSliderDOM');
 const buttonSliderNext = document.getElementById('trendingRightButtonSlider');
 const buttonSliderPrev = document.getElementById('trendingLefttButtonSlider');
-const favGifsGridContainer= document.getElementById('favGifsGridDOM')
+const favGifsGridContainer= document.getElementById('favGifsGridDOM');
+const displayFavoritesGridContainer = document.getElementById('displayFavoritesGrid-container')
+const NoFavoritesContentCcontainer = document.getElementById('NoFavoritesContent-containerDOM');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
+const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
 const searchResultsFavButton = document.getElementsByClassName('searchResultsFavButton');
 const searchResultsDownloadButton = document.getElementsByClassName('searchResultsDownloadButton');
 const searchResultsMaxButton = document.getElementsByClassName('searchResultsMaxButton');
+const favActiveTrending = document.getElementsByClassName('favActiveTrending');
 const trendingCardsFavButton = document.getElementsByClassName('trendingCardsFavButton');
 const trendingCardsDownloadButton = document.getElementsByClassName('trendingCardsDownloadButton');
 const trendingCardsMaxButton = document.getElementsByClassName('trendingCardsMaxButton');
+const favFavButton = document.getElementsByClassName('favFavButton');
 
 const arraySearchGifsResults = [];
 let slicedArrayOfSearchGifsResults = [];
@@ -92,7 +103,7 @@ const requestToGiphy = async (giphyNode, searchQuery  = "", termQuery = "", resu
   return gifObject.data;
 }
 
-const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid, overlayDivClass, buttonsDivWrapperClass, favButtonClass, downloadButtonClass, maxButtonClass, callBackFunction) => {
+const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid, overlayDivClass, buttonsDivWrapperClass, favButtonClass, activeFavClass, displayFavoriteActiveNoneBlock, downloadButtonClass, maxButtonClass, callBackFunction) => {
   let gifUser = fetchedGifObject.username;
   let gifTitle = fetchedGifObject.title;
   let gifImg = fetchedGifObject.images.downsized.url;
@@ -105,7 +116,7 @@ const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid,
             <div class="flexContainer ${overlayDivClass}">
               <div class="flexContainer ${buttonsDivWrapperClass}">
                 <button class="trendingCardsButton ${favButtonClass}">
-                  <svg class="favActive display-none" width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <svg class="${activeFavClass} ${displayFavoriteActiveNoneBlock}" width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>
                       <path d="M275.322322,427 C276.828175,427 278.272313,427.609648 279.336861,428.694752 C280.40162,429.779051 281,431.250383 281,432.784592 C281,434.318801 280.40162,435.790133 279.336716,436.87458 L271.617243,444.739417 C271.27622,445.086861 270.723313,445.086861 270.38229,444.739417 L262.662816,436.87458 C260.445728,434.615742 260.445728,430.953442 262.662816,428.694604 C264.879905,426.435766 268.474516,426.435766 270.691605,428.694604 L270.999766,429.008569 L271.307783,428.694752 C272.372332,427.609648 273.81647,427 275.322322,427 Z" id="favIcon-active"></path>
                     </defs>
@@ -182,14 +193,14 @@ const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid,
   callBackFunction;
 }
 
-const primaryDisplayOnGrid = (sourceArrayToGetGifObject, parentContainer, displaySearchResultsGrid) => {
+const primaryDisplayOnGrid = (sourceArrayToGetGifObject, parentContainer, favButtonClass,displayFavoriteActiveNoneBlock, displaySearchResultsGrid) => {
   if (sourceArrayToGetGifObject.length <= 12) {
     for (i = 0; i < sourceArrayToGetGifObject.length; i++) {
-      displayGifsObjectInGrid(sourceArrayToGetGifObject[i], 'searchResultGifCard', parentContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton', displaySearchResultsGrid)
+      displayGifsObjectInGrid(sourceArrayToGetGifObject[i], 'searchResultGifCard', parentContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', favButtonClass, 'favActiveSearchResults', displayFavoriteActiveNoneBlock, 'searchResultsDownloadButton', 'searchResultsMaxButton', displaySearchResultsGrid)
     }
   } else {
     for (i = 0; i < 12; i++) {
-      displayGifsObjectInGrid(sourceArrayToGetGifObject[i], 'searchResultGifCard', parentContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton', displaySearchResultsGrid)
+      displayGifsObjectInGrid(sourceArrayToGetGifObject[i], 'searchResultGifCard', parentContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', favButtonClass, 'favActiveSearchResults', displayFavoriteActiveNoneBlock, 'searchResultsDownloadButton', 'searchResultsMaxButton', displaySearchResultsGrid)
     }
   }
 }
