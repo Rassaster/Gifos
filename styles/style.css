@@ -902,11 +902,12 @@ nav input {
   width: 10.416667vw;
   min-height: 140px;
   height: 10.416667vw;
-  margin-top: 110px;
+  margin-top: 40px;
 }
 
 .noResults-wrapper p {
   margin-top: 29px;
+  margin-bottom: 45px;
   font-size: calc(20px + 0.13888889vw);
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -1439,6 +1440,7 @@ nav input {
 }
 
 .myFavTitle-wrapper {
+  margin-top: 30px;
   width: 100vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1524,11 +1526,12 @@ nav input {
   width: 10.416667vw;
   min-height: 140px;
   height: 10.416667vw;
-  margin-top: 110px;
+  margin-top: 40px;
 }
 
 .noMyFav-wrapper p {
   margin-top: 29px;
+  margin-bottom: 45px;
   font-size: calc(20px + 0.13888889vw);
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
@@ -1648,11 +1651,12 @@ nav input {
   width: 10.416667vw;
   min-height: 140px;
   height: 10.416667vw;
-  margin-top: 110px;
+  margin-top: 40px;
 }
 
 .noMyGifos-wrapper p {
   margin-top: 29px;
+  margin-bottom: 45px;
   font-size: calc(20px + 0.13888889vw);
   line-height: 25px;
   font-family: "Montserrat-Bold", sans-serif;
