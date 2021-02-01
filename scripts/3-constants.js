@@ -27,6 +27,7 @@
  * @const favoritesGridCcontainer #favoritesGrid-containerDOM DOM Node.
  * @const displayFavoritesGridContainer #displayFavoritesGridContainer DOM Node.
  * @const NoFavoritesContentCcontainer #NoFavoritesContent-containerDOM DOM Node.
+ * @const verMasFavoritesButtonDOM #myFavVerMasButton DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -71,6 +72,7 @@ const buttonSliderPrev = document.getElementById('trendingLefttButtonSlider');
 const favGifsGridContainer= document.getElementById('favGifsGridDOM');
 const displayFavoritesGridContainer = document.getElementById('displayFavoritesGrid-container')
 const NoFavoritesContentCcontainer = document.getElementById('NoFavoritesContent-containerDOM');
+const verMasFavoritesButtonDOM = document.getElementById('myFavVerMasButton');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
@@ -87,6 +89,7 @@ const arraySearchGifsResults = [];
 let slicedArrayOfSearchGifsResults = [];
 const arrayTrendingGifsResults = [];
 let favoriteGifs = [];
+let slicedArrayOfFavoriteGifs = []
 /**
  * @function requestToGiphy
  * @param {*} giphyNode 
@@ -205,9 +208,27 @@ const primaryDisplayOnGrid = (sourceArrayToGetGifObject, parentContainer, favBut
   }
 }
 
-const verMasButtonsFunctionality = () => {
+const triggerVerMasSearchResultsButton = () => {
+  let momentarySlicedArray;
   for (i = 0; i < 12; i++) {
-    displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+    displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
-  slicedArrayOfSearchGifsResults = slicedArrayOfSearchGifsResults.slice(12)
+  triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
+  checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], favoriteGifs, favActiveSearchResults);
+
+  momentarySlicedArray = slicedArrayOfSearchGifsResults.slice(12);
+  slicedArrayOfSearchGifsResults = momentarySlicedArray;
+}
+
+
+const triggerVerMasFavoritesButton = () => {
+  alert(1)
+  let momentarySlicedArray;
+  for (i = 0; i < slicedArrayOfFavoriteGifs.length; i++) {
+    displayGifsObjectInGrid((slicedArrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+  }
+  triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
+  checkIfAreFavoritesSaved();
+  momentarySlicedArray = slicedArrayOfFavoriteGifs.slice(12);
+  slicedArrayOfFavoriteGifs = momentarySlicedArray;
 }

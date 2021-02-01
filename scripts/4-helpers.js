@@ -40,7 +40,15 @@ const closeRestartSearch = () => {
   closeAutocompleteSuggestions();
 }
 
-const checkIfFavoritesAreSaved = () => {
+const showHideVerMasButton = (targetArray, verMasButton) => {
+  if (targetArray.length <= 12) {
+    addClass(verMasButton, 'display-none');
+  } else if (targetArray.length > 12) {
+    removeClass(verMasButton, 'display-none');
+  }
+}
+
+const checkIfAreFavoritesSaved = () => {
   if (favoriteGifs.length !== 0) {
     removeClass(displayFavoritesGridContainer, 'display-none');
     addClass(NoFavoritesContentCcontainer, 'display-none');
@@ -66,25 +74,17 @@ const checkInArrayGifsIfAnyIsFavorite = (resourceArrayOfGifs, arrayToSearchIn, r
     for (i = 0; i < arrayToSearchIn.length; i++) {
       if (gif.id === arrayToSearchIn[i].id) {
         removeClass(removeFavClass[resourceArrayOfGifs.indexOf(gif)], 'display-none');
-        console.log(resourceArrayOfGifs.indexOf(gif))
       }
     }
   })
 }
 const localStorageFavsToFavsArray = () => {
   let returnedFavsLocal = localStorage.getItem('localFavGifs');
-  favoritesToJSON = JSON.parse(returnedFavsLocal)
+  favoritesToJSON = JSON.parse(returnedFavsLocal);
   favoriteGifs = favoritesToJSON;
 }
-
-// Constant Calls
-window.onload = () => {
-  if (localStorage.getItem('localFavGifs') !== null) {
-    localStorageFavsToFavsArray();
-  }
-  if (favGifsGridContainer) {
-    primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
-    triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-    checkIfFavoritesAreSaved();
-  }
+const localStorageFavsToFavsArrayCopy = () => {
+  let returnedFavsLocal = localStorage.getItem('localFavGifs');
+  favoritesToJSON = JSON.parse(returnedFavsLocal);
+  slicedArrayOfFavoriteGifs = favoritesToJSON;
 }

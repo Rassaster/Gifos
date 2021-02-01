@@ -25,6 +25,7 @@ const triggerSearch = (searchTerm) => {
     closeRestartSearch();
     triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
     checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], favoriteGifs, favActiveSearchResults);
+    showHideVerMasButton(arraySearchGifsResults[0], verMasSearchResultsButton);
   })
   .catch(err => console.error(err));
 }
@@ -64,6 +65,5 @@ closeSearchButton.addEventListener('click', closeRestartSearch);
  * @listens #closeButton-searchBar
  */
 verMasSearchResultsButtonDOM.addEventListener('click', () => {
-  verMasButtonsFunctionality(slicedArrayOfSearchGifsResults);
-
+  triggerVerMasSearchResultsButton();
 })

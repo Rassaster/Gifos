@@ -33,3 +33,7 @@ buttonSliderNext.addEventListener('click', () => {
 buttonSliderPrev.addEventListener('click', () => {
   trendingGifsSliderDOM.scrollLeft -= 600;
 });
+
+verMasFavoritesButtonDOM.addEventListener('click', () => {
+  triggerVerMasFavoritesButton();
+})
