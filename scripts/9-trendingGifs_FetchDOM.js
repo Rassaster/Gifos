@@ -5,7 +5,7 @@
  * @const arrayTrendingGifsResults an empty array that will store all the Objects (Gifs) fetched from gifsRequest()
  * @callback trendingGifsResultsToDOM(trendingGifsObject)
  */
-requestToGiphy(Giphy_Trending_Node, Giphy_Results_Limit, 12)
+requestToGiphy(Giphy_Trending_Node, '', '', Giphy_Results_Limit, 15)
 .then((data) => {
   arrayTrendingGifsResults.push(data);
   for (i = 0; i < data.length; i++) {

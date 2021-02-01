@@ -40,8 +40,8 @@
  * @const favFavButton .favFavButton DOM Nodes.
 
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
- * @var slicedArrayOfSearchGifsResults [array]
- * @const arrayTrendingGifsResults [array].
+ * @var slicedArrayOfSearchGifsResults [array] 
+ * @const arrayTrendingGifsResults [array] Use [0] to acces the data.
  * @var favoriteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -98,7 +98,7 @@ let favoriteGifs = [];
 const requestToGiphy = async (giphyNode, searchQuery  = "", termQuery = "", resultsLimit = "", limitNum = "") => { 
   let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + searchQuery + termQuery + resultsLimit + limitNum);
   let gifObject = await response.json();
-  console.log(`Node: ${giphyNode} -> Searched/Typed Term: ${termQuery} -> Results limit: ${resultsLimit}:`);
+  console.log(`Node: ${giphyNode} -> Searched/Typed Term: ${termQuery} -> Results limit: ${limitNum}:`);
   console.log(gifObject.data);
   return gifObject.data;
 }

@@ -17,8 +17,9 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           }
         // It IS favorite:
         } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === true) {
+          let clickedGifId = sourceArrayToGetGifObject[indexOfButton].id;
           for (i = 0; i < favoriteGifs.length; i++) {
-            if(sourceArrayToGetGifObject[indexOfButton].id === favoriteGifs[i].id) {
+            if(clickedGifId === favoriteGifs[i].id) {
               favoriteGifs.splice(i, 1);
             }
           }
@@ -29,6 +30,11 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
             triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
             checkIfFavoritesAreSaved();
+            for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
+              if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
+                addClass(favActiveTrending[i], 'display-none');
+              }
+            }
           }
       }
     })
