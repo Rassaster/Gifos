@@ -68,11 +68,11 @@
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container createGifos-container">
       <div class="flexContainer createGifosCapture-wrapper">
-        <div class="textInstructionsGifosCapture-wrapper display-none">
+        <div class="textInstructionsGifosCapture-wrapper">
           <h4 id="headingInstructionsContentGifosCapture">Aquí podrás<br>crear tus propios <span>GIFOS</span></h4>
           <p id="paragraphInstructionsContentGifosCapture">¡Crea tu GIFO en sólo 3 pasos!<br>(sólo necesitas una cámara para grabar un video) </p>
         </div>
-        <div class="cameraView-wrapper">
+        <div class="cameraView-wrapper display-none">
           <div class="cameraOverlay-wrapper">
             <div class="flexContainer uploadingGifo-wrapper">
               <img id="uploadingGifoOnLoad" class="uploadingGifoStatusImg" src="assets/3.createGifosAssets/icon-loader.svg" alt="Subiendo tu GIFO">
@@ -129,11 +129,15 @@
         <p id="step2" class="flexContainer step-wrapper">2</p>
         <p id="step3" class="flexContainer step-wrapper">3</p>
         <button id="repeatVideoButton" class="repeatVideoAndDurationViewer display-none">Repetir Captura</button>
-        <p id="videoDurationViewer" class="repeatVideoAndDurationViewer">00:00:06</p>
+        <p id="videoDurationViewer" class="repeatVideoAndDurationViewer display-none">00:00:06</p>
       </div>
       <div class="flexContainer commandButtonCreateGifos-wrapper">
         <div class="borderTopCommandButton"></div>
-        <button id="commandButtonCreateGifos">Comenzar</button>
+        <button class='commandButtonCreateGifos' id="comenzarButton">Comenzar</button>
+        <button class='commandButtonCreateGifos display-none' id="grabarButton">Grabar</button>
+        <button class='commandButtonCreateGifos display-none' id="finalizarButton">Finalizar</button>
+        <button class='commandButtonCreateGifos display-none' id="subirGifoButton">Subir Gifo</button>
+
       
       </div>
       <div class="cameraAssets-wrapper">

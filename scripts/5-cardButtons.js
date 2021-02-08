@@ -9,7 +9,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           slicedArrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
           localStorage.localFavGifs = JSON.stringify(favoriteGifs);
           removeClass(favActiveClass[indexOfButton], 'display-none');
-          alert('hello there')
+
           if (favGifsGridContainer) {
             emptyInnerHTMLofElement(favGifsGridContainer);
             primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');

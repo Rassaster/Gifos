@@ -27,5 +27,9 @@ window.onload = () => {
     triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
     checkIfAreFavoritesSaved();
     showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+    
+    verMasFavoritesButtonDOM.addEventListener('click', () => {
+      triggerVerMasFavoritesButton();
+    })
   }
 }

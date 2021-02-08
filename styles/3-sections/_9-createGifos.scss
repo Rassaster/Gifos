@@ -96,8 +96,10 @@
   font-size: 1.0416667vw; //=15px/1440px}
 }
 #repeatVideoButton {
-  border-bottom: 2px solid $tertiaryLM-color;
   font-size: 0.90277778vw; //=13px/1440px}
+  &:hover {
+    border-bottom: 2px solid $tertiaryLM-color;
+  }
 }
 
 // ***************************************************************************************
@@ -114,7 +116,7 @@
   border-radius: 1.7361111vw; //=25px/1440px
   background-color: $mainLM-color;
 }
-#commandButtonCreateGifos {
+.commandButtonCreateGifos {
   margin-top: 20px;
   width: 8.8194444vw; //=127px/1440px
   height: 3.4722222vw; //=50px/1440px

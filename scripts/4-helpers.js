@@ -39,7 +39,6 @@ const closeRestartSearch = () => {
   emptySearchValue();
   closeAutocompleteSuggestions();
 }
-
 const showHideVerMasButton = (targetArray, verMasButton) => {
   if (targetArray.length <= 12) {
     addClass(verMasButton, 'display-none');
@@ -47,7 +46,6 @@ const showHideVerMasButton = (targetArray, verMasButton) => {
     removeClass(verMasButton, 'display-none');
   }
 }
-
 const checkIfAreFavoritesSaved = () => {
   if (favoriteGifs.length !== 0) {
     removeClass(displayFavoritesGridContainer, 'display-none');
