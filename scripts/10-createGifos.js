@@ -63,3 +63,14 @@ repeatVideoButton.addEventListener('click', () => {
   removeClass(doneButton, 'display-none');
   recorder.startRecording();
 })
+
+const uploadToGiphy = async (fileGif) => { 
+  let response = await fetch(Giphy_UploadURL + fileGif + Giphy_APIKey, {
+    method: 'POST',
+    body: fileGif,
+    mode: 'no-cors'
+  })
+  console.log(response.status);
+  console.log(response.json())
+  return response.json();
+}

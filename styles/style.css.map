@@ -18,7 +18,8 @@
         "3-sections/_6-socialMedia&Rights.scss",
         "3-sections/_7-favorites.scss",
         "3-sections/_8-myGifos.scss",
-        "3-sections/_9-createGifos.scss"
+        "3-sections/_9-createGifos.scss",
+        "4-darkMode/darkMode.scss"
     ],
     "names": [],
     "file": "style.css"

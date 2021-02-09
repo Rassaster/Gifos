@@ -58,6 +58,7 @@
  * @var favoriteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
+const Giphy_UploadURL =  "https://upload.giphy.com/v1/gifs";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
 const Giphy_Search_Node = 'gifs/search';
 const Giphy_Search_Autocomplete = 'gifs/search/tags';
