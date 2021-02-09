@@ -28,6 +28,18 @@
  * @const displayFavoritesGridContainer #displayFavoritesGridContainer DOM Node.
  * @const NoFavoritesContentCcontainer #NoFavoritesContent-containerDOM DOM Node.
  * @const verMasFavoritesButtonDOM #myFavVerMasButton DOM Node.
+ * @const textInstructionsGifosWrapper #textInstructionsGifosCaptureWrapper DOM Node.
+ * @const beginButton #beginButton DOM Node.
+ * @const recordButton #recordButton DOM Node.
+ * @const doneButton #doneButton DOM Node.
+ * @const uploadGifoButton #uploadGifoButton DOM Node.
+ * @const stepOne #step1 DOM Node.
+ * @const stepTwo #step2 DOM Node.
+ * @const stepThree #step3 DOM Node.
+ * @const cameraViewWrapper #cameraViewWrapper DOM Node.
+ * @const videoCameraView #videoCameraView DOM Node.
+ * @const videoDurationViewer #videoDurationViewer DOM Node.
+ * @const repeatVideoButton #repeatVideoButton DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -73,6 +85,18 @@ const favGifsGridContainer= document.getElementById('favGifsGridDOM');
 const displayFavoritesGridContainer = document.getElementById('displayFavoritesGrid-container')
 const NoFavoritesContentCcontainer = document.getElementById('NoFavoritesContent-containerDOM');
 const verMasFavoritesButtonDOM = document.getElementById('myFavVerMasButton');
+const textInstructionsGifosWrapper = document.getElementById('textInstructionsGifosCaptureWrapper');
+const beginButton = document.getElementById('beginButton');
+const recordButton = document.getElementById('recordButton');
+const doneButton = document.getElementById('doneButton');
+const uploadGifoButton = document.getElementById('uploadGifoButton');
+const stepOne = document.getElementById('step1');
+const stepTwo = document.getElementById('step2');
+const stepThree = document.getElementById('step3');
+const cameraViewWrapper = document.getElementById('cameraViewWrapper');
+const videoCameraView = document.getElementById('videoCameraView');
+const videoDurationViewer = document.getElementById('videoDurationViewer');
+const repeatVideoButton = document.getElementById('repeatVideoButton');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');

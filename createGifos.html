@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/style.css" type="text/css">
   <!-- Favicon: -->
   <link rel="shortcut icon" href="assets/-1.headerSectionAssets/logoGifos.svg" type="image/svg+xml">
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -68,12 +69,13 @@
     <!-- TOP SECTION -->
     <section class="flexContainer topSection-container createGifos-container">
       <div class="flexContainer createGifosCapture-wrapper">
-        <div class="textInstructionsGifosCapture-wrapper">
+        <div class="textInstructionsGifosCapture-wrapper" id="textInstructionsGifosCaptureWrapper">
           <h4 id="headingInstructionsContentGifosCapture">Aquí podrás<br>crear tus propios <span>GIFOS</span></h4>
-          <p id="paragraphInstructionsContentGifosCapture">¡Crea tu GIFO en sólo 3 pasos!<br>(sólo necesitas una cámara para grabar un video) </p>
+          <p id="paragraphInstructionsContentGifosCapture">¡Crea tu GIFO en sólo 3 pasos!<br>(sólo necesitas una cámara para grabar un video)</p>
         </div>
-        <div class="cameraView-wrapper display-none">
-          <div class="cameraOverlay-wrapper">
+        <div id="cameraViewWrapper" class="flexContainer cameraView-wrapper display-none">
+          <video id="videoCameraView" src=""></video>
+          <div class="cameraOverlay-wrapper display-none">
             <div class="flexContainer uploadingGifo-wrapper">
               <img id="uploadingGifoOnLoad" class="uploadingGifoStatusImg" src="assets/3.createGifosAssets/icon-loader.svg" alt="Subiendo tu GIFO">
               <img id="uploadingGifoCheck" class="uploadingGifoStatusImg display-none" src="assets/3.createGifosAssets/icon-checkTick.svg" alt="GIFO subido con éxito">
@@ -125,7 +127,7 @@
         <div class="cornersCreateGifos bottomCornersCreateGifos rightCornersCreateGifos"></div>
       </div>
       <div class="flexContainer createSteps-wrapper">
-        <p id="step1" class="flexContainer step-wrapper currentStep-wrapper">1</p>
+        <p id="step1" class="flexContainer step-wrapper">1</p>
         <p id="step2" class="flexContainer step-wrapper">2</p>
         <p id="step3" class="flexContainer step-wrapper">3</p>
         <button id="repeatVideoButton" class="repeatVideoAndDurationViewer display-none">Repetir Captura</button>
@@ -133,10 +135,10 @@
       </div>
       <div class="flexContainer commandButtonCreateGifos-wrapper">
         <div class="borderTopCommandButton"></div>
-        <button class='commandButtonCreateGifos' id="comenzarButton">Comenzar</button>
-        <button class='commandButtonCreateGifos display-none' id="grabarButton">Grabar</button>
-        <button class='commandButtonCreateGifos display-none' id="finalizarButton">Finalizar</button>
-        <button class='commandButtonCreateGifos display-none' id="subirGifoButton">Subir Gifo</button>
+        <button class='commandButtonCreateGifos' id="beginButton">Comenzar</button>
+        <button class='commandButtonCreateGifos display-none' id="recordButton">Grabar</button>
+        <button class='commandButtonCreateGifos display-none' id="doneButton">Finalizar</button>
+        <button class='commandButtonCreateGifos display-none' id="uploadGifoButton">Subir Gifo</button>
 
       
       </div>
