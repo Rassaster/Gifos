@@ -1576,6 +1576,7 @@ nav input {
 }
 
 .myGifosTitle-wrapper {
+  margin-top: 30px;
   width: 100vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

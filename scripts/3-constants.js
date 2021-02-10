@@ -48,6 +48,7 @@
  * @const uploadingGifoOnLoad #uploadingGifoOnLoad DOM Node.
  * @const uploadingGifoCheck #uploadingGifoCheck DOM Node.
  * @const previewRecordedGif #previewRecordedGif DOM Node.
+ * @const displayCreatedGifsGridContainer #displayCreatedGifsGrid-container DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -115,6 +116,7 @@ const uploadingGifoButtonsWrapper = document.getElementById('uploadingGifoButton
 const uploadingGifoOnLoad = document.getElementById('uploadingGifoOnLoad');
 const uploadingGifoCheck = document.getElementById('uploadingGifoCheck');
 const previewRecordedGif = document.getElementById('previewRecordedGif');
+const displayCreatedGifsGridContainer = document.getElementById('displayCreatedGifsGrid-container');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
