@@ -46,7 +46,14 @@ const uploadToGiphy = async (fileGif) => {
     console.log(err)
   }
 }
-
+const triggerSearchByID = (gifID) => {
+  requestToGiphy(Giphy_SearchByID_Node, gifID)
+  .then(data => {
+    arrayOfCreatedGifsIDs.push(data);
+    localStorage.localStorageCreatedGifs = JSON.stringify(arrayOfCreatedGifsIDs);
+  })
+  .catch(err => console.error(err))
+}
 beginButton.addEventListener('click', () => {
   addClass(stepOne, 'currentStep-wrapper');
   displayTextForCameraPermission();
@@ -100,8 +107,7 @@ uploadGifoButton.addEventListener('click', () => {
     uploadingGifoStatusText.innerText = 'GIFO subido con éxito!'
     removeClass(createOtherGifoButton, 'display-none');
     
-    arrayOfCreatedGifsIDs.push(uploadedGifo.data.id);
-    localStorage.localStorageCreatedGifs = JSON.stringify(arrayOfCreatedGifsIDs);
+    triggerSearchByID(uploadedGifo.data.id)
     console.log(`Aqui esta: ${uploadedGifo.data.id}`);
   })
 })

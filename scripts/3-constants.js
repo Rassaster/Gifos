@@ -3,6 +3,7 @@
  * @const Giphy_BaseURL string.
  * @const Giphy_APIKey string.
  * @const Giphy_Search_Node string.
+ * @const Giphy_SearchByID_Node string.
  * @const Giphy_Search_Autocomplete string.
  * @const Giphy_Trending_Node string.
  * @const Giphy_Trending_Search_Terms_Node string.
@@ -66,10 +67,10 @@
  * @var favorarrayOfCreatedGifsIDsiteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
-const Giphy_SearchByID = "https://api.giphy.com/v1/gifs";
 const Giphy_UploadURL =  "https://upload.giphy.com/v1/gifs";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
 const Giphy_Search_Node = 'gifs/search';
+const Giphy_SearchByID_Node = "gifs/";
 const Giphy_Search_Autocomplete = 'gifs/search/tags';
 const Giphy_Trending_Search_Terms_Node = 'trending/searches'
 const Giphy_Trending_Node = "gifs/trending";
