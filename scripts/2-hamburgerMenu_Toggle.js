@@ -34,8 +34,11 @@ window.onload = () => {
       triggerVerMasFavoritesButton();
     })
   }
-
-  if (localStorage.getItem('localStorageCreatedGifs') !== null) {
-    localStorageCreatedGifsToCreatedGifsArray();
+  if (createdGifsGridDOM){
+    if (localStorage.getItem('localStorageCreatedGifs') !== null) {
+      localStorageCreatedGifsToCreatedGifsArray();
+      // delete function below
+      primaryDisplayOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM, 'searchResultsFavButton', 'display-none');
+    }
   }
 }
