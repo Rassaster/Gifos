@@ -98,6 +98,9 @@ uploadGifoButton.addEventListener('click', () => {
     removeClass(uploadingGifoButtonsWrapper, 'display-none');
     removeClass(uploadingGifoCheck, 'display-none');
     uploadingGifoStatusText.innerText = 'GIFO subido con éxito!'
+    
+    arrayOfCreatedGifsIDs.push(uploadedGifo.data.id);
+    localStorage.localStorageCreatedGifs = JSON.stringify(arrayOfCreatedGifsIDs);
     console.log(`Aqui esta: ${uploadedGifo.data.id}`);
-  });
+  })
 })
