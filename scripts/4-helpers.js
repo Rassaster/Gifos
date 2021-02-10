@@ -86,3 +86,9 @@ const localStorageFavsToFavsArrayCopy = () => {
   favoritesToJSON = JSON.parse(returnedFavsLocal);
   slicedArrayOfFavoriteGifs = favoritesToJSON;
 }
+
+const localStorageCreatedGifsToCreatedGifsArray = () => {
+  let returnedCreatedLocal = localStorage.getItem('localStorageCreatedGifs');
+  createdIDToJSON = JSON.parse(returnedCreatedLocal);
+  arrayOfCreatedGifsIDs = createdIDToJSON;
+}
