@@ -64,6 +64,7 @@
  * @var favoriteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
+const Giphy_SearchByID = "https://api.giphy.com/v1/gifs";
 const Giphy_UploadURL =  "https://upload.giphy.com/v1/gifs";
 const Giphy_APIKey = "?api_key=33l2FVbyT45wmg6e3MJf38JvhgOSNzdH";
 const Giphy_Search_Node = 'gifs/search';
@@ -135,8 +136,8 @@ let slicedArrayOfFavoriteGifs = []
  * @param {*} resultsLimit 
  * @param {*} limitNum 
  */
-const requestToGiphy = async (giphyNode, searchQuery  = "", termQuery = "", resultsLimit = "", limitNum = "") => { 
-  let response = await fetch(Giphy_BaseURL + giphyNode + Giphy_APIKey + searchQuery + termQuery + resultsLimit + limitNum);
+const requestToGiphy = async (giphyNode, gifID = '', searchQuery  = "", termQuery = "", resultsLimit = "", limitNum = "") => { 
+  let response = await fetch(Giphy_BaseURL + giphyNode + gifID + Giphy_APIKey + searchQuery + termQuery + resultsLimit + limitNum);
   let gifObject = await response.json();
   console.log(`Node: ${giphyNode} -> Searched/Typed Term: ${termQuery} -> Results limit: ${limitNum}:`);
   console.log(gifObject.data);

@@ -42,7 +42,7 @@ const listenToAutocompleteSuggestions = () => {
  * @throws
 */
 const triggerAutocomplete = () => {
-  requestToGiphy(Giphy_Search_Autocomplete, Giphy_Search_Query, userSearchInput.value)
+  requestToGiphy(Giphy_Search_Autocomplete, '', Giphy_Search_Query, userSearchInput.value)
     .then((data) => {
       for (i = 0; i < data.length; i++) {
         autocompleteSuggestionToDOM(data[i]);

@@ -15,7 +15,7 @@
  * @throws
  */
 const triggerSearch = (searchTerm) => {
-  requestToGiphy(Giphy_Search_Node, Giphy_Search_Query, searchTerm, Giphy_Results_Limit, 48)
+  requestToGiphy(Giphy_Search_Node, '', Giphy_Search_Query, searchTerm, Giphy_Results_Limit, 48)
   .then((data) => {
     cleanSearchResults();
     displaySearchTermAsResultsTitle(searchTerm);
