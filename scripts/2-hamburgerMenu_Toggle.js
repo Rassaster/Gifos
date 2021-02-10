@@ -34,4 +34,8 @@ window.onload = () => {
       triggerVerMasFavoritesButton();
     })
   }
+
+  if (localStorage.getItem('localStorageCreatedGifs') !== null) {
+    localStorageCreatedGifsToCreatedGifsArray();
+  }
 }

@@ -40,6 +40,7 @@
  * @const videoCameraView #videoCameraView DOM Node.
  * @const videoDurationViewer #videoDurationViewer DOM Node.
  * @const repeatVideoButton #repeatVideoButton DOM Node.
+ * @const createOtherGifoButton #createOtherGifoButton DOM Node.
  * @const cameraOverlayWrapper #cameraOverlayWrapper DOM Node.
  * @const uploadingGifoStatusText #uploadingGifoStatusText DOM Node.
  * @const uploadingGifoButtonsWrapper #uploadingGifoButtons-wrapper DOM Node.
@@ -99,6 +100,7 @@ const beginButton = document.getElementById('beginButton');
 const recordButton = document.getElementById('recordButton');
 const doneButton = document.getElementById('doneButton');
 const uploadGifoButton = document.getElementById('uploadGifoButton');
+const createOtherGifoButton = document.getElementById('createOtherGifoButton');
 const stepOne = document.getElementById('step1');
 const stepTwo = document.getElementById('step2');
 const stepThree = document.getElementById('step3');

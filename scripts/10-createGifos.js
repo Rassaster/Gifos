@@ -98,9 +98,22 @@ uploadGifoButton.addEventListener('click', () => {
     removeClass(uploadingGifoButtonsWrapper, 'display-none');
     removeClass(uploadingGifoCheck, 'display-none');
     uploadingGifoStatusText.innerText = 'GIFO subido con éxito!'
+    removeClass(createOtherGifoButton, 'display-none');
     
     arrayOfCreatedGifsIDs.push(uploadedGifo.data.id);
     localStorage.localStorageCreatedGifs = JSON.stringify(arrayOfCreatedGifsIDs);
     console.log(`Aqui esta: ${uploadedGifo.data.id}`);
   })
+})
+createOtherGifoButton.addEventListener('click', () => {
+  recorder.reset();
+  newGifFile.delete('file');
+  addClass(createOtherGifoButton, 'display-none');
+  removeClass(recordButton, 'display-none');
+  removeClass(videoCameraView, 'display-none');
+  addClass(previewRecordedGif, 'display-none');
+  removeClass(videoDurationViewer, 'display-none');
+  addClass(cameraOverlayWrapper, 'display-none');
+  removeClass(uploadingGifoOnLoad, 'display-none');
+  addClass(uploadingGifoCheck, 'display-none');
 })
