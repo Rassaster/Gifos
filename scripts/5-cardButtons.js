@@ -7,7 +7,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
       if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === undefined) {
           favoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
           slicedArrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-          localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+          localStorage.localStorageFavGifs = JSON.stringify(favoriteGifs);
           removeClass(favActiveClass[indexOfButton], 'display-none');
 
           if (favGifsGridContainer) {
@@ -30,7 +30,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             slicedArrayOfFavoriteGifs.splice(i, 1);
           }
         }
-        localStorage.localFavGifs = JSON.stringify(favoriteGifs);
+        localStorage.localStorageFavGifs = JSON.stringify(favoriteGifs);
         addClass(favActiveClass[indexOfButton], 'display-none');
         if (favGifsGridContainer) {
             emptyInnerHTMLofElement(favGifsGridContainer);

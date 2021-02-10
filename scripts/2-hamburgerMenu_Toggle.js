@@ -14,7 +14,7 @@ userNavToggleView.addEventListener('click', displayHideNavList);
 // Constant Calls
 window.onload = () => {
   // onLoad General
-  if (localStorage.getItem('localFavGifs') !== null) {
+  if (localStorage.getItem('localStorageFavGifs') !== null) {
     localStorageFavsToFavsArray();
     localStorageFavsToFavsArrayCopy();
     if (favoriteGifs.length > 12) {
