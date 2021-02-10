@@ -128,6 +128,7 @@ let slicedArrayOfSearchGifsResults = [];
 const arrayTrendingGifsResults = [];
 let favoriteGifs = [];
 let slicedArrayOfFavoriteGifs = []
+let arrayOfCreatedGifsIDs = [];
 /**
  * @function requestToGiphy
  * @param {*} giphyNode 
@@ -143,7 +144,6 @@ const requestToGiphy = async (giphyNode, gifID = '', searchQuery  = "", termQuer
   console.log(gifObject.data);
   return gifObject.data;
 }
-
 const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid, overlayDivClass, buttonsDivWrapperClass, favButtonClass, activeFavClass, displayFavoriteActiveNoneBlock, downloadButtonClass, maxButtonClass, callBackFunction) => {
   let gifUser = fetchedGifObject.username;
   let gifTitle = fetchedGifObject.title;
@@ -233,7 +233,6 @@ const displayGifsObjectInGrid = (fetchedGifObject, cardWrapperClass, targetGrid,
   targetGrid.appendChild(gifCardWrapper);
   callBackFunction;
 }
-
 const primaryDisplayOnGrid = (sourceArrayToGetGifObject, parentContainer, favButtonClass,displayFavoriteActiveNoneBlock, displaySearchResultsGrid) => {
   if (sourceArrayToGetGifObject.length <= 12) {
     for (i = 0; i < sourceArrayToGetGifObject.length; i++) {
@@ -245,7 +244,6 @@ const primaryDisplayOnGrid = (sourceArrayToGetGifObject, parentContainer, favBut
     }
   }
 }
-
 const triggerVerMasSearchResultsButton = () => {
   let momentarySlicedArray;
   for (i = 0; i < 12; i++) {
@@ -257,8 +255,6 @@ const triggerVerMasSearchResultsButton = () => {
   momentarySlicedArray = slicedArrayOfSearchGifsResults.slice(12);
   slicedArrayOfSearchGifsResults = momentarySlicedArray;
 }
-
-
 const triggerVerMasFavoritesButton = () => {
   alert(1)
   let momentarySlicedArray;
