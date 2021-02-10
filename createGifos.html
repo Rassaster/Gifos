@@ -75,12 +75,13 @@
         </div>
         <div id="cameraViewWrapper" class="flexContainer cameraView-wrapper display-none">
           <video id="videoCameraView" src=""></video>
-          <div class="cameraOverlay-wrapper display-none">
+          <img id="previewRecordedGif" class="display-none" src="" alt="">
+          <div id="cameraOverlayWrapper" class="cameraOverlay-wrapper display-none">
             <div class="flexContainer uploadingGifo-wrapper">
               <img id="uploadingGifoOnLoad" class="uploadingGifoStatusImg" src="assets/3.createGifosAssets/icon-loader.svg" alt="Subiendo tu GIFO">
               <img id="uploadingGifoCheck" class="uploadingGifoStatusImg display-none" src="assets/3.createGifosAssets/icon-checkTick.svg" alt="GIFO subido con éxito">
-              <h4 id="uploadingGifoStatusText" >GIFO subido con éxito</h4>
-              <div id="uploadingGifoButtons-wrapper" class="flexContainer">
+              <h4 id="uploadingGifoStatusText"></h4>
+              <div id="uploadingGifoButtons-wrapper" class="flexContainer display-none">
                 <button id="uploadingGifoDownloadButton"class="uploadingGifoButtons">
                   <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <defs>

@@ -40,6 +40,12 @@
  * @const videoCameraView #videoCameraView DOM Node.
  * @const videoDurationViewer #videoDurationViewer DOM Node.
  * @const repeatVideoButton #repeatVideoButton DOM Node.
+ * @const cameraOverlayWrapper #cameraOverlayWrapper DOM Node.
+ * @const uploadingGifoStatusText #uploadingGifoStatusText DOM Node.
+ * @const uploadingGifoButtonsWrapper #uploadingGifoButtons-wrapper DOM Node.
+ * @const uploadingGifoOnLoad #uploadingGifoOnLoad DOM Node.
+ * @const uploadingGifoCheck #uploadingGifoCheck DOM Node.
+ * @const previewRecordedGif #previewRecordedGif DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -98,6 +104,12 @@ const cameraViewWrapper = document.getElementById('cameraViewWrapper');
 const videoCameraView = document.getElementById('videoCameraView');
 const videoDurationViewer = document.getElementById('videoDurationViewer');
 const repeatVideoButton = document.getElementById('repeatVideoButton');
+const cameraOverlayWrapper = document.getElementById('cameraOverlayWrapper');
+const uploadingGifoStatusText = document.getElementById('uploadingGifoStatusText');
+const uploadingGifoButtonsWrapper = document.getElementById('uploadingGifoButtons-wrapper');
+const uploadingGifoOnLoad = document.getElementById('uploadingGifoOnLoad');
+const uploadingGifoCheck = document.getElementById('uploadingGifoCheck');
+const previewRecordedGif = document.getElementById('previewRecordedGif');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');

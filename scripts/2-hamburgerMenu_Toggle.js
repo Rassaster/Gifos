@@ -20,6 +20,8 @@ window.onload = () => {
     if (favoriteGifs.length > 12) {
       slicedArrayOfFavoriteGifs = favoriteGifs.slice(12);
     }
+  } else {
+    console.log('No favs.')
   }
   // onLoad for Favorites
   if (favGifsGridContainer) {

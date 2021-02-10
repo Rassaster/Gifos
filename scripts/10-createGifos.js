@@ -1,5 +1,5 @@
 let recorder;
-let form = new FormData();
+let newGifFile;
 const getMediaFromUser = async () => {
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: false,
@@ -12,15 +12,12 @@ const getMediaFromUser = async () => {
       addClass(beginButton, 'display-none');
       removeClass(recordButton, 'display-none');
       removeClass(videoDurationViewer, 'display-none');
-
       videoCameraView.srcObject = stream;
       videoCameraView.play();
       recorder = RecordRTC(stream, { 
         type: 'gif',
         frameRate: 1,
         quality: 10,
-        height: 200,
-        width: 100,
         onGifRecordingStarted: function() {
         console.log('started') }
       });
@@ -36,6 +33,20 @@ const displayTextForCameraPermission = () => {
   </p>
   `
 }
+const uploadToGiphy = async (fileGif) => { 
+  try {
+    let response = await fetch(Giphy_UploadURL + Giphy_APIKey, {
+      method: 'POST',
+      body: fileGif,
+    });
+    let newGif = response.json();
+    console.log(newGif);
+    return newGif;
+  } catch(err) {
+    console.log(err)
+  }
+}
+
 beginButton.addEventListener('click', () => {
   addClass(stepOne, 'currentStep-wrapper');
   displayTextForCameraPermission();
@@ -46,31 +57,47 @@ recordButton.addEventListener('click', () => {
   removeClass(doneButton, 'display-none');
   recorder.startRecording();
 })
+let blobURL;
 doneButton.addEventListener('click', () => {
   addClass(doneButton, 'display-none');
   removeClass(uploadGifoButton, 'display-none');
   removeClass(repeatVideoButton, 'display-none');
   addClass(videoDurationViewer, 'display-none');
   recorder.stopRecording(() => {
-    form.append('file', recorder.getBlob(), 'myGif.gif');
-    console.log(form.get('file'))
+    blobURL = URL.createObjectURL(recorder.getBlob());
+    console.log(`àca el blob: ${blobURL}`);
+    newGifFile = new FormData();
+    newGifFile.append('file', recorder.getBlob(), 'myGif.gif');
+    console.log(newGifFile.get('file'))
+    addClass(videoCameraView, 'display-none');
+    removeClass(previewRecordedGif, 'display-none');
+    previewRecordedGif.src = blobURL;
   })
 })
 repeatVideoButton.addEventListener('click', () => {
+  recorder.reset();
+  newGifFile.delete('file');
+  removeClass(videoCameraView, 'display-none');
+  addClass(previewRecordedGif, 'display-none');
   addClass(repeatVideoButton, 'display-none');
   removeClass(videoDurationViewer, 'display-none');
   addClass(uploadGifoButton, 'display-none');
-  removeClass(doneButton, 'display-none');
-  recorder.startRecording();
+  removeClass(recordButton, 'display-none');
 })
+uploadGifoButton.addEventListener('click', () => {
+  removeClass(cameraOverlayWrapper, 'display-none');
+  addClass(uploadGifoButton, 'display-none');
+  addClass(repeatVideoButton, 'display-none');
+  uploadingGifoStatusText.innerText = 'Estamos subiendo tu GIFO';
 
-const uploadToGiphy = async (fileGif) => { 
-  let response = await fetch(Giphy_UploadURL + fileGif + Giphy_APIKey, {
-    method: 'POST',
-    body: fileGif,
-    mode: 'no-cors'
-  })
-  console.log(response.status);
-  console.log(response.json())
-  return response.json();
-}
+  uploadToGiphy(newGifFile)
+  .then(uploadedGifo => {
+    addClass(stepThree, 'currentStep-wrapper');
+    removeClass(stepTwo, 'currentStep-wrapper');
+    addClass(uploadingGifoOnLoad, 'display-none');
+    removeClass(uploadingGifoButtonsWrapper, 'display-none');
+    removeClass(uploadingGifoCheck, 'display-none');
+    uploadingGifoStatusText.innerText = 'GIFO subido con éxito!'
+    console.log(`Aqui esta: ${uploadedGifo.data.id}`);
+  });
+})
