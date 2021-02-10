@@ -62,6 +62,7 @@
  * @var slicedArrayOfSearchGifsResults [array] 
  * @const arrayTrendingGifsResults [array] Use [0] to acces the data.
  * @var favoriteGifs [array].
+ * @var favorarrayOfCreatedGifsIDsiteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_SearchByID = "https://api.giphy.com/v1/gifs";
