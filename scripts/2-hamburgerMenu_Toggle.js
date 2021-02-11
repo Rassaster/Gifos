@@ -34,10 +34,12 @@ window.onload = () => {
       triggerVerMasFavoritesButton();
     })
   }
-  if (createdGifsGridDOM){
+  if (createdGifsGridDOM || videoCameraView) {
     if (localStorage.getItem('localStorageCreatedGifs') !== null) {
       localStorageCreatedGifsToCreatedGifsArray();
-      primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM)
+    }
+    if (createdGifsGridDOM) {
+      primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM);
     }
   }
 }
