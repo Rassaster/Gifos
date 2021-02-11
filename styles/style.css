@@ -1628,9 +1628,19 @@ nav input {
   gap: 2.0833333vw 2.0833333vw;
 }
 
-.myGifosGrid img {
+.myGifosGrid .searchResultGifCard {
+  position: relative;
   width: 100%;
   height: 100%;
+}
+
+.myGifosGrid .searchResultGifCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.myGifosGrid .searchResultGifCard:hover .searchResultGifCard-overlay {
+  visibility: visible;
 }
 
 .noMyGifos-wrapper {

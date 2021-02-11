@@ -37,8 +37,8 @@ window.onload = () => {
   if (createdGifsGridDOM){
     if (localStorage.getItem('localStorageCreatedGifs') !== null) {
       localStorageCreatedGifsToCreatedGifsArray();
-      // delete function below
-      primaryDisplayOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM, 'searchResultsFavButton', 'display-none');
+      // must replace function bellow with primaryDisplayCreatedGifsOnGrid()
+      displayCreatedGifsObjectInGrid(arrayOfCreatedGifsIDs[0], createdGifsGridDOM);
     }
   }
 }
