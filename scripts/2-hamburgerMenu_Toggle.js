@@ -37,8 +37,7 @@ window.onload = () => {
   if (createdGifsGridDOM){
     if (localStorage.getItem('localStorageCreatedGifs') !== null) {
       localStorageCreatedGifsToCreatedGifsArray();
-      // must replace function bellow with primaryDisplayCreatedGifsOnGrid()
-      displayCreatedGifsObjectInGrid(arrayOfCreatedGifsIDs[0], createdGifsGridDOM);
+      primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM)
     }
   }
 }

@@ -356,4 +356,14 @@ const displayCreatedGifsObjectInGrid = (fetchedGifObject, targetGrid) => {
   `
   targetGrid.appendChild(gifCardWrapper);
 }
-const primaryDisplayCreatedGifsOnGrid = () => {}
+const primaryDisplayCreatedGifsOnGrid = (sourceArrayToGetGifObject, parentContainer) => {
+  if (sourceArrayToGetGifObject.length <= 12) {
+    for (i = 0; i < sourceArrayToGetGifObject.length; i++) {
+      displayCreatedGifsObjectInGrid(sourceArrayToGetGifObject[i], parentContainer);
+    } 
+  } else {
+    for (i = 0; i < 12; i++) {
+      displayCreatedGifsObjectInGrid(sourceArrayToGetGifObject[i], parentContainer);
+    }
+  }
+}
