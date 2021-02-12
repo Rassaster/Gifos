@@ -14,7 +14,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             emptyInnerHTMLofElement(favGifsGridContainer);
             primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
             triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-            checkIfAreFavoritesSaved();
+            checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
           }
 
           if (favoriteGifs.length > 12) {
@@ -38,7 +38,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             emptyInnerHTMLofElement(favGifsGridContainer);
             primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
             triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-            checkIfAreFavoritesSaved();
+            checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
             for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
               if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
                 addClass(favActiveTrending[i], 'display-none');

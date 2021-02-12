@@ -358,7 +358,7 @@ const triggerVerMasFavoritesButton = () => {
     displayGifsObjectInGrid((slicedArrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
   triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-  checkIfAreFavoritesSaved();
+  checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
   momentarySlicedArray = slicedArrayOfFavoriteGifs.slice(12);
   slicedArrayOfFavoriteGifs = momentarySlicedArray;
 }

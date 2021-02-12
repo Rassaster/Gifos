@@ -46,16 +46,17 @@ const showHideVerMasButton = (targetArray, verMasButton) => {
     removeClass(verMasButton, 'display-none');
   }
 }
-const checkIfAreFavoritesSaved = () => {
-  if (favoriteGifs.length !== 0) {
-    removeClass(displayFavoritesGridContainer, 'display-none');
-    addClass(NoFavoritesContentCcontainer, 'display-none');
+const checkIfAreGifsSaved = (sourceArray, gridContainer, noContentContainer) => {
+  if (sourceArray.length !== 0) {
+    removeClass(gridContainer, 'display-none');
+    addClass(noContentContainer, 'display-none');
   } 
-  if (favoriteGifs.length === 0) {
-    addClass(displayFavoritesGridContainer, 'display-none');
-    removeClass(NoFavoritesContentCcontainer, 'display-none');
+  if (sourceArray.length === 0) {
+    addClass(gridContainer, 'display-none');
+    removeClass(noContentContainer, 'display-none');
   }
 }
+
 const checkIfIsFavoriteByGifid = (targetGifid, arrayToSearchIn) => {
   let gifIsFav;
   for (i = 0; i < arrayToSearchIn.length; i++) {

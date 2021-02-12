@@ -27,13 +27,14 @@ window.onload = () => {
   if (favGifsGridContainer) {
     primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
     triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-    checkIfAreFavoritesSaved();
+    checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
     showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
     
     verMasFavoritesButtonDOM.addEventListener('click', () => {
       triggerVerMasFavoritesButton();
     })
   }
+  // onLoad for Created Gifs
   if (createdGifsGridDOM || videoCameraView) {
     if (localStorage.getItem('localStorageCreatedGifs') !== null) {
       localStorageCreatedGifsToCreatedGifsArray();
