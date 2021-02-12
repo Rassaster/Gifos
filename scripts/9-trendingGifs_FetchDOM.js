@@ -12,7 +12,7 @@ requestToGiphy(Giphy_Trending_Node, '', '', Giphy_Results_Limit, 15)
     displayGifsObjectInGrid(data[i], 'trendingGifoCard', trendingGifsSliderContainer, 'trendingGifoCard-overlay', 'socialTrendingCards-wrapper', 'trendingCardsFavButton', 'favActiveTrending', 'display-none', 'trendingCardsDownloadButton', 'trendingCardsMaxButton');
   }
   triggerAddFavButtonGif(trendingCardsFavButton, arrayTrendingGifsResults[0], favActiveTrending);
-  checkInArrayGifsIfAnyIsFavorite(arrayTrendingGifsResults[0], favoriteGifs, favActiveTrending);
+  checkInArrayGifsIfAnyIsFavorite(arrayTrendingGifsResults[0], arrayOfFavoriteGifs, favActiveTrending);
   })
   .catch(err => console.error(err));
 /**

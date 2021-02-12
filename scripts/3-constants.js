@@ -66,7 +66,7 @@
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @var slicedArrayOfSearchGifsResults [array] 
  * @const arrayTrendingGifsResults [array] Use [0] to acces the data.
- * @var favoriteGifs [array].
+ * @var arrayOfFavoriteGifs [array].
  * @var favorarrayOfCreatedGifsIDsiteGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
@@ -136,8 +136,8 @@ const favFavButton = document.getElementsByClassName('favFavButton');
 const arraySearchGifsResults = [];
 let slicedArrayOfSearchGifsResults = [];
 const arrayTrendingGifsResults = [];
-let favoriteGifs = [];
-let slicedArrayOfFavoriteGifs = []
+let arrayOfFavoriteGifs = [];
+let slicedArrayOfarrayOfFavoriteGifs = []
 let arrayOfCreatedGifsIDs = [];
 /**
  * @function requestToGiphy
@@ -346,7 +346,7 @@ const triggerVerMasSearchResultsButton = () => {
     displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
   triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
-  checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], favoriteGifs, favActiveSearchResults);
+  checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], arrayOfFavoriteGifs, favActiveSearchResults);
 
   momentarySlicedArray = slicedArrayOfSearchGifsResults.slice(12);
   slicedArrayOfSearchGifsResults = momentarySlicedArray;
@@ -354,11 +354,11 @@ const triggerVerMasSearchResultsButton = () => {
 const triggerVerMasFavoritesButton = () => {
   alert(1)
   let momentarySlicedArray;
-  for (i = 0; i < slicedArrayOfFavoriteGifs.length; i++) {
-    displayGifsObjectInGrid((slicedArrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+  for (i = 0; i < slicedArrayOfarrayOfFavoriteGifs.length; i++) {
+    displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
   }
-  triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-  checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
-  momentarySlicedArray = slicedArrayOfFavoriteGifs.slice(12);
-  slicedArrayOfFavoriteGifs = momentarySlicedArray;
+  triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
+  checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+  momentarySlicedArray = slicedArrayOfarrayOfFavoriteGifs.slice(12);
+  slicedArrayOfarrayOfFavoriteGifs = momentarySlicedArray;
 }

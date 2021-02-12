@@ -24,7 +24,7 @@ const triggerSearch = (searchTerm) => {
     primaryDisplayOnGrid(arraySearchGifsResults[0], searchResultsGifsGridContainer, 'searchResultsFavButton', 'display-none', removeClass(searchResultsContainer, 'display-none'));
     closeRestartSearch();
     triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
-    checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], favoriteGifs, favActiveSearchResults);
+    checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], arrayOfFavoriteGifs, favActiveSearchResults);
     showHideVerMasButton(arraySearchGifsResults[0], verMasSearchResultsButton);
   })
   .catch(err => console.error(err));

@@ -80,12 +80,12 @@ const checkInArrayGifsIfAnyIsFavorite = (resourceArrayOfGifs, arrayToSearchIn, r
 const localStorageFavsToFavsArray = () => {
   let returnedFavsLocal = localStorage.getItem('localStorageFavGifs');
   favoritesToJSON = JSON.parse(returnedFavsLocal);
-  favoriteGifs = favoritesToJSON;
+  arrayOfFavoriteGifs = favoritesToJSON;
 }
 const localStorageFavsToFavsArrayCopy = () => {
   let returnedFavsLocal = localStorage.getItem('localStorageFavGifs');
   favoritesToJSON = JSON.parse(returnedFavsLocal);
-  slicedArrayOfFavoriteGifs = favoritesToJSON;
+  slicedArrayOfarrayOfFavoriteGifs = favoritesToJSON;
 }
 
 const localStorageCreatedGifsToCreatedGifsArray = () => {

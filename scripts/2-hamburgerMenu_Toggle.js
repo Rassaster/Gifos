@@ -17,18 +17,18 @@ window.onload = () => {
   if (localStorage.getItem('localStorageFavGifs') !== null) {
     localStorageFavsToFavsArray();
     localStorageFavsToFavsArrayCopy();
-    if (favoriteGifs.length > 12) {
-      slicedArrayOfFavoriteGifs = favoriteGifs.slice(12);
+    if (arrayOfFavoriteGifs.length > 12) {
+      slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
     }
   } else {
     console.log('No favs.')
   }
   // onLoad for Favorites
   if (favGifsGridContainer) {
-    primaryDisplayOnGrid(favoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
-    triggerAddFavButtonGif(favFavButton, favoriteGifs, favActiveSearchResults);
-    checkIfAreGifsSaved(favoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
-    showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+    primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+    triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
+    checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+    showHideVerMasButton(arrayOfFavoriteGifs, verMasFavoritesButtonDOM);
     
     verMasFavoritesButtonDOM.addEventListener('click', () => {
       triggerVerMasFavoritesButton();
@@ -41,6 +41,7 @@ window.onload = () => {
     }
     if (createdGifsGridDOM) {
       primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM);
+      
     }
   }
 }
