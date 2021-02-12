@@ -20,7 +20,9 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           if (favoriteGifs.length > 12) {
             slicedArrayOfFavoriteGifs = favoriteGifs.slice(12);
           }
-          showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+          if(favGifsGridContainer) {
+            showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+          }
         // It IS favorite:
       } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, favoriteGifs) === true) {
         let clickedGifId = sourceArrayToGetGifObject[indexOfButton].id;
@@ -46,7 +48,9 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
         if (favoriteGifs.length > 12) {
           slicedArrayOfFavoriteGifs = favoriteGifs.slice(12);
         }
-        showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+        if (favGifsGridContainer) {
+          showHideVerMasButton(favoriteGifs, verMasFavoritesButtonDOM);
+        }
       }
     })
   })
