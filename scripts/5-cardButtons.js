@@ -21,7 +21,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
           }
           if(favGifsGridContainer) {
-            showHideVerMasButton(arrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+            showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
           }
         // It IS favorite:
       } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
@@ -49,7 +49,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
         }
         if (favGifsGridContainer) {
-          showHideVerMasButton(arrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+          showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
         }
       }
     })

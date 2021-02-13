@@ -28,7 +28,7 @@ window.onload = () => {
     primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
     triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
     checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
-    showHideVerMasButton(arrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+    showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
     
     verMasFavoritesButtonDOM.addEventListener('click', () => {
       triggerVerMasFavoritesButton();
@@ -45,7 +45,7 @@ window.onload = () => {
     if (createdGifsGridDOM) {
       primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM);
       checkIfAreGifsSaved(arrayOfCreatedGifsIDs, displayCreatedGifsGridContainer, noCreatedGifsContentContainer);
-      showHideVerMasButton(arrayOfCreatedGifsIDs, myGifosMasButton);
+      showHideVerMasButton(slicedArrayOfCreatedGifs, myGifosMasButton);
       myGifosMasButton.addEventListener('click', triggerVerMasCreatedGifsButton);
     }
   }
