@@ -51,6 +51,7 @@
  * @const displayCreatedGifsGridContainer #displayCreatedGifsGrid-container DOM Node.
  * @const createdGifsGridDOM #createdGifsGridDOM DOM Node.
  * @const noCreatedGifsContentContainer #noCreatedGifsContent-containerDOM DOM Node.
+ * @const myGifosMasButton #myGifosMasButton DOM Node
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -68,6 +69,8 @@
  * @const arrayTrendingGifsResults [array] Use [0] to acces the data.
  * @var arrayOfFavoriteGifs [array].
  * @var favorarrayOfCreatedGifsIDsiteGifs [array].
+ * @var arrayOfCreatedGifsIDs [array].
+ * @var slicedArrayOfCreatedGifs [array].
  */
 const Giphy_BaseURL = "https://api.giphy.com/v1/";
 const Giphy_UploadURL =  "https://upload.giphy.com/v1/gifs";
@@ -121,6 +124,7 @@ const previewRecordedGif = document.getElementById('previewRecordedGif');
 const displayCreatedGifsGridContainer = document.getElementById('displayCreatedGifsGrid-container');
 const createdGifsGridDOM = document.getElementById('createdGifsGridDOM');
 const noCreatedGifsContentContainer= document.getElementById('noCreatedGifsContent-containerDOM')
+const myGifosMasButton = document.getElementById('myGifosMasButton');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
@@ -139,6 +143,7 @@ const arrayTrendingGifsResults = [];
 let arrayOfFavoriteGifs = [];
 let slicedArrayOfarrayOfFavoriteGifs = []
 let arrayOfCreatedGifsIDs = [];
+let slicedArrayOfCreatedGifs = [];
 /**
  * @function requestToGiphy
  * @param {*} giphyNode 
@@ -350,6 +355,7 @@ const triggerVerMasSearchResultsButton = () => {
 
   momentarySlicedArray = slicedArrayOfSearchGifsResults.slice(12);
   slicedArrayOfSearchGifsResults = momentarySlicedArray;
+  showHideVerMasButton(slicedArrayOfSearchGifsResults, verMasSearchResultsButton);
 }
 const triggerVerMasFavoritesButton = () => {
   alert(1)
@@ -361,4 +367,14 @@ const triggerVerMasFavoritesButton = () => {
   checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
   momentarySlicedArray = slicedArrayOfarrayOfFavoriteGifs.slice(12);
   slicedArrayOfarrayOfFavoriteGifs = momentarySlicedArray;
+  showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+}
+const triggerVerMasCreatedGifsButton = () => {
+  let momentarySlicedArray;
+  for (i = 0; i < slicedArrayOfCreatedGifs.length; i++) {
+    displayCreatedGifsObjectInGrid(slicedArrayOfCreatedGifs[i], createdGifsGridDOM);
+  }
+  momentarySlicedArray = slicedArrayOfCreatedGifs.slice(12);
+  slicedArrayOfCreatedGifs = momentarySlicedArray;
+  showHideVerMasButton(slicedArrayOfCreatedGifs, myGifosMasButton);
 }

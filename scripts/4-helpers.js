@@ -40,7 +40,7 @@ const closeRestartSearch = () => {
   closeAutocompleteSuggestions();
 }
 const showHideVerMasButton = (targetArray, verMasButton) => {
-  if (targetArray.length <= 12) {
+  if (targetArray.length < 12) {
     addClass(verMasButton, 'display-none');
   } else if (targetArray.length > 12) {
     removeClass(verMasButton, 'display-none');

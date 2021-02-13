@@ -38,10 +38,15 @@ window.onload = () => {
   if (createdGifsGridDOM || videoCameraView) {
     if (localStorage.getItem('localStorageCreatedGifs') !== null) {
       localStorageCreatedGifsToCreatedGifsArray();
+      if (arrayOfCreatedGifsIDs.length > 12) {
+        slicedArrayOfCreatedGifs = arrayOfCreatedGifsIDs.slice(12);
+      }
     }
     if (createdGifsGridDOM) {
       primaryDisplayCreatedGifsOnGrid(arrayOfCreatedGifsIDs, createdGifsGridDOM);
-      
+      checkIfAreGifsSaved(arrayOfCreatedGifsIDs, displayCreatedGifsGridContainer, noCreatedGifsContentContainer);
+      showHideVerMasButton(arrayOfCreatedGifsIDs, myGifosMasButton);
+      myGifosMasButton.addEventListener('click', triggerVerMasCreatedGifsButton);
     }
   }
 }
