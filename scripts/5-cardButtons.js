@@ -78,6 +78,7 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass, 
 
       removeClass(maxViewOverlayContainer, 'overlayZero');
       addClass(maxViewOverlayContainer, 'overlayFullScreen')
+      maxViewOverlayCloseButton.addEventListener('click', closeMaxViewOverlay);
       console.log(sourceArrayToGetGifObject[0][indexOfButton])
       imgMaxGifOverlay.src = sourceArrayToGetGifObject[0][indexOfButton].images.downsized.url;
       userMaxFullGif.innerText = sourceArrayToGetGifObject[0][indexOfButton].username;

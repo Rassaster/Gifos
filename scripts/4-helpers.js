@@ -39,6 +39,10 @@ const closeRestartSearch = () => {
   emptySearchValue();
   closeAutocompleteSuggestions();
 }
+const closeMaxViewOverlay = () => {
+  addClass(maxViewOverlayContainer, 'overlayZero');
+  removeClass(maxViewOverlayContainer, 'overlayFullScreen')
+}
 const showHideVerMasButton = (targetArray, verMasButton) => {
   if (targetArray.length === 0) {
     addClass(verMasButton, 'display-none');
