@@ -2128,7 +2128,7 @@ video, #previewRecordedGif {
   position: fixed;
   top: 50%;
   left: 50%;
-  background-color: coral;
+  background-color: rgba(96, 215, 199, 0.9);
   z-index: 400;
   -webkit-transition: height 0.4s, width 0.4s;
   transition: height 0.4s, width 0.4s;
