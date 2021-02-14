@@ -55,22 +55,58 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
     })
   })
 }
+// const triggerMaxViewButtonGif = (favButtonClass, sourceArrayToGetGifObject, favActiveClass, maxViewButtonClass) => {
+//   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
+//     buttonMaxView.addEventListener('click', () => {
+//       let indexOfButton = Array.from(maxViewButtonClass).indexOf(buttonMaxView);
+//       removeClass(maxViewOverlayContainer, 'overlayZero');
+//       addClass(maxViewOverlayContainer, 'overlayFullScreen');
+//       imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.downsized.url;
+
+//       // It IS favorite:
+//       if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
+
+//       }
+//     })
+//   })
+// }
+
+const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass, favButtonClass) => {
+  Array.from(maxViewButtonClass).forEach(buttonMaxView => {
+    buttonMaxView.addEventListener('click', () => {
+      let indexOfButton = Array.from(maxViewButtonClass).indexOf(buttonMaxView);
+
+      removeClass(maxViewOverlayContainer, 'overlayZero');
+      addClass(maxViewOverlayContainer, 'overlayFullScreen')
+      console.log(sourceArrayToGetGifObject[0][indexOfButton])
+      imgMaxGifOverlay.src = sourceArrayToGetGifObject[0][indexOfButton].images.downsized.url;
+      userMaxFullGif.innerText = sourceArrayToGetGifObject[0][indexOfButton].username;
+      titleMaxFullGif.innerText = sourceArrayToGetGifObject[0][indexOfButton].title;
+
+
+      // It IS favorite:
+      if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
+
+      }
+    })
+  })
+}
+
+
+
+
 
 // window.onload = setTimeout(()=>{
-
 //   Array.from(trendingCardsDownloadButton).forEach(buttonDownload => {
 //     buttonDownload.addEventListener('click', () => {
 //       let indexOfButton = Array.from(trendingCardsDownloadButton).indexOf(buttonDownload)
 //       alert(indexOfButton)
 //     })
 //   })
-
 //   Array.from(trendingCardsMaxButton).forEach(buttonMaxSize => {
 //     buttonMaxSize.addEventListener('click', () => {
 //       let indexOfButton = Array.from(trendingCardsMaxButton).indexOf(buttonMaxSize)
 //       alert(indexOfButton)
 //     })
 //   })
-
-  
 // }, 1000)

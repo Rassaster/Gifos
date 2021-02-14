@@ -2126,8 +2126,8 @@ video, #previewRecordedGif {
 
 #maxViewOverlay-container {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   background-color: coral;
   z-index: 400;
   -webkit-transition: height 0.4s, width 0.4s;
@@ -2143,6 +2143,11 @@ video, #previewRecordedGif {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  left: 50%;
+  /*Add this*/
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*Add this*/
 }
 
 .overlayZero {

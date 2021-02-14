@@ -52,6 +52,11 @@
  * @const createdGifsGridDOM #createdGifsGridDOM DOM Node.
  * @const noCreatedGifsContentContainer #noCreatedGifsContent-containerDOM DOM Node.
  * @const myGifosMasButton #myGifosMasButton DOM Node
+ * @const maxViewOverlayContainer #maxViewOverlay-container DOM Node. 
+ * @const imgMaxGifOverlay #imgMaxGifOverlay DOM Node.
+ * @const userMaxFullGif #userMaxFullGif DOM Node.
+ * @const titleMaxFullGif #titleMaxFullGif DOM Node.
+ * @const socialMaxFullGifButtonsContainer #socialMaxFullGifButtons-container DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -125,6 +130,11 @@ const displayCreatedGifsGridContainer = document.getElementById('displayCreatedG
 const createdGifsGridDOM = document.getElementById('createdGifsGridDOM');
 const noCreatedGifsContentContainer= document.getElementById('noCreatedGifsContent-containerDOM')
 const myGifosMasButton = document.getElementById('myGifosMasButton');
+const maxViewOverlayContainer = document.getElementById('maxViewOverlay-container');
+const imgMaxGifOverlay = document.getElementById('imgMaxGifOverlay');
+const userMaxFullGif = document.getElementById('userMaxFullGif');
+const titleMaxFullGif = document.getElementById('titleMaxFullGif');
+const socialMaxFullGifButtonsContainer = document.getElementById('socialMaxFullGifButtons-container');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
