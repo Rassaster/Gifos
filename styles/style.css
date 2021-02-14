@@ -2266,4 +2266,10 @@ video, #previewRecordedGif {
 .socialMaxFullGifButton svg:hover .rectangle-cardIconBtn, .socialMaxFullGifButton svg:hover .icon-cardIconBtn {
   opacity: 1;
 }
+
+#favActiveMaxViewOverlay {
+  position: absolute;
+  width: 56%;
+  left: 20%;
+}
 /*# sourceMappingURL=style.css.map */

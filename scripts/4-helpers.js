@@ -42,6 +42,7 @@ const closeRestartSearch = () => {
 const closeMaxViewOverlay = () => {
   addClass(maxViewOverlayContainer, 'overlayZero');
   removeClass(maxViewOverlayContainer, 'overlayFullScreen')
+  imgMaxGifOverlay.src = ''
 }
 const showHideVerMasButton = (targetArray, verMasButton) => {
   if (targetArray.length === 0) {

@@ -66,3 +66,8 @@
   @include cardButton;
   background-color: blue;
 }
+#favActiveMaxViewOverlay {
+  position: absolute;
+  width: 56%;
+  left: 20%;
+}
