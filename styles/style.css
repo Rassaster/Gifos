@@ -2123,4 +2123,142 @@ video, #previewRecordedGif {
             transform: rotate(360deg);
   }
 }
+
+#maxViewOverlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: coral;
+  z-index: 400;
+  -webkit-transition: height 0.4s, width 0.4s;
+  transition: height 0.4s, width 0.4s;
+  overflow: hidden;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlayZero {
+  width: 0vw;
+  height: 0%;
+}
+
+.overlayFullScreen {
+  width: 100vw;
+  height: 100%;
+}
+
+#maxViewOverlayCloseButton {
+  position: absolute;
+  top: 4.7222222vw;
+  right: 19.444444vw;
+  width: 1.1111111vw;
+  height: 1.1111111vw;
+  background-image: url("../../assets/icon-close.svg");
+}
+
+#overlayImgButtons-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#imgMaxGifOverlay {
+  width: 48.263889vw;
+  height: 26.736111vw;
+}
+
+.socialMaxFullGif-container {
+  margin-top: 25px;
+  width: 48.263889vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialMaxFullGifNameTitle-container {
+  height: 100%;
+}
+
+.userMaxFullGif {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: calc(15px + 0.13888889vw);
+}
+
+.titleMaxFullGif {
+  margin-top: 8px;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: calc(16px + 0.13888889vw);
+}
+
+.socialMaxFullGifButtons-container {
+  min-width: 80px;
+  width: 6.9444444vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialMaxFullGifButton {
+  min-width: 26px;
+  width: 2.5vw;
+  min-height: 26px;
+  height: 2.5vw;
+  background-color: blue;
+}
+
+.socialMaxFullGifButton svg {
+  width: 100%;
+  height: 100%;
+}
+
+.socialMaxFullGifButton svg .rectangle-cardIconBtn {
+  fill: #FFFFFF;
+  opacity: 0.7;
+}
+
+.socialMaxFullGifButton svg .icon-cardIconBtn {
+  opacity: 0.7;
+  fill: #572EE5;
+}
+
+.socialMaxFullGifButton svg:hover .rectangle-cardIconBtn, .socialMaxFullGifButton svg:hover .icon-cardIconBtn {
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */
