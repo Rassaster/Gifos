@@ -29,7 +29,7 @@ window.onload = () => {
     triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
     checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
     showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
-    
+    triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
     verMasFavoritesButtonDOM.addEventListener('click', () => {
       triggerVerMasFavoritesButton();
     })

@@ -9,19 +9,16 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           // slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
           localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
           removeClass(favActiveClass[indexOfButton], 'display-none');
-
           if (favGifsGridContainer) {
+            showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
             emptyInnerHTMLofElement(favGifsGridContainer);
             primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
             triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
             checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+            triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
           }
-
           if (arrayOfFavoriteGifs.length > 12) {
             slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
-          }
-          if(favGifsGridContainer) {
-            showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
           }
         // It IS favorite:
       } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
@@ -36,21 +33,20 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
         localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
         addClass(favActiveClass[indexOfButton], 'display-none');
         if (favGifsGridContainer) {
-            emptyInnerHTMLofElement(favGifsGridContainer);
-            primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
-            triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
-            checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
-            for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
-              if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
-                addClass(favActiveTrending[i], 'display-none');
-              }
+          showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+          emptyInnerHTMLofElement(favGifsGridContainer);
+          primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+          triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
+          checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+          triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+          for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
+            if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
+              addClass(favActiveTrending[i], 'display-none');
             }
+          }
         }
         if (arrayOfFavoriteGifs.length > 12) {
           slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
-        }
-        if (favGifsGridContainer) {
-          showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
         }
       }
     })
@@ -62,14 +58,19 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
   if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === undefined) {
     alert('No soy gif favorito aún!')
     arrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-    slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+    // slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
     localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
     removeClass(favActiveMaxViewOverlay, 'display-none');
     if (arrayOfFavoriteGifs.length > 12) {
       slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
     }
-    if(favGifsGridContainer) {
+    if (favGifsGridContainer) {
       showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+      emptyInnerHTMLofElement(favGifsGridContainer);
+      primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+      triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
+      checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+      triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
     }
      // It IS favorite:
   } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
@@ -90,10 +91,21 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
     }
     if (favGifsGridContainer) {
       showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+      emptyInnerHTMLofElement(favGifsGridContainer);
+      primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
+      triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
+      checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
+      triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+      for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
+        if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
+          addClass(favActiveTrending[i], 'display-none');
+        }
+      }
     }
-  }
 
+  }
 }
+
 const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) => {
   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
     buttonMaxView.addEventListener('click', () => {
