@@ -6,7 +6,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
       // Is NOT favorite:
       if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === undefined) {
           arrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-          slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+          // slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
           localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
           removeClass(favActiveClass[indexOfButton], 'display-none');
 
@@ -29,7 +29,8 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
         for (i = 0; i < arrayOfFavoriteGifs.length; i++) {
           if(clickedGifId === arrayOfFavoriteGifs[i].id) {
             arrayOfFavoriteGifs.splice(i, 1);
-            slicedArrayOfarrayOfFavoriteGifs.splice(i, 1);
+            // slicedArrayOfarrayOfFavoriteGifs.splice(i, 1);
+            slicedArrayOfarrayOfFavoriteGifs = [];
           }
         }
         localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
@@ -55,21 +56,6 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
     })
   })
 }
-// const triggerMaxViewButtonGif = (favButtonClass, sourceArrayToGetGifObject, favActiveClass, maxViewButtonClass) => {
-//   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
-//     buttonMaxView.addEventListener('click', () => {
-//       let indexOfButton = Array.from(maxViewButtonClass).indexOf(buttonMaxView);
-//       removeClass(maxViewOverlayContainer, 'overlayZero');
-//       addClass(maxViewOverlayContainer, 'overlayFullScreen');
-//       imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.downsized.url;
-
-//       // It IS favorite:
-//       if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
-
-//       }
-//     })
-//   })
-// }
 
 const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) => {
   // Is NOT favorite:
@@ -85,8 +71,28 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
     if(favGifsGridContainer) {
       showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
     }
+     // It IS favorite:
+  } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
+    alert('I am favorite! YES!')
+    alert(sourceArrayToGetGifObject[indexOfButton].id);
+    for (i = 0; i < arrayOfFavoriteGifs.length; i++) {
+      if(sourceArrayToGetGifObject[indexOfButton].id === arrayOfFavoriteGifs[i].id) {
+        alert(i);
+        arrayOfFavoriteGifs.splice(i, 1);
+        // slicedArrayOfarrayOfFavoriteGifs.splice(i, 1);
+        slicedArrayOfarrayOfFavoriteGifs = [];
+      }
+    }
+    localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
+    addClass(favActiveMaxViewOverlay, 'display-none');
+    if (arrayOfFavoriteGifs.length > 12) {
+      slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
+    }
+    if (favGifsGridContainer) {
+      showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+    }
   }
-  
+
 }
 const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) => {
   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
@@ -96,6 +102,13 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
       removeClass(maxViewOverlayContainer, 'overlayZero');
       addClass(maxViewOverlayContainer, 'overlayFullScreen')
       maxViewOverlayCloseButton.addEventListener('click', closeMaxViewOverlay);
+      if (maxViewOverlayCloseButton) {
+        document.addEventListener('keyup', event => {
+          if (event.keyCode === 27) {
+            closeMaxViewOverlay();
+          }
+        })
+      }
       console.log(sourceArrayToGetGifObject[indexOfButton])
       imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.downsized.url;
       userMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].username;
@@ -161,13 +174,6 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
       favButtonMaxViewOverlay.addEventListener('click', () => {
         triggerFavMaxOverlayButton(sourceArrayToGetGifObject, indexOfButton);
       });
-      if (maxViewOverlayCloseButton) {
-        document.addEventListener('keyup', event => {
-          if (event.keyCode === 27) {
-            closeMaxViewOverlay();
-          }
-        })
-      }
     });
   })
 }

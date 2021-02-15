@@ -16,7 +16,7 @@ window.onload = () => {
   // onLoad General
   if (localStorage.getItem('localStorageFavGifs') !== null) {
     localStorageFavsToFavsArray();
-    localStorageFavsToFavsArrayCopy();
+    // localStorageFavsToFavsArrayCopy();
     if (arrayOfFavoriteGifs.length > 12) {
       slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
     }
