@@ -71,11 +71,28 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
 //   })
 // }
 
+const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) => {
+  // Is NOT favorite:
+  if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === undefined) {
+    alert('No soy gif favorito aún!')
+    arrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+    slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
+    localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
+    removeClass(favActiveMaxViewOverlay, 'display-none');
+    if (arrayOfFavoriteGifs.length > 12) {
+      slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
+    }
+    if(favGifsGridContainer) {
+      showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
+    }
+  }
+  
+}
 const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) => {
   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
     buttonMaxView.addEventListener('click', () => {
       let indexOfButton = Array.from(maxViewButtonClass).indexOf(buttonMaxView);
-      
+
       removeClass(maxViewOverlayContainer, 'overlayZero');
       addClass(maxViewOverlayContainer, 'overlayFullScreen')
       maxViewOverlayCloseButton.addEventListener('click', closeMaxViewOverlay);
@@ -140,7 +157,18 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
       if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
         removeClass(favActiveMaxViewOverlay, 'display-none');
       }
-    })
+      const favButtonMaxViewOverlay = document.getElementById('favButtonMaxViewOverlay');
+      favButtonMaxViewOverlay.addEventListener('click', () => {
+        triggerFavMaxOverlayButton(sourceArrayToGetGifObject, indexOfButton);
+      });
+      if (maxViewOverlayCloseButton) {
+        document.addEventListener('keyup', event => {
+          if (event.keyCode === 27) {
+            closeMaxViewOverlay();
+          }
+        })
+      }
+    });
   })
 }
 

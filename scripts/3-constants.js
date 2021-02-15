@@ -58,6 +58,7 @@
  * @const titleMaxFullGif #titleMaxFullGif DOM Node.
  * @const socialMaxFullGifButtonsContainer #socialMaxFullGifButtons-container DOM Node.
  * @const maxViewOverlayCloseButton #maxViewOverlayCloseButton DOM Node.
+ * @const favButtonMaxViewOverlay #favButtonMaxViewOverlay DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -137,6 +138,7 @@ const userMaxFullGif = document.getElementById('userMaxFullGif');
 const titleMaxFullGif = document.getElementById('titleMaxFullGif');
 const socialMaxFullGifButtonsContainer = document.getElementById('socialMaxFullGifButtons-container');
 const maxViewOverlayCloseButton = document.getElementById('maxViewOverlayCloseButton');
+
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
