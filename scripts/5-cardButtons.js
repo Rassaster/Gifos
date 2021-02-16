@@ -122,7 +122,7 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
         })
       }
       console.log(sourceArrayToGetGifObject[indexOfButton])
-      imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.downsized.url;
+      imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.original.url;
       userMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].username;
       titleMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].title;
       socialMaxFullGifButtonsContainer.innerHTML = 

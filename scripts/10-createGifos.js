@@ -64,21 +64,21 @@ recordButton.addEventListener('click', () => {
   removeClass(doneButton, 'display-none');
   recorder.startRecording();
 })
-let blobURL;
+let blobURLRecordedGif;
 doneButton.addEventListener('click', () => {
   addClass(doneButton, 'display-none');
   removeClass(uploadGifoButton, 'display-none');
   removeClass(repeatVideoButton, 'display-none');
   addClass(videoDurationViewer, 'display-none');
   recorder.stopRecording(() => {
-    blobURL = URL.createObjectURL(recorder.getBlob());
-    console.log(`àca el blob: ${blobURL}`);
+    blobURLRecordedGif = URL.createObjectURL(recorder.getBlob());
+    console.log(`àca el blob: ${blobURLRecordedGif}`);
     newGifFile = new FormData();
     newGifFile.append('file', recorder.getBlob(), 'myGif.gif');
     console.log(newGifFile.get('file'))
     addClass(videoCameraView, 'display-none');
     removeClass(previewRecordedGif, 'display-none');
-    previewRecordedGif.src = blobURL;
+    previewRecordedGif.src = blobURLRecordedGif;
   })
 })
 repeatVideoButton.addEventListener('click', () => {
