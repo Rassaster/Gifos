@@ -365,11 +365,13 @@ const triggerVerMasSearchResultsButton = () => {
   if (slicedArrayOfSearchGifsResults.length >= 12) {
     for (i = 0; i < 12; i++) {
       displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+      triggerMaxViewButtonGif(arraySearchGifsResults[0], searchResultsMaxButton);
     }
   }
   if (slicedArrayOfSearchGifsResults.length < 12) {
     for (i = 0; i < slicedArrayOfSearchGifsResults.length; i++) {
       displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+      triggerMaxViewButtonGif(arraySearchGifsResults[0], searchResultsMaxButton);
     }
   }
   triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
@@ -385,11 +387,13 @@ const triggerVerMasFavoritesButton = () => {
   if (slicedArrayOfarrayOfFavoriteGifs.length >= 12) {
     for (i = 0; i < 12; i++) {
       displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+      triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
     }
   }
   if (slicedArrayOfarrayOfFavoriteGifs.length < 12) {
     for (i = 0; i < slicedArrayOfarrayOfFavoriteGifs.length; i++) {
       displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+      triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
     }
   }  
   triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
