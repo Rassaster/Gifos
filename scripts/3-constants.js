@@ -362,8 +362,15 @@ const primaryDisplayCreatedGifsOnGrid = (sourceArrayToGetGifObject, parentContai
 }
 const triggerVerMasSearchResultsButton = () => {
   let momentarySlicedArray;
-  for (i = 0; i < 12; i++) {
-    displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+  if (slicedArrayOfSearchGifsResults.length >= 12) {
+    for (i = 0; i < 12; i++) {
+      displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+    }
+  }
+  if (slicedArrayOfSearchGifsResults.length < 12) {
+    for (i = 0; i < slicedArrayOfSearchGifsResults.length; i++) {
+      displayGifsObjectInGrid((slicedArrayOfSearchGifsResults[i]), 'searchResultGifCard', searchResultsGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'searchResultsFavButton', 'favActiveSearchResults', 'display-none', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+    }
   }
   triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
   checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], arrayOfFavoriteGifs, favActiveSearchResults);
@@ -375,9 +382,16 @@ const triggerVerMasSearchResultsButton = () => {
 const triggerVerMasFavoritesButton = () => {
   alert(1)
   let momentarySlicedArray;
-  for (i = 0; i < slicedArrayOfarrayOfFavoriteGifs.length; i++) {
-    displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+  if (slicedArrayOfarrayOfFavoriteGifs.length >= 12) {
+    for (i = 0; i < 12; i++) {
+      displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+    }
   }
+  if (slicedArrayOfarrayOfFavoriteGifs.length < 12) {
+    for (i = 0; i < slicedArrayOfarrayOfFavoriteGifs.length; i++) {
+      displayGifsObjectInGrid((slicedArrayOfarrayOfFavoriteGifs[i]), 'searchResultGifCard', favGifsGridContainer, 'searchResultGifCard-overlay', 'socialSearchResultGifCards-wrapper', 'favFavButton', 'favActiveSearchResults', 'display-block', 'searchResultsDownloadButton', 'searchResultsMaxButton');
+    }
+  }  
   triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
   checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
   momentarySlicedArray = slicedArrayOfarrayOfFavoriteGifs.slice(12);
@@ -386,8 +400,15 @@ const triggerVerMasFavoritesButton = () => {
 }
 const triggerVerMasCreatedGifsButton = () => {
   let momentarySlicedArray;
-  for (i = 0; i < slicedArrayOfCreatedGifs.length; i++) {
-    displayCreatedGifsObjectInGrid(slicedArrayOfCreatedGifs[i], createdGifsGridDOM);
+  if (slicedArrayOfCreatedGifs.length >= 12) {
+    for (i = 0; i < 12; i++) {
+      displayCreatedGifsObjectInGrid(slicedArrayOfCreatedGifs[i], createdGifsGridDOM);
+    }
+  }
+  if (slicedArrayOfCreatedGifs.length < 12) {
+    for (i = 0; i < slicedArrayOfCreatedGifs.length; i++) {
+      displayCreatedGifsObjectInGrid(slicedArrayOfCreatedGifs[i], createdGifsGridDOM);
+    }
   }
   momentarySlicedArray = slicedArrayOfCreatedGifs.slice(12);
   slicedArrayOfCreatedGifs = momentarySlicedArray;
