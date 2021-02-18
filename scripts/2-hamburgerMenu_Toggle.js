@@ -48,6 +48,9 @@ window.onload = () => {
       checkIfAreGifsSaved(arrayOfCreatedGifsIDs, displayCreatedGifsGridContainer, noCreatedGifsContentContainer);
       showHideVerMasButton(slicedArrayOfCreatedGifs, myGifosMasButton);
       myGifosMasButton.addEventListener('click', triggerVerMasCreatedGifsButton);
+      triggerMaxViewButtonGif(arrayOfCreatedGifsIDs, maxCreatedGifosButton);
+      triggerDownloadGif(downloadCreatedGifosButton, arrayOfCreatedGifsIDs);
+      triggerDeleteGif();
     }
   }
 }

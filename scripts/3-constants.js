@@ -70,6 +70,9 @@
  * @const trendingCardsDownloadButton .trendingCardsDownloadButton DOM Nodes.
  * @const trendingCardsMaxButton .trendingCardsMaxButton DOM Nodes.
  * @const favFavButton .favFavButton DOM Nodes.
+ * @const maxCreatedGifosButton .maxCreatedGifosButton DOM Nodes.
+ * @const downloadCreatedGifosButton .downloadCreatedGifosButton DOM Nodes.
+ * @const trashCreatedGifosButton .trashCreatedGifosButton DOM Node.
 
  * @const arraySearchGifsResults [array] Use [0] to acces the array element with data.
  * @var slicedArrayOfSearchGifsResults [array] 
@@ -139,7 +142,6 @@ const titleMaxFullGif = document.getElementById('titleMaxFullGif');
 const socialMaxFullGifButtonsContainer = document.getElementById('socialMaxFullGifButtons-container');
 const maxViewOverlayCloseButton = document.getElementById('maxViewOverlayCloseButton');
 
-
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
 const searchResultsFavButton = document.getElementsByClassName('searchResultsFavButton');
@@ -150,6 +152,9 @@ const trendingCardsFavButton = document.getElementsByClassName('trendingCardsFav
 const trendingCardsDownloadButton = document.getElementsByClassName('trendingCardsDownloadButton');
 const trendingCardsMaxButton = document.getElementsByClassName('trendingCardsMaxButton');
 const favFavButton = document.getElementsByClassName('favFavButton');
+const maxCreatedGifosButton = document.getElementsByClassName('maxCreatedGifosButton');
+const downloadCreatedGifosButton = document.getElementsByClassName('downloadCreatedGifosButton');
+const trashCreatedGifosButton = document.getElementsByClassName('trashCreatedGifosButton');
 
 const arraySearchGifsResults = [];
 let slicedArrayOfSearchGifsResults = [];
@@ -174,7 +179,7 @@ const requestToGiphy = async (giphyNode, gifID = '', searchQuery  = "", termQuer
   return gifObject.data;
 }
 const downloadGif = async (gifWebpURL, username, gifTitle) => {
-  let fetchResponse = await fetch(gifWebpURL)
+  let fetchResponse = await fetch(gifWebpURL);
   let blobObject = await fetchResponse.blob();
   let imgURL = URL.createObjectURL(blobObject);
   const saveGif = document.createElement("a");
