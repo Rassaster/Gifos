@@ -2166,7 +2166,7 @@ video, #previewRecordedGif {
   right: 19.444444vw;
   width: 1.1111111vw;
   height: 1.1111111vw;
-  background-image: url(../../assets/icon-close.svg);
+  background-image: url(../assets/icon-close.svg);
 }
 
 #overlayImgButtons-container {
