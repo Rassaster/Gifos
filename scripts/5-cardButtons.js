@@ -34,7 +34,6 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
         localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
         addClass(favActiveClass[indexOfButton], 'display-none');
         if (favGifsGridContainer) {
-          showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
           emptyInnerHTMLofElement(favGifsGridContainer);
           primaryDisplayOnGrid(arrayOfFavoriteGifs, favGifsGridContainer, 'favFavButton', 'display-block');
           triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
@@ -49,6 +48,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
         }
         if (arrayOfFavoriteGifs.length > 12) {
           slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
+          showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
         }
       }
     })
