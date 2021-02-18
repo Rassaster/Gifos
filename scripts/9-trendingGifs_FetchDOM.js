@@ -13,6 +13,7 @@ requestToGiphy(Giphy_Trending_Node, '', '', Giphy_Results_Limit, 15)
   }
   triggerAddFavButtonGif(trendingCardsFavButton, arrayTrendingGifsResults[0], favActiveTrending);
   triggerMaxViewButtonGif(arrayTrendingGifsResults[0], trendingCardsMaxButton);
+  triggerDownloadGif(trendingCardsDownloadButton,  arrayTrendingGifsResults[0]);
   checkInArrayGifsIfAnyIsFavorite(arrayTrendingGifsResults[0], arrayOfFavoriteGifs, favActiveTrending);
   })
   .catch(err => console.error(err));

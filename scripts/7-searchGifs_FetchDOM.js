@@ -26,6 +26,7 @@ const triggerSearch = (searchTerm) => {
     triggerAddFavButtonGif(searchResultsFavButton, arraySearchGifsResults[0], favActiveSearchResults);
     checkInArrayGifsIfAnyIsFavorite(arraySearchGifsResults[0], arrayOfFavoriteGifs, favActiveSearchResults);
     triggerMaxViewButtonGif(arraySearchGifsResults[0], searchResultsMaxButton);
+    triggerDownloadGif(searchResultsDownloadButton,  arraySearchGifsResults[0]);
     showHideVerMasButton(slicedArrayOfSearchGifsResults, verMasSearchResultsButton);
   })
   .catch(err => console.error(err));

@@ -30,6 +30,7 @@ window.onload = () => {
     checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
     showHideVerMasButton(slicedArrayOfarrayOfFavoriteGifs, verMasFavoritesButtonDOM);
     triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+    triggerDownloadGif(searchResultsDownloadButton, arrayOfFavoriteGifs);
     verMasFavoritesButtonDOM.addEventListener('click', () => {
       triggerVerMasFavoritesButton();
     })

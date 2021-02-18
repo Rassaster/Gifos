@@ -16,6 +16,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
             triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
             checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
             triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+            triggerDownloadGif(searchResultsDownloadButton, arrayOfFavoriteGifs);
           }
           if (arrayOfFavoriteGifs.length > 12) {
             slicedArrayOfarrayOfFavoriteGifs = arrayOfFavoriteGifs.slice(12);
@@ -39,6 +40,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
           triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
           checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
           triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+          triggerDownloadGif(searchResultsDownloadButton, arrayOfFavoriteGifs);
           for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
             if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
               addClass(favActiveTrending[i], 'display-none');
@@ -52,7 +54,6 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
     })
   })
 }
-
 const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) => {
   // Is NOT favorite:
   if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === undefined) {
@@ -71,6 +72,7 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
       triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
       checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
       triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+      triggerDownloadGif(searchResultsDownloadButton, arrayOfFavoriteGifs);
     }
      // It IS favorite:
   } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
@@ -96,6 +98,7 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
       triggerAddFavButtonGif(favFavButton, arrayOfFavoriteGifs, favActiveSearchResults);
       checkIfAreGifsSaved(arrayOfFavoriteGifs, displayFavoritesGridContainer, NoFavoritesContentCcontainer);
       triggerMaxViewButtonGif(arrayOfFavoriteGifs, searchResultsMaxButton);
+      triggerDownloadGif(searchResultsDownloadButton, arrayOfFavoriteGifs);
       for (i = 0; i < arrayTrendingGifsResults[0].length; i++) {
         if(clickedGifId === arrayTrendingGifsResults[0][i].id) {
           addClass(favActiveTrending[i], 'display-none');
@@ -105,12 +108,10 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
 
   }
 }
-
 const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) => {
   Array.from(maxViewButtonClass).forEach(buttonMaxView => {
     buttonMaxView.addEventListener('click', () => {
       let indexOfButton = Array.from(maxViewButtonClass).indexOf(buttonMaxView);
-
       removeClass(maxViewOverlayContainer, 'overlayZero');
       addClass(maxViewOverlayContainer, 'overlayFullScreen')
       maxViewOverlayCloseButton.addEventListener('click', closeMaxViewOverlay);
@@ -186,11 +187,27 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
       favButtonMaxViewOverlay.addEventListener('click', () => {
         triggerFavMaxOverlayButton(sourceArrayToGetGifObject, indexOfButton);
       });
+      const downloadButtonMaxViewOverlay = document.getElementById('downloadButtonMaxViewOverlay')
+      let gifWebpURL = sourceArrayToGetGifObject[indexOfButton].images.original.webp;
+      let username = sourceArrayToGetGifObject[indexOfButton].username;
+      let gifTitle = sourceArrayToGetGifObject[indexOfButton].title;
+      downloadButtonMaxViewOverlay.addEventListener('click', () => {
+        downloadGif(gifWebpURL, username, gifTitle);
+      })
     });
   })
 }
-
-
+const triggerDownloadGif = (downloadButtonClass, sourceArrayToGetGifObject) => {
+  Array.from(downloadButtonClass).forEach(buttonDownload => {
+    buttonDownload.addEventListener('click', () => {
+      let indexOfButton = Array.from(downloadButtonClass).indexOf(buttonDownload);
+      let gifWebpURL = sourceArrayToGetGifObject[indexOfButton].images.original.webp;
+      let username = sourceArrayToGetGifObject[indexOfButton].username;
+      let gifTitle = sourceArrayToGetGifObject[indexOfButton].title;
+      downloadGif(gifWebpURL, username, gifTitle);
+    })
+  })
+}
 
 
 
