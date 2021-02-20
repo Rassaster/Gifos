@@ -397,7 +397,6 @@ const triggerVerMasSearchResultsButton = () => {
   showHideVerMasButton(slicedArrayOfSearchGifsResults, verMasSearchResultsButton);
 }
 const triggerVerMasFavoritesButton = () => {
-  alert(1)
   let momentarySlicedArray;
   if (slicedArrayOfarrayOfFavoriteGifs.length >= 12) {
     for (i = 0; i < 12; i++) {

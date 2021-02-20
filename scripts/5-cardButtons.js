@@ -57,9 +57,7 @@ const triggerAddFavButtonGif = (favButtonClass, sourceArrayToGetGifObject, favAc
 const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) => {
   // Is NOT favorite:
   if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === false || checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === undefined) {
-    alert('No soy gif favorito aún!')
     arrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
-    // slicedArrayOfarrayOfFavoriteGifs.push(sourceArrayToGetGifObject[indexOfButton]);
     localStorage.localStorageFavGifs = JSON.stringify(arrayOfFavoriteGifs);
     removeClass(favActiveMaxViewOverlay, 'display-none');
     if (arrayOfFavoriteGifs.length > 12) {
@@ -76,13 +74,9 @@ const triggerFavMaxOverlayButton = (sourceArrayToGetGifObject, indexOfButton) =>
     }
      // It IS favorite:
   } else if (checkIfIsFavoriteByGifid(sourceArrayToGetGifObject[indexOfButton].id, arrayOfFavoriteGifs) === true) {
-    alert('I am favorite! YES!')
-    alert(sourceArrayToGetGifObject[indexOfButton].id);
     for (i = 0; i < arrayOfFavoriteGifs.length; i++) {
       if(sourceArrayToGetGifObject[indexOfButton].id === arrayOfFavoriteGifs[i].id) {
-        alert(i);
         arrayOfFavoriteGifs.splice(i, 1);
-        // slicedArrayOfarrayOfFavoriteGifs.splice(i, 1);
         slicedArrayOfarrayOfFavoriteGifs = [];
       }
     }
@@ -145,7 +139,6 @@ const triggerDeleteGifMaxOverlayButton = (indexOfButton) => {
   if (arrayOfCreatedGifsIDs.length > 12) {
     slicedArrayOfCreatedGifs = arrayOfCreatedGifsIDs.slice(12);
   }
-  alert('DELETED')
 }
 const triggerDownloadGif = (downloadButtonClass, sourceArrayToGetGifObject) => {
   Array.from(downloadButtonClass).forEach(buttonDownload => {
@@ -175,7 +168,6 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
       console.log(sourceArrayToGetGifObject[indexOfButton])
 
       if (sourceArrayToGetGifObject === arrayOfCreatedGifsIDs) {
-        alert('createdGif')
         imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.original.url;
         userMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].username;
         titleMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].title;
@@ -220,11 +212,9 @@ const triggerMaxViewButtonGif = (sourceArrayToGetGifObject, maxViewButtonClass) 
         `
         const trashButtonMaxViewOverlay = document.getElementById('trashButtonMaxViewOverlay');
         trashButtonMaxViewOverlay.addEventListener('click', () => {
-          alert('trash');
           triggerDeleteGifMaxOverlayButton(indexOfButton);
         });
       } else {
-        alert('NOT createdGif!')
         imgMaxGifOverlay.src = sourceArrayToGetGifObject[indexOfButton].images.original.url;
         userMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].username;
         titleMaxFullGif.innerText = sourceArrayToGetGifObject[indexOfButton].title;
