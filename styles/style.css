@@ -2160,16 +2160,8 @@ video, #previewRecordedGif {
   height: 100%;
 }
 
-#maxViewOverlayCloseButton {
-  position: absolute;
-  top: 4.7222222vw;
-  right: 19.444444vw;
-  width: 1.1111111vw;
-  height: 1.1111111vw;
-  background-image: url(../assets/icon-closeMaxOverlay.svg);
-}
-
 #overlayImgButtons-container {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2186,6 +2178,15 @@ video, #previewRecordedGif {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#maxViewOverlayCloseButton {
+  position: absolute;
+  top: -6.25vw;
+  right: -5.5555556vw;
+  width: 1.1111111vw;
+  height: 1.1111111vw;
+  background-image: url(../assets/icon-closeMaxOverlay.svg);
 }
 
 #imgMaxGifOverlay {

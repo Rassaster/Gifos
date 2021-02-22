@@ -18,18 +18,19 @@
   width: 100vw;
   height: 100%;
 }
-#maxViewOverlayCloseButton {
-  position: absolute;
-  top: 4.7222222vw; // =68px/1440px
-  right: 19.444444vw; // =280px/1440x
-  width: 1.1111111vw; // =16px/1440px
-  height: 1.1111111vw; // =16px/1440px
-  background-image: url(../assets/icon-closeMaxOverlay.svg);
-}
 #overlayImgButtons-container {
+  position: relative;
   width: fit-content;
   height: fit-content;
   @include flexContainerConfig(row, nowrap, center, center);
+}
+#maxViewOverlayCloseButton {
+  position: absolute;
+  top: -6.25vw; // =90px/1440px
+  right: -5.5555556vw; // =80px/1440px
+  width: 1.1111111vw; // =16px/1440px
+  height: 1.1111111vw; // =16px/1440px
+  background-image: url(../assets/icon-closeMaxOverlay.svg);
 }
 #imgMaxGifOverlay {
   width: 48.263889vw; // = 695px/1440px
