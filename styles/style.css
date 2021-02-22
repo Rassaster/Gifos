@@ -2172,6 +2172,64 @@ video, #previewRecordedGif {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .cameraAssets-wrapper {
+    display: none;
+  }
+  .createGifosCapture-wrapper {
+    position: relative;
+    width: 89.583333vw;
+    height: 50.78125vw;
+  }
+  #headingInstructionsContentGifosCapture {
+    font-size: calc(18px + 0.34722222vw);
+    line-height: calc(28px + 1.5625vw);
+  }
+  #paragraphInstructionsContentGifosCapture {
+    font-size: calc(12px + 0.65104167vw);
+    line-height: calc(21px + 0.69444444vw);
+  }
+  .commandButtonCreateGifos {
+    width: 16.536458vw;
+    height: 6.5104167vw;
+    font-size: calc(11px + 0.26041667vw);
+  }
+  .createSteps-wrapper {
+    width: 89.583333vw;
+    height: 9.765625vw;
+  }
+  .step-wrapper {
+    min-width: 24px;
+    width: 2.8645833vw;
+    min-height: 24px;
+    height: 2.8645833vw;
+    font-size: 2.34375vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #headingInstructionsContentGifosCapture {
+    font-size: calc(15px + 0.34722222vw);
+    line-height: calc(25px + 0.69444444vw);
+  }
+  #paragraphInstructionsContentGifosCapture {
+    font-size: calc(12px + 0.34722222vw);
+    line-height: calc(21px + 0.69444444vw);
+  }
+  .commandButtonCreateGifos {
+    font-size: calc(7px + 0.26041667vw);
+  }
+  .createSteps-wrapper {
+    width: 1.761882353vw;
+    height: 17.64706vw;
+  }
+  .step-wrapper {
+    width: 5.1764706vw;
+    height: 5.1764706vw;
+    font-size: 2.3529412vw;
+  }
+}
+
 #maxViewOverlay-container {
   position: fixed;
   top: 50%;

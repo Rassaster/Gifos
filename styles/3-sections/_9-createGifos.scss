@@ -40,8 +40,8 @@
 }
 #headingInstructionsContentGifosCapture {
   text-align: center;
-  font-size: calc(25px + 0.34722222vw); // =30px+(5px/1440px)
-  line-height: calc(35px + 0.69444444vw); // =40px+(10px/1440px)
+  font-size: calc(25px + 0.34722222vw); // =25px+(5px/1440px)
+  line-height: calc(35px + 0.69444444vw); // =35px+(10px/1440px)
   font-family: $strongTitles-font;
   color: $mainLM-color; 
   span {
@@ -50,8 +50,8 @@
 }
 #paragraphInstructionsContentGifosCapture {
   text-align: center;
-  font-size: calc(16px + 0.34722222vw); // =30px+(5px/1440px)
-  line-height: calc(29px + 0.69444444vw); // =40px+(10px/1440px)
+  font-size: calc(16px + 0.34722222vw); // =16px+(5px/1440px)
+  line-height: calc(29px + 0.69444444vw); // =29px+(10px/1440px)
   font-family: $regularContent-font;
   color: $quinaryLM-color; 
 }
@@ -258,5 +258,65 @@ video, #previewRecordedGif {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .cameraAssets-wrapper {
+    display: none;
+  }
+  .createGifosCapture-wrapper {
+    position: relative;
+    width: 89.583333vw; //=688px/768px
+    height: 50.78125vw; //=390px/768px
+  }
+  #headingInstructionsContentGifosCapture {
+    font-size: calc(18px + 0.34722222vw); // =18pxx+(5px/768px)
+    line-height: calc(28px + 1.5625vw); // =28px+(10px/768px)
+  }
+  #paragraphInstructionsContentGifosCapture {
+    font-size: calc(12px + 0.65104167vw); // =12px+(5px/1px)
+    line-height: calc(21px + 0.69444444vw); // =21px+(10px/1440px)
+  }
+  .commandButtonCreateGifos {
+    width: 16.536458vw; //=127px/768px
+    height: 6.5104167vw; //=50px/768px
+    font-size: calc(11px + 0.26041667vw); //=10px+(2px/768px)
+  }
+  .createSteps-wrapper{
+    width: 89.583333vw; //=688px/768px
+    height: 9.765625vw; //=75px/768px
+  }
+  .step-wrapper {
+    min-width: 24px;
+    width: 2.8645833vw; //=22px/768px
+    min-height: 24px;
+    height: 2.8645833vw; //=22px/768px
+    font-size: 2.34375vw; //=18px/768px
+  }
+}
+@media screen and (max-width: 425px) {
+  #headingInstructionsContentGifosCapture {
+    font-size: calc(15px + 0.34722222vw); // =12px+(5px/1440px)
+    line-height: calc(25px + 0.69444444vw); // =22px+(10px/1440px)
+  }
+  #paragraphInstructionsContentGifosCapture {
+    font-size: calc(12px + 0.34722222vw); // =8px+(5px/1440px)
+    line-height: calc(21px + 0.69444444vw); // =17px+(10px/1440px)
+  }
+  .commandButtonCreateGifos {
+    font-size: calc(7px + 0.26041667vw); //=10px+(2px/768px)
+  }
+  .createSteps-wrapper{
+    width: 1.761882353vw; //=688px/425px
+    height: 17.64706vw; //=75px/425px
+  }
+  .step-wrapper {
+    width: 5.1764706vw; //=22px/425px
+    height: 5.1764706vw; //=22px/425px
+    font-size: 2.3529412vw; //=18px/425px
+
   }
 }
