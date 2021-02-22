@@ -2248,7 +2248,6 @@ video, #previewRecordedGif {
   width: 2.5vw;
   min-height: 26px;
   height: 2.5vw;
-  background-color: blue;
 }
 
 .socialMaxFullGifButton svg {
@@ -2278,22 +2277,41 @@ video, #previewRecordedGif {
 
 @media screen and (max-width: 768px) {
   #imgMaxGifOverlay {
-    width: 60.263889vw;
-    height: 40.736111vw;
+    width: 70.263889vw;
+    height: 50.736111vw;
   }
   .socialMaxFullGif-container {
-    width: 60.263889vw;
+    width: 70.263889vw;
   }
   .userMaxFullGif {
     font-size: calc(12px + 0.13888889vw);
   }
   .titleMaxFullGif {
-    margin-top: 8px;
     font-size: calc(12px + 0.13888889vw);
   }
   .socialMaxFullGifButton {
-    width: 3vw;
-    height: 3vw;
+    min-width: 26px;
+    width: 4vw;
+    min-height: 26px;
+    height: 4vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #maxViewOverlayCloseButton {
+    min-width: 10px;
+    min-height: 10px;
+  }
+  .userMaxFullGif {
+    font-size: calc(10px + 0.13888889vw);
+  }
+  .titleMaxFullGif {
+    margin-top: 8px;
+    font-size: calc(10px + 0.13888889vw);
+  }
+  .socialMaxFullGifButton {
+    min-width: 22px;
+    min-height: 22px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -67,7 +67,6 @@
   min-height:  26px;
   height: 2.5vw; // =36px/1440px
   @include cardButton;
-  background-color: blue;
 }
 #favActiveMaxViewOverlay {
   position: absolute;
@@ -80,24 +79,39 @@
 @media screen and (max-width: 1024px) {}
 @media screen and (max-width: 768px) {
   #imgMaxGifOverlay {
-    width: 60.263889vw; // = 695px/1440px
-    height: 40.736111vw; // = 385px/1440px
+    width: 70.263889vw; // = 695px/1440px
+    height: 50.736111vw; // = 385px/1440px
   }
   .socialMaxFullGif-container {
-    width: 60.263889vw; // = 695px/1440px
+    width: 70.263889vw; // = 695px/1440px
   }
   .userMaxFullGif {
     font-size: calc(12px + 0.13888889vw); // =15px+(2px/1440px)
   }
   .titleMaxFullGif {
-    margin-top: 8px;
     font-size: calc(12px + 0.13888889vw); // =16px+(2px/1440px)
   }
   .socialMaxFullGifButton {
-    width: 3vw; // =36px/1440px
-    height: 3vw; // =36px/1440px
+    min-width: 26px;
+    width: 4vw; // =36px/1440px
+    min-height: 26px;
+    height: 4vw; // =36px/1440px
   }
 }
 @media screen and (max-width: 425px) {
-
+  #maxViewOverlayCloseButton {
+    min-width: 10px;
+    min-height: 10px;
+  }
+  .userMaxFullGif {
+    font-size: calc(10px + 0.13888889vw); // =15px+(2px/1440px)
+  }
+  .titleMaxFullGif {
+    margin-top: 8px;
+    font-size: calc(10px + 0.13888889vw); // =16px+(2px/1440px)
+  }
+  .socialMaxFullGifButton {
+    min-width: 22px;
+    min-height: 22px;
+  }
 }
