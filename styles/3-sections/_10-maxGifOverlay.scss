@@ -28,7 +28,9 @@
   position: absolute;
   top: -6.25vw; // =90px/1440px
   right: -5.5555556vw; // =80px/1440px
+  min-width: 13px;
   width: 1.1111111vw; // =16px/1440px
+  min-height: 13px;
   height: 1.1111111vw; // =16px/1440px
   background-image: url(../assets/icon-closeMaxOverlay.svg);
 }
@@ -71,4 +73,31 @@
   position: absolute;
   width: 56%;
   left: 20%;
+}
+//----------------------------------------------------------------------------------------
+//-------------------MEDIA QUERIES--------------------------------------------------------
+//----------------------------------------------------------------------------------------
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 768px) {
+  #imgMaxGifOverlay {
+    width: 60.263889vw; // = 695px/1440px
+    height: 40.736111vw; // = 385px/1440px
+  }
+  .socialMaxFullGif-container {
+    width: 60.263889vw; // = 695px/1440px
+  }
+  .userMaxFullGif {
+    font-size: calc(12px + 0.13888889vw); // =15px+(2px/1440px)
+  }
+  .titleMaxFullGif {
+    margin-top: 8px;
+    font-size: calc(12px + 0.13888889vw); // =16px+(2px/1440px)
+  }
+  .socialMaxFullGifButton {
+    width: 3vw; // =36px/1440px
+    height: 3vw; // =36px/1440px
+  }
+}
+@media screen and (max-width: 425px) {
+
 }

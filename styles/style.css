@@ -2184,7 +2184,9 @@ video, #previewRecordedGif {
   position: absolute;
   top: -6.25vw;
   right: -5.5555556vw;
+  min-width: 13px;
   width: 1.1111111vw;
+  min-height: 13px;
   height: 1.1111111vw;
   background-image: url(../assets/icon-closeMaxOverlay.svg);
 }
@@ -2272,5 +2274,26 @@ video, #previewRecordedGif {
   position: absolute;
   width: 56%;
   left: 20%;
+}
+
+@media screen and (max-width: 768px) {
+  #imgMaxGifOverlay {
+    width: 60.263889vw;
+    height: 40.736111vw;
+  }
+  .socialMaxFullGif-container {
+    width: 60.263889vw;
+  }
+  .userMaxFullGif {
+    font-size: calc(12px + 0.13888889vw);
+  }
+  .titleMaxFullGif {
+    margin-top: 8px;
+    font-size: calc(12px + 0.13888889vw);
+  }
+  .socialMaxFullGifButton {
+    width: 3vw;
+    height: 3vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
