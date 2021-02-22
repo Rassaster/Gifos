@@ -243,11 +243,6 @@
       }
     }
   }
-}
-@media screen and (max-width: 768px) {
-  .searchBar-container {
-    border-radius: 3.515625vw; // 27px/768px
-  }
   .socialSearchResultGifCards-wrapper{
     .searchResultsMaxButton {
       position: absolute;
@@ -261,6 +256,11 @@
         visibility: hidden;
       }
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .searchBar-container {
+    border-radius: 3.515625vw; // 27px/768px
   }
 }
 @media screen and (max-width: 670px) {
