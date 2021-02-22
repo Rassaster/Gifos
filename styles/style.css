@@ -931,6 +931,9 @@ nav input {
     grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
   }
+  .resultsGrid .searchResultGifCard:hover .searchResultGifCard-overlay {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1547,6 +1550,9 @@ nav input {
     grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
   }
+  .myFavGrid .searchResultGifCard:hover .searchResultGifCard-overlay {
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 670px) {
@@ -1682,6 +1688,9 @@ nav input {
         grid-template-columns: repeat(3, 29.94792vw);
     grid-auto-rows: 26.041667vw;
     gap: 1.3020833vw 1.3020833vw;
+  }
+  .myGifosGrid .searchResultGifCard:hover .searchResultGifCard-overlay {
+    visibility: hidden;
   }
 }
 
