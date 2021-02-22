@@ -941,14 +941,12 @@ nav input {
     border-radius: 3.515625vw;
   }
   .socialSearchResultGifCards-wrapper .searchResultsMaxButton {
-    opacity: 0.6;
     position: absolute;
     top: 0;
     margin: 0;
     width: 100%;
     height: 100%;
     width: 100%;
-    background-color: red;
     visibility: visible;
   }
   .socialSearchResultGifCards-wrapper .searchResultsMaxButton svg {
@@ -1229,6 +1227,18 @@ nav input {
 }
 
 @media screen and (max-width: 768px) {
+  .trendingGifoCard-overlay .socialTrendingCards-wrapper .trendingCardsMaxButton {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+  }
+  .trendingGifoCard-overlay .socialTrendingCards-wrapper .trendingCardsMaxButton svg {
+    visibility: hidden;
+  }
   .trendingSlider-container {
     margin-top: 30px;
     margin-bottom: 80px;
@@ -1268,8 +1278,8 @@ nav input {
     margin-right: 1.5625vw;
     margin-left: 1.5625vw;
   }
-  .trendingGifoCard .trendingGifoCard-overlay {
-    display: none;
+  .trendingGifoCard:hover .trendingGifoCard-overlay {
+    visibility: hidden;
   }
 }
 

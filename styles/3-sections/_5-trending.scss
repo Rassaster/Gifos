@@ -143,6 +143,22 @@
 //-------------------MEDIA QUERIES--------------------------------------------------------
 //----------------------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
+  .trendingGifoCard-overlay {
+    .socialTrendingCards-wrapper {
+      .trendingCardsMaxButton {
+        position: absolute;
+        top: 0;
+        margin: 0;
+        width: 100%; // =260px/1440px
+        height: 100%; // =200px/1440px;
+        width: 100%;
+        visibility: visible;
+        svg {
+          visibility: hidden;
+        }
+      }
+    }
+  }
   .trendingSlider-container {
     margin-top: 30px;
     margin-bottom: 80px;
@@ -177,8 +193,8 @@
     max-height: 275px;;
     margin-right: 1.5625vw; // =12px/768px
     margin-left: 1.5625vw; // =12px/768px
-    .trendingGifoCard-overlay {
-      display: none;
+    &:hover .trendingGifoCard-overlay {
+      visibility: hidden;
     }
   }
 }
