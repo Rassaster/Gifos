@@ -338,6 +338,9 @@ nav input {
 }
 
 @media screen and (max-width: 768px) {
+  #createGifoLink {
+    display: none;
+  }
   .fa-bars {
     display: block;
   }
