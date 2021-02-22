@@ -307,7 +307,9 @@ video, #previewRecordedGif {
     line-height: calc(21px + 0.69444444vw); // =17px+(10px/1440px)
   }
   .commandButtonCreateGifos {
-    font-size: calc(7px + 0.26041667vw); //=10px+(2px/768px)
+    width: 29.882353vw; //=127px/425x
+    height: 11.764706vw; //=50px/425px
+    font-size: calc(12px + 0.26041667vw); //=10px+(2px/768px)
   }
   .createSteps-wrapper{
     width: 1.761882353vw; //=688px/425px
@@ -316,7 +318,7 @@ video, #previewRecordedGif {
   .step-wrapper {
     width: 5.1764706vw; //=22px/425px
     height: 5.1764706vw; //=22px/425px
-    font-size: 2.3529412vw; //=18px/425px
+    font-size: 3.8529412vw; //=18px/425px
 
   }
 }

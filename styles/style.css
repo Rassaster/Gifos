@@ -2217,7 +2217,9 @@ video, #previewRecordedGif {
     line-height: calc(21px + 0.69444444vw);
   }
   .commandButtonCreateGifos {
-    font-size: calc(7px + 0.26041667vw);
+    width: 29.882353vw;
+    height: 11.764706vw;
+    font-size: calc(12px + 0.26041667vw);
   }
   .createSteps-wrapper {
     width: 1.761882353vw;
@@ -2226,7 +2228,7 @@ video, #previewRecordedGif {
   .step-wrapper {
     width: 5.1764706vw;
     height: 5.1764706vw;
-    font-size: 2.3529412vw;
+    font-size: 3.8529412vw;
   }
 }
 
