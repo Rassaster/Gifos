@@ -2302,6 +2302,10 @@ video, #previewRecordedGif {
   opacity: 1;
 }
 
+#favButtonMaxViewOverlay {
+  position: relative;
+}
+
 #favActiveMaxViewOverlay {
   position: absolute;
   width: 56%;

@@ -68,6 +68,9 @@
   height: 2.5vw; // =36px/1440px
   @include cardButton;
 }
+#favButtonMaxViewOverlay {
+  position: relative;
+}
 #favActiveMaxViewOverlay {
   position: absolute;
   width: 56%;
