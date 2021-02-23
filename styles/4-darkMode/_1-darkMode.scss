@@ -72,7 +72,7 @@
       color: $mainDM-color;
     }
   }
-  #verMasSearchResultsButtonDOM, #beginButton, #recordButton, #doneButton, #uploadGifoButton {
+  #verMasSearchResultsButtonDOM, #myFavVerMasButton, #beginButton, #recordButton, #doneButton, #uploadGifoButton {
     border-color: $mainDM-color;
     color: $mainDM-color;
     &:hover {
@@ -133,7 +133,13 @@
     }
   }
   // Favoritos
-  
+  .myFav-container {
+    .myFavTitle-wrapper {
+      h2 {
+        color: $mainDM-color;
+      }
+    }
+  }
   // Create Gifos
   .createGifos-container {
     .createGifosCapture-wrapper {

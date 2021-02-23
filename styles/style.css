@@ -2518,12 +2518,12 @@ video, #previewRecordedGif {
   color: #FFFFFF;
 }
 
-.darkMode #verMasSearchResultsButtonDOM, .darkMode #beginButton, .darkMode #recordButton, .darkMode #doneButton, .darkMode #uploadGifoButton {
+.darkMode #verMasSearchResultsButtonDOM, .darkMode #myFavVerMasButton, .darkMode #beginButton, .darkMode #recordButton, .darkMode #doneButton, .darkMode #uploadGifoButton {
   border-color: #FFFFFF;
   color: #FFFFFF;
 }
 
-.darkMode #verMasSearchResultsButtonDOM:hover, .darkMode #beginButton:hover, .darkMode #recordButton:hover, .darkMode #doneButton:hover, .darkMode #uploadGifoButton:hover {
+.darkMode #verMasSearchResultsButtonDOM:hover, .darkMode #myFavVerMasButton:hover, .darkMode #beginButton:hover, .darkMode #recordButton:hover, .darkMode #doneButton:hover, .darkMode #uploadGifoButton:hover {
   background-color: #FFFFFF;
   border-color: #FFFFFF;
   color: #000000;
@@ -2572,6 +2572,10 @@ video, #previewRecordedGif {
   .darkMode nav .navUl {
     background-color: #000000;
   }
+}
+
+.darkMode .myFav-container .myFavTitle-wrapper h2 {
+  color: #FFFFFF;
 }
 
 .darkMode .createGifos-container .createGifosCapture-wrapper {
