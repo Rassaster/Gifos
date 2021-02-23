@@ -212,6 +212,8 @@ footer {
   height: 4.1041667vw;
   max-height: 80px;
   margin-left: 10.833333vw;
+  background-image: url(../../assets/-1.headerSectionAssets/logoGifos.svg);
+  background-size: contain;
 }
 
 #logoHeader {
@@ -726,7 +728,7 @@ nav input {
 
 .resultItem-wrapper::before {
   content: "______________________________";
-  color: #9CAFC3;
+  color: #000000;
 }
 
 #searchResultItemDOM {
@@ -924,7 +926,6 @@ nav input {
     width: 71.744792vw;
     max-width: unset;
     min-height: 50px;
-    border: 1px solid #572EE5;
     border-radius: 2.6367188vw;
   }
   .resultsGrid {
@@ -2427,6 +2428,149 @@ video, #previewRecordedGif {
   .socialMaxFullGifButton {
     min-width: 22px;
     min-height: 22px;
+  }
+}
+
+.darkMode {
+  background-color: #37383C;
+}
+
+.darkMode header {
+  border-color: #000000;
+}
+
+.darkMode header, .darkMode footer {
+  background-color: #37383C;
+}
+
+.darkMode .trendingSection-container {
+  background-color: #222326;
+}
+
+.darkMode nav .hamburgerMenu {
+  background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-burgerDM.svg);
+}
+
+.darkMode #anchorHome {
+  background-image: url(../assets/-1.headerSectionAssets/logoGifosDM.svg);
+}
+
+.darkMode #createGifoLink .oval-createGifosBtn {
+  stroke: #FFFFFF;
+  fill: #37383C;
+}
+
+.darkMode #createGifoLink .cross-createGifosBtn {
+  fill: #FFFFFF;
+}
+
+.darkMode #createGifoLink:hover .oval-createGifosBtn {
+  stroke: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.darkMode #createGifoLink:active .oval-createGifosBtn {
+  stroke: #9CAFC3;
+  fill: #9CAFC3;
+}
+
+.darkMode #createGifoLink:hover .cross-createGifosBtn {
+  fill: #000000;
+}
+
+.darkMode #createGifoLink:active .cross-createGifosBtn {
+  fill: #FFFFFF;
+}
+
+.darkMode li a {
+  color: #FFFFFF;
+}
+
+.darkMode .welcomeMessage-wrapper h1 {
+  color: #FFFFFF;
+}
+
+.darkMode .searchBar-container {
+  border-color: #FFFFFF;
+}
+
+.darkMode .searchBar-container #searchIcon-searchBar {
+  background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/iconDM-search-darkMode.svg);
+}
+
+.darkMode .searchBar-container #closeButton-searchBar {
+  background-image: url(../assets/iconDM-close-darkMode.svg);
+}
+
+.darkMode #searchBar {
+  color: #FFFFFF;
+}
+
+.darkMode #trendingSuggestionsContainerDOM h3, .darkMode #trendingSuggestionsContainerDOM .trendingTermsDOM {
+  color: #FFFFFF;
+}
+
+.darkMode .resultItem-wrapper::before {
+  color: #FFFFFF;
+}
+
+.darkMode .resultItem-wrapper #searchResultItemDOM {
+  color: #FFFFFF;
+}
+
+.darkMode #verMasSearchResultsButtonDOM {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.darkMode #verMasSearchResultsButtonDOM:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #000000;
+}
+
+.darkMode .trendingTitle-wrapper h2, .darkMode .trendingTitle-wrapper p {
+  color: #FFFFFF;
+}
+
+.darkMode .trendingSlider-container .trendingSliderButton {
+  border-color: #FFFFFF;
+}
+
+.darkMode .trendingSlider-container .trendingSliderButton i {
+  color: #FFFFFF;
+}
+
+.darkMode .trendingSlider-container .trendingSliderButton:hover {
+  background-color: #FFFFFF;
+}
+
+.darkMode .trendingSlider-container .trendingSliderButton:hover i {
+  color: #000000;
+}
+
+.darkMode footer .socialMedia-container p {
+  color: #FFFFFF;
+}
+
+.darkMode footer .socialMedia-container .socialMedia-wrapper a i {
+  color: #9CAFC3;
+}
+
+.darkMode footer .socialMedia-container .socialMedia-wrapper a:hover i {
+  color: #FFFFFF;
+}
+
+.darkMode footer .allRights-wrapper p {
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .darkMode nav .showClose {
+    background-image: url(../assets/iconDM-close-darkMode.svg);
+  }
+  .darkMode nav .navUl {
+    background-color: #000000;
   }
 }
 /*# sourceMappingURL=style.css.map */

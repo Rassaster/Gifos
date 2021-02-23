@@ -1,0 +1,135 @@
+.darkMode {
+  // Main Sections
+  header {
+    border-color: $quaternaryDM-color;
+  }
+  background-color: $secondaryM-color;
+  header, footer {
+    background-color: $secondaryM-color;    
+  }
+  .trendingSection-container {
+    background-color: $tertiaryDM-color;
+  }
+  nav {
+    .hamburgerMenu {
+      background-image: url(../assets/-1.headerSectionAssets/0.navMenuAssets/button-burgerDM.svg);
+    }
+  }
+  #anchorHome {
+    background-image: url(../assets/-1.headerSectionAssets/logoGifosDM.svg);
+  }
+  #createGifoLink {
+    .oval-createGifosBtn {
+      stroke: $mainDM-color;
+      fill: $secondaryM-color;
+    }
+    .cross-createGifosBtn {
+      fill: $mainDM-color;
+    }
+    &:hover .oval-createGifosBtn {
+      stroke: $mainDM-color;
+      fill: $mainDM-color;
+    }
+    &:active .oval-createGifosBtn {
+      stroke: $quinaryDM-color;
+      fill: $quinaryDM-color;
+    }
+    &:hover .cross-createGifosBtn{
+      fill: $quaternaryDM-color;
+    }
+    &:active .cross-createGifosBtn{
+      fill: $mainDM-color;
+    }
+  }
+  li a {  
+    color: $mainDM-color;
+  }
+  .welcomeMessage-wrapper h1  {
+    color: $mainDM-color;
+  }
+  .searchBar-container {
+    border-color: $mainDM-color;
+    #searchIcon-searchBar {
+      background-image: url(../assets/-2.mainSectionAssets/0.searchAssets/iconDM-search-darkMode.svg);
+    }
+    #closeButton-searchBar {
+      background-image: url(../assets/iconDM-close-darkMode.svg);
+    }
+  }
+  #searchBar {
+    color: $mainDM-color;
+  }
+  #trendingSuggestionsContainerDOM  {
+    h3, .trendingTermsDOM {
+      color: $mainDM-color;
+    }
+  }
+  .resultItem-wrapper {
+    &::before {
+      color: $mainDM-color;
+    }
+    #searchResultItemDOM {
+      color: $mainDM-color;
+    }
+  }
+  #verMasSearchResultsButtonDOM {
+    border-color: $mainDM-color;
+    color: $mainDM-color;
+    &:hover {
+      background-color: $mainDM-color;
+      border-color: $mainDM-color;
+      color: $quaternaryDM-color;
+    }
+  }
+  .trendingTitle-wrapper {
+    h2, p {
+      color: $mainDM-color;
+    }
+  }
+  .trendingSlider-container {
+    .trendingSliderButton {
+      border-color: $mainDM-color;
+      i {
+        color: $mainDM-color;
+      }
+      &:hover {
+        background-color: $mainDM-color;
+      }
+      &:hover i {
+        color: $quaternaryDM-color;
+      }
+    }
+  }
+  footer {
+    .socialMedia-container {
+      p {
+        color: $mainDM-color;
+      }
+      .socialMedia-wrapper {
+        a {
+          i {
+            color: $quinaryDM-color;
+          }
+          &:hover i {
+            color: $mainDM-color;
+          }
+        }
+      }
+    }
+    .allRights-wrapper {
+      p {
+        color: $mainDM-color;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    nav {
+      .showClose {
+        background-image: url(../assets/iconDM-close-darkMode.svg);
+      }
+      .navUl {
+        background-color: $quaternaryDM-color;
+      }
+    }
+  }
+}
