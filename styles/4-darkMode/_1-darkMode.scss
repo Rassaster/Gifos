@@ -72,7 +72,7 @@
       color: $mainDM-color;
     }
   }
-  #verMasSearchResultsButtonDOM {
+  #verMasSearchResultsButtonDOM, #beginButton, #recordButton, #doneButton, #uploadGifoButton {
     border-color: $mainDM-color;
     color: $mainDM-color;
     &:hover {
@@ -129,6 +129,47 @@
       }
       .navUl {
         background-color: $quaternaryDM-color;
+      }
+    }
+  }
+  // Create Gifos
+  .createGifos-container {
+    .createGifosCapture-wrapper {
+      .textInstructionsGifosCapture-wrapper {
+        #headingInstructionsContentGifosCapture {
+          color: $mainDM-color;
+        }
+        #paragraphInstructionsContentGifosCapture {
+          color: $mainDM-color;
+        }
+      }
+      border-color: $mainDM-color;
+      .cornersCreateGifos {
+        border-color: $mainDM-color;
+      }
+    }
+    .createSteps-wrapper {
+      .step-wrapper {
+        border-color: $mainDM-color;
+        color: $mainDM-color;
+      }
+      .currentStep-wrapper {
+        color: $quaternaryDM-color;
+        background-color: $mainDM-color;
+      }
+      #repeatVideoButton, #videoDurationViewer {
+        color: $mainDM-color;
+      }
+    }
+    .commandButtonCreateGifos-wrapper {
+      .borderTopCommandButton {
+        border-color: $mainDM-color;
+        background-color: $mainDM-color;
+      }
+    }
+    .cameraAssets-wrapper {
+      #cameraLightAsset {
+        background: linear-gradient(90deg, hsla(167, 72%, 60%, 0.8) 0%, hsla(167, 72%, 60%, 0) 100%);
       }
     }
   }
