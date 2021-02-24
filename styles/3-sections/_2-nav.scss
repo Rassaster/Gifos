@@ -29,6 +29,7 @@ nav {
   font-size: calc(11px + 0.13888889vw); // =11px + (2px/1440px)
   font-family: $strongTitles-font;
   color: $mainLM-color;
+  cursor: pointer;
   &:hover {
     text-decoration: underline $tertiaryLM-color 2px;
   }

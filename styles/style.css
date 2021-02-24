@@ -270,6 +270,7 @@ nav input {
   font-size: calc(11px + 0.13888889vw);
   font-family: "Montserrat-Bold", sans-serif;
   color: #572EE5;
+  cursor: pointer;
 }
 
 .nav-anchor:hover {
