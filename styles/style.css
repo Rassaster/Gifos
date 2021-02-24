@@ -2482,7 +2482,7 @@ video, #previewRecordedGif {
   fill: #FFFFFF;
 }
 
-.darkMode li a {
+.darkMode li a, .darkMode li p {
   color: #FFFFFF;
 }
 

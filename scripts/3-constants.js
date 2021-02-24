@@ -10,6 +10,7 @@
  * @const Giphy_Search_Query string.
  * @const Giphy_Results_Limit string.
  * 
+ * @const toggleDarkMode #toggleDarkMode DOM Node.
  * @const userSearchInput #searchBar DOM Node.
  * @const searchIconBar #searchIcon-searchBar DOM Node.
  * @const closeSearchButton #closeButton-searchBar DOM Node.
@@ -93,6 +94,7 @@ const Giphy_Trending_Node = "gifs/trending";
 const Giphy_Search_Query = `&q=`;
 const Giphy_Results_Limit = '&limit=';
 
+const toggleDarkMode = document.getElementById('toggleDarkMode');
 const userSearchInput = document.getElementById('searchBar');
 const searchIconBar = document.getElementById('searchIcon-searchBar');
 const closeSearchButton = document.getElementById('closeButton-searchBar');
