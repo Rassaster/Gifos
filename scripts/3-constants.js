@@ -10,7 +10,6 @@
  * @const Giphy_Search_Query string.
  * @const Giphy_Results_Limit string.
  * 
- * 
  * @const webBody #webBody DOM Node.
  * @const toggleDarkMode #toggleDarkMode DOM Node.
  * @const userSearchInput #searchBar DOM Node.
@@ -62,6 +61,11 @@
  * @const socialMaxFullGifButtonsContainer #socialMaxFullGifButtons-container DOM Node.
  * @const maxViewOverlayCloseButton #maxViewOverlayCloseButton DOM Node.
  * @const favButtonMaxViewOverlay #favButtonMaxViewOverlay DOM Node.
+ * 
+ * @const cameraRollSmallAsset #cameraRollSmallAsset DOM Node.
+ * @const cameraRollBigAsset #cameraRollBigAsset DOM Node.
+ * @const cameraAloneAsset #cameraAloneAsset DOM Node.
+ * @const cameraRollFloorAsset #cameraRollFloorAsset DOM Node.
  * 
  * @const trendingTerms .trendingTermsDOM DOM Nodes.
  * @const avActiveSearchResults .favActiveSearchResults DOM Nodes.
@@ -147,6 +151,11 @@ const userMaxFullGif = document.getElementById('userMaxFullGif');
 const titleMaxFullGif = document.getElementById('titleMaxFullGif');
 const socialMaxFullGifButtonsContainer = document.getElementById('socialMaxFullGifButtons-container');
 const maxViewOverlayCloseButton = document.getElementById('maxViewOverlayCloseButton');
+
+const cameraRollSmallAsset = document.getElementById('cameraRollSmallAsset');
+const cameraRollBigAsset = document.getElementById('cameraRollBigAsset');
+const cameraAloneAsset = document.getElementById('cameraAloneAsset');
+const cameraRollFloorAsset = document.getElementById('cameraRollFloorAsset');
 
 const trendingTerms = document.getElementsByClassName('trendingTermsDOM');
 const favActiveSearchResults = document.getElementsByClassName('favActiveSearchResults');
