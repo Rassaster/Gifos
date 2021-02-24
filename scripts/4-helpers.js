@@ -24,7 +24,7 @@ const removeClass = (nodeElement, className) => {
   nodeElement.classList.remove(className);
 }
 const toggleClass = (nodeElement, className) => {
-  nodeElement.classList.toggle(className;)
+  nodeElement.classList.toggle(className);
 }
 const displayAutcompleteSuggestions = () => {
   removeClass(searchButton, 'visibility-hidden');
