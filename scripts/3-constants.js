@@ -178,6 +178,7 @@ let arrayOfFavoriteGifs = [];
 let slicedArrayOfarrayOfFavoriteGifs = []
 let arrayOfCreatedGifsIDs = [];
 let slicedArrayOfCreatedGifs = [];
+let darkModestatus = false;
 /**
  * @function requestToGiphy
  * @param {*} giphyNode 
