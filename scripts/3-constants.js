@@ -178,7 +178,7 @@ let arrayOfFavoriteGifs = [];
 let slicedArrayOfarrayOfFavoriteGifs = []
 let arrayOfCreatedGifsIDs = [];
 let slicedArrayOfCreatedGifs = [];
-let darkModestatus = false;
+localStorage.darkModestatusLocal;
 /**
  * @function requestToGiphy
  * @param {*} giphyNode 
@@ -448,4 +448,20 @@ const triggerVerMasCreatedGifsButton = () => {
   momentarySlicedArray = slicedArrayOfCreatedGifs.slice(12);
   slicedArrayOfCreatedGifs = momentarySlicedArray;
   showHideVerMasButton(slicedArrayOfCreatedGifs, myGifosMasButton);
+}
+const triggerToggleDarkMode = () => {
+  toggleClass(webBody, 'darkMode');
+  if (videoCameraView) {
+    if (localStorage.getItem('darkModestatusLocal') === 'true') {
+      cameraRollSmallAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll2-darkMode.svg';
+      cameraRollBigAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll3-darkMode.svg';
+      // cameraAloneAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/';
+      cameraRollFloorAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll-darkMode.svg';
+    } else if (localStorage.getItem('darkModestatusLocal') === 'false') {
+      cameraRollSmallAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll2.svg';
+      cameraRollBigAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll3.svg';
+      cameraAloneAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraAlone.svg';
+      cameraRollFloorAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll.svg';
+    }
+  }
 }

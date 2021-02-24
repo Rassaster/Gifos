@@ -95,9 +95,15 @@ const localStorageFavsToFavsArrayCopy = () => {
   favoritesToJSON = JSON.parse(returnedFavsLocal);
   slicedArrayOfarrayOfFavoriteGifs = favoritesToJSON;
 }
-
 const localStorageCreatedGifsToCreatedGifsArray = () => {
   let returnedCreatedLocal = localStorage.getItem('localStorageCreatedGifs');
   createdIDToJSON = JSON.parse(returnedCreatedLocal);
   arrayOfCreatedGifsIDs = createdIDToJSON;
+}
+const checkDarkModeLocalStorageStatus = () => {
+  if (localStorage.getItem('darkModestatusLocal') === 'false') {
+    removeClass(webBody, 'darkMode');
+  } else if (localStorage.getItem('darkModestatusLocal') === 'true') {
+    addClass(webBody, 'darkMode');
+  }
 }
