@@ -100,10 +100,24 @@ const localStorageCreatedGifsToCreatedGifsArray = () => {
   createdIDToJSON = JSON.parse(returnedCreatedLocal);
   arrayOfCreatedGifsIDs = createdIDToJSON;
 }
+const toggleCameraAssets = () => {
+  if (videoCameraView) {
+    if (localStorage.getItem('darkModestatusLocal') === 'true') {
+      cameraRollSmallAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll2-darkMode.svg';
+      cameraRollBigAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll3-darkMode.svg';
+      cameraRollFloorAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/elementDM-cameraRoll-darkMode.svg';
+    } else if (localStorage.getItem('darkModestatusLocal') === 'false') {
+      cameraRollSmallAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll2.svg';
+      cameraRollBigAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll3.svg';
+      cameraRollFloorAsset.src = 'assets/3.createGifosAssets/0.cameraAssets/element-cameraRoll.svg';
+    }
+  }
+}
 const checkDarkModeLocalStorageStatus = () => {
   if (localStorage.getItem('darkModestatusLocal') === 'false') {
     removeClass(webBody, 'darkMode');
   } else if (localStorage.getItem('darkModestatusLocal') === 'true') {
     addClass(webBody, 'darkMode');
   }
+  toggleCameraAssets();
 }
