@@ -1,4 +1,5 @@
 toggleDarkMode.addEventListener('click', () => {
+  alert('toggleDarkMode clicked')
   if (localStorage.getItem('darkModestatusLocal') === 'false') {
     localStorage.darkModestatusLocal = true;
     toggleDarkMode.innerText = 'MODO DIURNO';
