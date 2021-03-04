@@ -14,7 +14,6 @@ userNavToggleView.addEventListener('click', displayHideNavList);
 // Constant Calls
 window.onload = () => {
   // onLoad General
-  localStorage.setItem = 'darkModestatusLocal';
   checkDarkModeLocalStorageStatus();
   if (localStorage.getItem('localStorageFavGifs') !== null) {
     localStorageFavsToFavsArray();
