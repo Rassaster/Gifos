@@ -61,6 +61,8 @@
  * @const socialMaxFullGifButtonsContainer #socialMaxFullGifButtons-container DOM Node.
  * @const maxViewOverlayCloseButton #maxViewOverlayCloseButton DOM Node.
  * @const favButtonMaxViewOverlay #favButtonMaxViewOverlay DOM Node.
+ * @const uploadingGifoDownloadButton #uploadingGifoDownloadButton DOM Node.
+ * @const uploadingGifCopyLinkButton #uploadingGifCopyLinkButton DOM Node.
  * 
  * @const cameraRollSmallAsset #cameraRollSmallAsset DOM Node.
  * @const cameraRollBigAsset #cameraRollBigAsset DOM Node.
@@ -151,6 +153,8 @@ const userMaxFullGif = document.getElementById('userMaxFullGif');
 const titleMaxFullGif = document.getElementById('titleMaxFullGif');
 const socialMaxFullGifButtonsContainer = document.getElementById('socialMaxFullGifButtons-container');
 const maxViewOverlayCloseButton = document.getElementById('maxViewOverlayCloseButton');
+const uploadingGifoDownloadButton = document.getElementById('uploadingGifoDownloadButton');
+const uploadingGifCopyLinkButton = document.getElementById('uploadingGifCopyLinkButton');
 
 const cameraRollSmallAsset = document.getElementById('cameraRollSmallAsset');
 const cameraRollBigAsset = document.getElementById('cameraRollBigAsset');
