@@ -116,8 +116,10 @@ const toggleCameraAssets = () => {
 const checkDarkModeLocalStorageStatus = () => {
   if (localStorage.getItem('darkModestatusLocal') === 'false') {
     removeClass(webBody, 'darkMode');
+    toggleDarkMode.innerText = 'MODO NOCTURNO';
   } else if (localStorage.getItem('darkModestatusLocal') === 'true') {
     addClass(webBody, 'darkMode');
+    toggleDarkMode.innerText = 'MODO DIURNO';
   }
   toggleCameraAssets();
 }
