@@ -141,3 +141,11 @@ createOtherGifoButton.addEventListener('click', () => {
   removeClass(uploadingGifoOnLoad, 'display-none');
   addClass(uploadingGifoCheck, 'display-none');
 })
+uploadingGifoDownloadButton.addEventListener('click', ()=>{
+  let gifURL = arrayOfCreatedGifsIDs[arrayOfCreatedGifsIDs.length-1].images.original.url;
+  let username = arrayOfCreatedGifsIDs[arrayOfCreatedGifsIDs.length-1].username;
+  let gifTitle = arrayOfCreatedGifsIDs[arrayOfCreatedGifsIDs.length-1].title;
+  downloadGif(gifURL, username, gifTitle);
+});
+uploadingGifCopyLinkButton.addEventListener('click', ()=>{});
+
