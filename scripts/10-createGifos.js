@@ -1,5 +1,20 @@
 let recorder;
 let newGifFile;
+let seconds = 0;
+let timerInterval;
+const startTimer = () => {
+  seconds += 1;
+    if (seconds < 10) {
+      videoDurationViewer.innerText = '00:' + '0' + seconds;
+    } else if (seconds >= 10) {
+      videoDurationViewer.innerText =  '00:' + seconds;
+    }
+}
+const stopTimer = () => {
+  clearInterval(timerInterval);
+  seconds = 0;
+  videoDurationViewer.innerText =  '00:00';
+}
 const getMediaFromUser = async () => {
   try {
     stream = await navigator.mediaDevices.getUserMedia({ audio: false,
@@ -55,6 +70,7 @@ const triggerSearchByID = (gifID) => {
   .catch(err => console.error(err))
 }
 beginButton.addEventListener('click', () => {
+  videoDurationViewer.innerText =  '00:00';
   addClass(stepOne, 'currentStep-wrapper');
   displayTextForCameraPermission();
   getMediaFromUser();
@@ -63,9 +79,11 @@ recordButton.addEventListener('click', () => {
   addClass(recordButton, 'display-none');
   removeClass(doneButton, 'display-none');
   recorder.startRecording();
+  timerInterval = setInterval(startTimer, 1000);
 })
 let blobURLRecordedGif;
 doneButton.addEventListener('click', () => {
+  stopTimer();
   addClass(doneButton, 'display-none');
   removeClass(uploadGifoButton, 'display-none');
   removeClass(repeatVideoButton, 'display-none');
