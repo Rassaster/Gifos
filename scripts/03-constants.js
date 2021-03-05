@@ -463,4 +463,5 @@ const copyToClipboard = (contentToBeCopied) => {
   document.body.appendChild(copiedContent);
   copiedContent.select();
   document.execCommand('copy');
+  document.body.removeChild(copiedContent);
 }
