@@ -457,3 +457,10 @@ const triggerToggleDarkMode = () => {
   toggleClass(webBody, 'darkMode');
   toggleCameraAssets();
 }
+const copyToClipboard = (contentToBeCopied) => {
+  let copiedContent = document.createElement('textarea');
+  copiedContent.value = contentToBeCopied;
+  document.body.appendChild(copiedContent);
+  copiedContent.select();
+  document.execCommand('copy');
+}

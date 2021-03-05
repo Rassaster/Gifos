@@ -147,5 +147,9 @@ uploadingGifoDownloadButton.addEventListener('click', ()=>{
   let gifTitle = arrayOfCreatedGifsIDs[arrayOfCreatedGifsIDs.length-1].title;
   downloadGif(gifURL, username, gifTitle);
 });
-uploadingGifCopyLinkButton.addEventListener('click', ()=>{});
+uploadingGifCopyLinkButton.addEventListener('click', ()=>{
+  let gifURL = arrayOfCreatedGifsIDs[arrayOfCreatedGifsIDs.length-1].url;
+  console.log(gifURL);
+  copyToClipboard(gifURL);
+});
 
