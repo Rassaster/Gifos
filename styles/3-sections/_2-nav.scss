@@ -91,7 +91,7 @@ nav {
 //-------------------MEDIA QUERIES--------------------------------------------------------
 //----------------------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
-  #createGifoLink {
+  #createGifoLink, #myGifosLink {
     display: none;
   }
   .fa-bars {

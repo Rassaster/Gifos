@@ -4,7 +4,7 @@ This project includes the usage of HTML, CSS, Sass and JavaScript.
 
 It was done with a "mobile first" aproach.
 
-Visit the landing page and listen to the podcasts by clicking [here](https://rassaster.github.io/PaleBlueDotPodcast/)!
+Visit the landing page and listen to the podcasts by clicking [here](https://rassaster.github.io/Gifos/)!
 
 ## Main goals and Challenges
 The main goal of this project was to succesfully connect with the [Giphy API](https://developers.giphy.com/) in order to search gifs, obtaion trending gifs displayed in a carousel, get the trending search terms, and create your own gifs being able to upload them to Giphy.
