@@ -31,15 +31,16 @@
 |____________________________________________________________________
 |---- /scripts
 |     |
-|     |--/1-darkMode_Toggle.js
-|     |--/2-hamburguerMenu_Toggle.js
-|     |--/3-constants.js
-|     |--/4-helpers.js
-|     |--/5-cardButtons.js
-|     |--/6-autocomplete_FetchDOM.js
-|     |--/7-searchGifs_FetchDOM.js 
-|     |--/8-trendingSearchTerms_FetchDOM.js
-|     |--/9-trendingGifs_FetchDOM.js
+|     |--/00-onLoadCalls.js
+|     |--/01-darkMode_Toggle.js
+|     |--/02-hamburguerMenu_Toggle.js
+|     |--/03-constants.js
+|     |--/04-helpers.js
+|     |--/05-cardButtons.js
+|     |--/06-autocomplete_FetchDOM.js
+|     |--/07-searchGifs_FetchDOM.js 
+|     |--/08-trendingSearchTerms_FetchDOM.js
+|     |--/09-trendingGifs_FetchDOM.js
 |     |--/10-createGifo.js
 |     |
 |     |______________________________________________________________
@@ -50,7 +51,6 @@
 |     |     |
 |     |     |-- /montserrat                   *
 |     |     |-- /roboto                       *
-|     |     
 |     |     
 |     |-- /1-base                             *
 |     |     |
