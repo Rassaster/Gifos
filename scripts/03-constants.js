@@ -174,7 +174,7 @@ const favFavButton = document.getElementsByClassName('favFavButton');
 const maxCreatedGifosButton = document.getElementsByClassName('maxCreatedGifosButton');
 const downloadCreatedGifosButton = document.getElementsByClassName('downloadCreatedGifosButton');
 const trashCreatedGifosButton = document.getElementsByClassName('trashCreatedGifosButton');
-
+// Arrays
 const arraySearchGifsResults = [];
 let slicedArrayOfSearchGifsResults = [];
 const arrayTrendingGifsResults = [];
