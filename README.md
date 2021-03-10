@@ -1,5 +1,5 @@
 # GIFOS
-### < HTML, CSS and JS project for [Acamica](https://www.acamica.com/desarrollo-web-full-stack) academy. />
+### < HTML, CSS and JS project for [Acamica](https://www.acamica.com) academy. />
 This project includes the usage of HTML, CSS, Sass and JavaScript.
 
 It was done with a "mobile first" aproach.
